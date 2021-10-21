@@ -1,26 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { ForestryControllerService } from 'src/app/controllers/forestry-controller/forestry-controller.service';
+import { ForestryController } from 'src/app/controllers/forestry-controller/forestry-controller';
 
 @Component({
   selector: 'app-forestry-view',
   templateUrl: './forestry-view.component.html',
-  styleUrls: ['./forestry-view.component.css'],
-  providers: [ ForestryControllerService ]
+  styleUrls: ['./forestry-view.component.css']
 })
 export class ForestryViewComponent implements OnInit {
+  forestryController: ForestryController;
   forestry: any;
 
-  constructor(
-    public forestryControllerService: ForestryControllerService
-  ) { 
-    this.forestryControllerService.init(this);
+  constructor() { 
+    this.forestryController = new ForestryController(this);
   }
 
   ngOnInit(): void {
   }
 
   onClick(): void {
-    this.forestryControllerService.getForestry();
+    this.forestryController.getForestry();
   }
 
   setForestry(value: any): void {
