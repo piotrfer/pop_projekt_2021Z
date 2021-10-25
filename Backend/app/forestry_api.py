@@ -22,6 +22,7 @@ def get_all_forestries():
 
 
 @ forestry_api.route("/forestry",  methods=['POST'])
+
 def save_forestry():
     content = request.json
 

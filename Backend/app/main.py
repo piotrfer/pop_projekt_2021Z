@@ -2,8 +2,8 @@ from flask import Flask
 from forestry_api import forestry_api
 from sensors_api import sensor_api
 
-app = Flask(__name__)
 
+app = Flask(__name__)
 
 app.config["DEBUG"] = True
 app.register_blueprint(forestry_api)
