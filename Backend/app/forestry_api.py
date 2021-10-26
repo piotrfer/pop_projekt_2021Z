@@ -4,6 +4,7 @@ from flask import Response
 from pydantic.error_wrappers import ValidationError
 
 from models.forestry import Forestry
+from db import Database
 
 
 forestry_api = Blueprint('forestry_api', __name__)
@@ -12,7 +13,8 @@ forestry_api = Blueprint('forestry_api', __name__)
 @forestry_api.route("/forestry",  methods=['GET'])
 def get_all_forestries():
     """TODO get all forestries in DB via ForestryDao"""
-
+    with Database() as db:
+        db.query('SELECT * FROM forestry')
     pass
 
 
