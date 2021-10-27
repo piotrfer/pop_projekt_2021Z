@@ -9982,6 +9982,7 @@
 														"$ref": "AAAAAAF8kBAvqe2tGLs="
 													},
 													"name": "forestry",
+													"type": "",
 													"multiplicity": "1",
 													"isUnique": true,
 													"direction": "return"
@@ -10260,6 +10261,7 @@
 														"$ref": "AAAAAAF8lM6SKBHpKbk="
 													},
 													"name": "forestAction",
+													"type": "",
 													"multiplicity": "1"
 												},
 												{
@@ -10269,6 +10271,7 @@
 														"$ref": "AAAAAAF8lM6SKBHpKbk="
 													},
 													"name": "forestAction",
+													"type": "",
 													"multiplicity": "1",
 													"direction": "return"
 												}
@@ -10761,6 +10764,7 @@
 														"$ref": "AAAAAAF8kBoZcu4KyxY="
 													},
 													"name": "sensor",
+													"type": "",
 													"multiplicity": "1"
 												}
 											]
@@ -10813,6 +10817,7 @@
 														"$ref": "AAAAAAF8kCeyeu7xSig="
 													},
 													"name": "sensorDto",
+													"type": "",
 													"multiplicity": "1"
 												},
 												{
@@ -11766,9 +11771,9 @@
 														"$ref": "AAAAAAF8lNaGnRI1mHI="
 													},
 													"font": "Arial;13;0",
-													"left": 24.72998046875,
+													"left": 22.55908203125,
 													"top": 5,
-													"width": 71.08447265625,
+													"width": 67.06640625,
 													"height": 13,
 													"text": "Add forestry"
 												},
@@ -11781,7 +11786,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -13060,7 +13065,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 64.72998046875,
+													"left": 63.99365234375,
 													"top": 493,
 													"width": 1,
 													"height": 13
@@ -13074,7 +13079,7 @@
 													"font": "Arial;13;1",
 													"left": 45,
 													"top": 493,
-													"width": 14.72998046875,
+													"width": 13.99365234375,
 													"height": 13,
 													"text": "alt"
 												},
@@ -13107,7 +13112,7 @@
 																	"font": "Arial;13;0",
 																	"left": 60,
 																	"top": 526,
-																	"width": 89.3623046875,
+																	"width": 86.14404296875,
 																	"height": 13,
 																	"text": "[isValid == true]"
 																}
@@ -13140,7 +13145,7 @@
 																	"font": "Arial;13;0",
 																	"left": 60,
 																	"top": 624,
-																	"width": 94.42138671875,
+																	"width": 90.47314453125,
 																	"height": 13,
 																	"text": "[isValid == false]"
 																}
