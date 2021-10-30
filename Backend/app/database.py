@@ -9,9 +9,11 @@ DATABASE = os.environ['DATABASE_DB']
 HOST = os.environ['DATABASE_HOST']
 PORT = os.environ['DATABASE_PORT']
 
+
 class Database:
     def __init__(self):
-        self._conn = psycopg2.connect(user=USERNAME, password=PASSWORD, host=HOST, port=PORT, dbname=DATABASE)
+        self._conn = psycopg2.connect(
+            user=USERNAME, password=PASSWORD, host=HOST, port=PORT, dbname=DATABASE)
         self._cursor = self._conn.cursor()
 
     def __enter__(self):
