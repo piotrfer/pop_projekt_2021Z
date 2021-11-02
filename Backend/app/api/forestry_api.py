@@ -9,11 +9,11 @@ from db.forestry import Forestry
 
 forestry_api = Blueprint('forestry_api', __name__)
 
-
 @forestry_api.route("/forestry",  methods=['GET'])
 def get_all_forestries():
     forestries_data: ForestryDto = Forestry.getAll()
-    return jsonify(forestries_data)
+    forestries_data_as_objects = map(transformForestriesArrayToObject, forestries_data)
+    return jsonify(list(forestries_data_as_objects))
 
 
 @forestry_api.route("/forestry",  methods=['POST'])
@@ -28,3 +28,6 @@ def save_forestry():
     Forestry.save(forestry_dto)
 
     return jsonify("Success")
+
+def transformForestriesArrayToObject(arr):
+        return {'id': arr[0], 'location': arr[1], 'name': arr[2]}
