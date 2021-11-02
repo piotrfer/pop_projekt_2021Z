@@ -1,12 +1,22 @@
-import { IForestryList } from 'src/app/interfaces/iforestry-list';
-import { IForestryPresenter } from "src/app/interfaces/iforestry-presenter";
+import { ForestryShower } from 'src/app/interfaces/forestry-shower';
+import { ForestryEventHandler } from "src/app/interfaces/forestry-event-handler";
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { ForestryDto } from 'src/app/data-types/forestry-dto';
 
-export class ForestryPresenter implements IForestryPresenter {
-    private forestryList: IForestryList|undefined;
+export class ForestryPresenter implements ForestryEventHandler {
+    private forestryView: ForestryShower|undefined;
 
-    init(forestryList: IForestryList) {
-        this.forestryList = forestryList;
+    constructor(private http: HttpClient) { }
+
+    init(forestryView: ForestryShower) {
+        this.forestryView = forestryView;
     }
     
-    handleShowAllForestries(): void {}
+    showAllForestriesClicked(): void {
+        this.http.get<ForestryDto[]>(environment.apiURL + 'forestry')
+            .subscribe((forestries) => {
+                this.forestryView!.showForestries(forestries)
+            });  
+    }
 }
