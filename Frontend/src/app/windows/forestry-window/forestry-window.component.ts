@@ -14,7 +14,7 @@ export class ForestryWindowComponent implements OnInit, AfterViewInit {
   private forestryView: ForestryShower|undefined;
   forestryPresenter: ForestryEventHandler;
 
-  constructor(private http: HttpClient) {
+  constructor(http: HttpClient) {
     this.forestryPresenter = new ForestryPresenter(http);
   }
 

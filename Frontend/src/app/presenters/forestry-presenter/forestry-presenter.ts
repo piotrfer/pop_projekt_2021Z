@@ -19,4 +19,11 @@ export class ForestryPresenter implements ForestryEventHandler {
                 this.forestryView!.showForestries(forestries)
             });  
     }
+    // showCreateForestryForm(){
+        
+    // }
+
+    //  saveForestryClicked(forestry: ForestryDto): void{
+        
+    // }
 }
