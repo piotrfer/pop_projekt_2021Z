@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { IForestryList } from 'src/app/interfaces/iforestry-list';
 import { IForestryPresenter } from 'src/app/interfaces/iforestry-presenter';
@@ -13,8 +14,8 @@ export class ForestryWindowComponent implements OnInit, AfterViewInit {
   private forestryList: IForestryList|undefined;
   forestryPresenter: IForestryPresenter;
 
-  constructor() {
-    this.forestryPresenter = new ForestryPresenter();
+  constructor(private http: HttpClient) {
+    this.forestryPresenter = new ForestryPresenter(http);
   }
 
   ngOnInit(): void {}
