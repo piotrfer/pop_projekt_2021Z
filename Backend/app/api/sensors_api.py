@@ -13,7 +13,8 @@ sensor_api = Blueprint('sensor_api', __name__)
 @sensor_api.route("/sensor",  methods=['GET'])
 def get_all_sensors():
     sensors_data: SensorDto = Sensor.getAll()
-    return jsonify(sensors_data)
+    sensors_data_as_objects = map(transformSensorsArrayToObject, sensors_data)
+    return jsonify(list(sensors_data_as_objects))
 
 
 @sensor_api.route("/sensor",  methods=['POST'])
@@ -28,3 +29,7 @@ def register_sensor():
     Sensor.save(sensor_dto)
 
     return jsonify("Success")
+
+
+def transformSensorsArrayToObject(arr):
+        return {'id': arr[0], 'location': arr[1], 'type': arr[2], 'model': arr[3]}
