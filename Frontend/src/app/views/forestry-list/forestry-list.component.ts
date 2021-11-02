@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ForestryDto } from 'src/app/data-types/forestry-dto';
 import { IForestryList } from 'src/app/interfaces/iforestry-list';
 import { IForestryPresenter } from 'src/app/interfaces/iforestry-presenter';
 
@@ -9,10 +10,20 @@ import { IForestryPresenter } from 'src/app/interfaces/iforestry-presenter';
 })
 export class ForestryListComponent implements OnInit, IForestryList {
   @Input() forestryPresenter: IForestryPresenter|undefined;
+  forestries: ForestryDto[]|undefined;
+  displayedColumns: string[] = ['id', 'location', 'name'];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.forestryPresenter!.showAllForestriesClicked();
+  }
 
-  showForestries(forestries: any[]): void {}
+  onShowDialogButtonClick(): void {
+    
+  }
+
+  showForestries(forestries: ForestryDto[]): void {
+    this.forestries = forestries;
+  }
 }
