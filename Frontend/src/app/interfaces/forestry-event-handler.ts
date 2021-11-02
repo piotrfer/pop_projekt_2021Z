@@ -5,5 +5,5 @@ export interface ForestryEventHandler {
     init(forestryList: ForestryShower): void;
     showAllForestriesClicked(): void;
     // showCreateForestryForm(): void;
-    //saveForestryClicked(forestry: ForestryDto): void;
+    saveForestryClicked(forestry: ForestryDto): void;
 }

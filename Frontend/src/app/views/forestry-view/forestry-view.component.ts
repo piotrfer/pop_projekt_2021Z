@@ -40,7 +40,7 @@ export class ForestryViewComponent implements OnInit, ForestryShower {
         location: result.coordinates,
         name: result.forestryName
       } 
-      //this.forestryPresenter!.saveForestryClicked(forestry);
+      this.forestryPresenter!.saveForestryClicked(forestry);
     });
   }
 

@@ -23,7 +23,7 @@ export class ForestryPresenter implements ForestryEventHandler {
         
     // }
 
-    //  saveForestryClicked(forestry: ForestryDto): void{
+     saveForestryClicked(forestry: ForestryDto): void{
         
-    // }
+    }
 }
