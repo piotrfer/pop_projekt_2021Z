@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ForestryDto } from 'src/app/data-types/forestry-dto';
 import { ForestryShower } from 'src/app/interfaces/forestry-shower';
-import { IForestryPresenter } from 'src/app/interfaces/iforestry-presenter';
+import { ForestryEventHandler } from 'src/app/interfaces/forestry-event-handler';
 
 @Component({
   selector: 'app-forestry-view',
@@ -9,7 +9,7 @@ import { IForestryPresenter } from 'src/app/interfaces/iforestry-presenter';
   styleUrls: ['./forestry-view.component.css']
 })
 export class ForestryViewComponent implements OnInit, ForestryShower {
-  @Input() forestryPresenter: IForestryPresenter|undefined;
+  @Input() forestryPresenter: ForestryEventHandler|undefined;
   forestries: ForestryDto[]|undefined;
   displayedColumns: string[] = ['id', 'location', 'name'];
 
