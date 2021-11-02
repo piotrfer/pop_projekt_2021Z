@@ -12,18 +12,17 @@ export class ForestryPresenter implements ForestryEventHandler {
     init(forestryView: ForestryShower) {
         this.forestryView = forestryView;
     }
-    
+
     showAllForestriesClicked(): void {
         this.http.get<ForestryDto[]>(environment.apiURL + 'forestry')
             .subscribe((forestries) => {
                 this.forestryView!.showForestries(forestries)
-            });  
+            });
     }
     // showCreateForestryForm(){
-        
+
     // }
 
      saveForestryClicked(forestry: ForestryDto): void{
-        
     }
 }
