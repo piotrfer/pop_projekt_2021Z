@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  apiURL: "http://127.0.0.1:4200/api/"
+  apiURL: "http://127.0.0.1:5000/"
 };
 
-/*
+/* http://127.0.0.0:4200/
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
  *

@@ -6,7 +6,6 @@ import { ForestryDto } from 'src/app/data-types/forestry-dto';
 
 export class ForestryPresenter implements ForestryEventHandler {
     private forestryView: ForestryShower|undefined;
-    baseURL: string = "http://127.0.0.1:5000/"
 
     constructor(private http: HttpClient) { }
 
@@ -32,6 +31,6 @@ export class ForestryPresenter implements ForestryEventHandler {
        };
        const body=forestry;
        console.log(body)
-       this.http.post(this.baseURL + 'forestry', body, httpOptions).subscribe(forestry => console.log(forestry));
+       this.http.post(environment.apiURL + 'forestry', body, httpOptions).subscribe(forestry => this.showAllForestriesClicked());
     }
 }

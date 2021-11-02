@@ -11,8 +11,11 @@ forestry_api = Blueprint('forestry_api', __name__)
 
 @forestry_api.route("/forestry",  methods=['GET'])
 def get_all_forestries():
+    print("got request")
     forestries_data: ForestryDto = Forestry.getAll()
+    print("got forestry")
     forestries_data_as_objects = map(transformForestriesArrayToObject, forestries_data)
+    print("got forestry as object")
     return jsonify(list(forestries_data_as_objects))
 
 
