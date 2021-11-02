@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ForestryViewComponent } from './views/forestry-view/forestry-view.component';
+import { ForestryWindowComponent } from './windows/forestry-window/forestry-window.component';
+import { ForestryListComponent } from './views/forestry-list/forestry-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ForestryViewComponent
+    ForestryWindowComponent,
+    ForestryListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
