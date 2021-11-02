@@ -1,5 +1,5 @@
 import { ForestryDto } from "../data-types/forestry-dto";
 
-export interface IForestryList {
+export interface IForestryShower {
     showForestries(forestries: ForestryDto[]): void;
 }
