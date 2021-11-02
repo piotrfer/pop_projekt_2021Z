@@ -14,13 +14,9 @@ export class ForestryPresenter implements ForestryEventHandler {
     }
     
     showAllForestriesClicked(): void {
-        // this.http.get<ForestryDto[]>(environment.apiURL + 'forestry')
-        //     .subscribe((forestries) => {
-        //         this.forestryView!.showForestries(forestries)
-        //     });  
-        this.http.get<any[]>(environment.apiURL + 'forestry')
+        this.http.get<ForestryDto[]>(environment.apiURL + 'forestry')
             .subscribe((forestries) => {
-                this.forestryView!.showForestries(forestries.map(f => ({ id: f[0], location: f[1], name: f[2] })))
+                this.forestryView!.showForestries(forestries)
             });  
     }
 }
