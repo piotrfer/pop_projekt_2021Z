@@ -8,4 +8,4 @@ app.register_blueprint(forestry_api)
 app.register_blueprint(sensor_api)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')
