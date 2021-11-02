@@ -1,15 +1,15 @@
-import { IForestryShower } from 'src/app/interfaces/iforestry-shower';
+import { ForestryShower } from 'src/app/interfaces/forestry-shower';
 import { IForestryPresenter } from "src/app/interfaces/iforestry-presenter";
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ForestryDto } from 'src/app/data-types/forestry-dto';
 
 export class ForestryPresenter implements IForestryPresenter {
-    private forestryView: IForestryShower|undefined;
+    private forestryView: ForestryShower|undefined;
 
     constructor(private http: HttpClient) { }
 
-    init(forestryView: IForestryShower) {
+    init(forestryView: ForestryShower) {
         this.forestryView = forestryView;
     }
     

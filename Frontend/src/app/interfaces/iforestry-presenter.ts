@@ -1,6 +1,6 @@
-import { IForestryShower } from "./iforestry-shower";
+import { ForestryShower } from "./forestry-shower";
 
 export interface IForestryPresenter {
-    init(forestryList: IForestryShower): void;
+    init(forestryList: ForestryShower): void;
     showAllForestriesClicked(): void;
 }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { IForestryShower } from 'src/app/interfaces/iforestry-shower';
+import { ForestryShower } from 'src/app/interfaces/forestry-shower';
 import { IForestryPresenter } from 'src/app/interfaces/iforestry-presenter';
 import { ForestryPresenter } from 'src/app/presenters/forestry-presenter/forestry-presenter';
 
@@ -11,7 +11,7 @@ import { ForestryPresenter } from 'src/app/presenters/forestry-presenter/forestr
 })
 export class ForestryWindowComponent implements OnInit, AfterViewInit {
   @ViewChild('forestryView') 
-  private forestryView: IForestryShower|undefined;
+  private forestryView: ForestryShower|undefined;
   forestryPresenter: IForestryPresenter;
 
   constructor(private http: HttpClient) {
