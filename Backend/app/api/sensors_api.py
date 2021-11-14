@@ -26,4 +26,4 @@ def register_sensor():
 
     id = SensorDaoImp.save(sensor_dto)
 
-    return jsonify("Success")
+    return jsonify({'Message': 'Success', 'Sensor_id': id})

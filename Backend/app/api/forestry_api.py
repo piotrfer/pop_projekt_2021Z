@@ -25,4 +25,4 @@ def save_forestry():
 
     id = ForestryDaoImp.save(forestry_dto)
 
-    return jsonify("Success")
+    return jsonify({'Message': 'Success', 'Forestry_id': id})
