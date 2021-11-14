@@ -23,14 +23,14 @@ export class ForestryPresenter implements ForestryEventHandler {
 
     // }
 
-     saveForestryClicked(forestry: ForestryDto): void{
-       const httpOptions = {
-         headers: new HttpHeaders({
-           'Content-Type':  'application/json'
-         })
-       };
-       const body=forestry;
-       console.log(body)
-       this.http.post(environment.apiURL + 'forestry', body, httpOptions).subscribe(forestry => this.showAllForestriesClicked());
-    }
+    //  saveForestryClicked(forestry: ForestryDto): void{
+    //    const httpOptions = {
+    //      headers: new HttpHeaders({
+    //        'Content-Type':  'application/json'
+    //      })
+    //    };
+    //    const body=forestry;
+    //    console.log(body)
+    //    this.http.post(environment.apiURL + 'forestry', body, httpOptions).subscribe(forestry => this.showAllForestriesClicked());
+    // }
 }

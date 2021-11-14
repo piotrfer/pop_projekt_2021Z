@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ForestryDto } from 'src/app/data-types/forestry-dto';
 import { ForestryShower } from 'src/app/interfaces/forestry-shower';
 import { ForestryEventHandler } from 'src/app/interfaces/forestry-event-handler';
+import { AddForestryEventHandler } from 'src/app/interfaces/add-forestry-event-handler';
 import {MatDialog} from "@angular/material/dialog";
 import { HttpClient} from '@angular/common/http';
 import {AddForestryDialogComponent} from "./add-forestry-dialog/add-forestry-dialog.component";
@@ -13,6 +14,7 @@ import {AddForestryDialogComponent} from "./add-forestry-dialog/add-forestry-dia
 })
 export class ForestryViewComponent implements OnInit, ForestryShower {
   @Input() forestryPresenter: ForestryEventHandler|undefined;
+  @Input() addForestryPresenter: AddForestryEventHandler|undefined;
   forestries: ForestryDto[]|undefined;
   displayedColumns: string[] = ['id', 'location', 'name'];
 
@@ -40,7 +42,7 @@ export class ForestryViewComponent implements OnInit, ForestryShower {
         location: result.coordinates,
         name: result.forestryName
       } 
-      this.forestryPresenter!.saveForestryClicked(forestry);
+      this.addForestryPresenter!.saveForestryClicked(forestry);
     });
   }
 
