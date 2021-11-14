@@ -4,16 +4,14 @@ from flask import Response
 from pydantic.error_wrappers import ValidationError
 
 from models.forestry_dto import ForestryDto
-from db.forestry import Forestry
-
+from dao_imp.forestry_dao_imp import ForestryDaoImp
 
 forestry_api = Blueprint('forestry_api', __name__)
 
 @forestry_api.route("/forestry",  methods=['GET'])
 def get_all_forestries():
-    forestries_data: ForestryDto = Forestry.getAll()
-    forestries_data_as_objects = map(transformForestriesArrayToObject, forestries_data)
-    return jsonify(list(forestries_data_as_objects))
+    forestries = ForestryDaoImp.getAll()
+    return jsonify(list(f.dict() for f in forestries))
 
 
 @forestry_api.route("/forestry",  methods=['POST'])
@@ -25,9 +23,6 @@ def save_forestry():
     except ValidationError as e:
         return Response(f"{e.json()}", 400)
 
-    Forestry.save(forestry_dto)
+    id = ForestryDaoImp.save(forestry_dto)
 
     return jsonify("Success")
-
-def transformForestriesArrayToObject(arr):
-        return {'id': arr[0], 'location': arr[1], 'name': arr[2]}
