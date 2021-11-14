@@ -10,13 +10,13 @@ sensor_api = Blueprint('sensor_api', __name__)
 
 
 @sensor_api.route("/sensor",  methods=['GET'])
-def get_all_sensors():
+def getAll():
     sensors = SensorDaoImp.getAll()
     return jsonify(list(s.dict() for s in sensors))
 
 
 @sensor_api.route("/sensor",  methods=['POST'])
-def register_sensor():
+def registerSensor():
     content = request.json
 
     try:

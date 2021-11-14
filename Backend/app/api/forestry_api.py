@@ -9,13 +9,13 @@ from dao_imp.forestry_dao_imp import ForestryDaoImp
 forestry_api = Blueprint('forestry_api', __name__)
 
 @forestry_api.route("/forestry",  methods=['GET'])
-def get_all_forestries():
+def getAll():
     forestries = ForestryDaoImp.getAll()
     return jsonify(list(f.dict() for f in forestries))
 
 
 @forestry_api.route("/forestry",  methods=['POST'])
-def save_forestry():
+def save():
     content = request.json
 
     try:
