@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ForestryDto } from 'src/app/data-types/forestry-dto';
-import { ForestryShower } from 'src/app/interfaces/forestry-shower';
+import { IForestryListView } from 'src/app/interfaces/iforestry-list-view';
 import { IForestryListEventHandler } from 'src/app/interfaces/iforestry-list-event-handler';
 import { IAddForestryEventHandler } from 'src/app/interfaces/iadd-forestry-event-handler';
 import {MatDialog} from "@angular/material/dialog";
@@ -12,7 +12,7 @@ import {AddForestryDialogComponent} from "./add-forestry-dialog/add-forestry-dia
   templateUrl: './forestry-view.component.html',
   styleUrls: ['./forestry-view.component.css']
 })
-export class ForestryViewComponent implements OnInit, ForestryShower {
+export class ForestryViewComponent implements OnInit, IForestryListView {
   @Input() forestryPresenter: IForestryListEventHandler|undefined;
   @Input() addForestryPresenter: IAddForestryEventHandler|undefined;
   forestries: ForestryDto[]|undefined;
