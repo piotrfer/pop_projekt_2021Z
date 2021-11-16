@@ -13,8 +13,8 @@ import { AddForestryDialogComponent } from '../add-forestry-dialog/add-forestry-
   styleUrls: ['./forestry-list.component.css'],
 })
 export class ForestryListComponent implements IForestryListView, OnInit {
-  @Input() forestryPresenter: IForestryListEventHandler | undefined;
-  @Input() addForestryPresenter: IAddForestryEventHandler | undefined;
+  @Input() forestryListEventHandler: IForestryListEventHandler | undefined;
+  @Input() addForestryEventHandler: IAddForestryEventHandler | undefined;
   forestries: ForestryDto[] | undefined;
   displayedColumns: string[] = ['id', 'location', 'name'];
 
@@ -25,7 +25,7 @@ export class ForestryListComponent implements IForestryListView, OnInit {
   }
 
   onInit(): void {
-    this.forestryPresenter!.showAllForestriesClicked();
+    this.forestryListEventHandler!.showAllForestriesClicked();
   }
 
   onShowDialogButtonClick(): void {
@@ -48,7 +48,7 @@ export class ForestryListComponent implements IForestryListView, OnInit {
         location: result.coordinates,
         name: result.forestryName,
       };
-      this.addForestryPresenter!.saveForestryClicked(forestry);
+      this.addForestryEventHandler!.saveForestryClicked(forestry);
     });
   }
 

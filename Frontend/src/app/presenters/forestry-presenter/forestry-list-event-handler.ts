@@ -3,20 +3,20 @@ import { IForestryListEventHandler } from 'src/app/interfaces/iforestry-list-eve
 import { ForestryAPI } from 'src/app/interfaces/forestry-api';
 
 export class ForestryListEventHandler implements IForestryListEventHandler {
-  private forestryView: IForestryListView | undefined;
+  private forestryList: IForestryListView | undefined;
   private apiProxy: ForestryAPI;
 
   constructor(private api: ForestryAPI) {
     this.apiProxy = api;
   }
 
-  init(forestryView: IForestryListView) {
-    this.forestryView = forestryView;
+  init(forestryList: IForestryListView) {
+    this.forestryList = forestryList;
   }
 
   showAllForestriesClicked(): void {
     this.apiProxy.getAll().subscribe((forestries) => {
-      this.forestryView!.showForestries(forestries);
+      this.forestryList!.showForestries(forestries);
     });
   }
 }

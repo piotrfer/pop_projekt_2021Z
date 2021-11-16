@@ -4,15 +4,15 @@ import { ForestryDto } from 'src/app/data-types/forestry-dto';
 import { ForestryAPI } from 'src/app/interfaces/forestry-api';
 
 export class AddForestryEventHandler implements IAddForestryEventHandler {
-  private forestryView: IForestryListView | undefined;
+  private forestryList: IForestryListView | undefined;
   private apiProxy: ForestryAPI;
 
   constructor(private api: ForestryAPI) {
     this.apiProxy = api;
   }
 
-  init(forestryView: IForestryListView) {
-    this.forestryView = forestryView;
+  init(forestryList: IForestryListView) {
+    this.forestryList = forestryList;
   }
   saveForestryClicked(forestry: ForestryDto): void {
     this.apiProxy.save(forestry).subscribe((response) => {

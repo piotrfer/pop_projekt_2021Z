@@ -16,20 +16,20 @@ import { ForestryAPI } from 'src/app/interfaces/forestry-api';
 export class ForestryWindowComponent implements OnInit, AfterViewInit {
   @ViewChild('forestryList') 
   private forestryList: IForestryListView|undefined;
-  forestryPresenter: IForestryListEventHandler;
-  addForestryPresenter: IAddForestryEventHandler;
+  forestryListEventHandler: IForestryListEventHandler;
+  addForestryEventHandler: IAddForestryEventHandler;
   forestryProxy: ForestryAPI;
 
   constructor(private http: HttpClient) {
     this.forestryProxy = new ForestryProxy(http);
-    this.forestryPresenter = new ForestryListEventHandler(this.forestryProxy);
-    this.addForestryPresenter = new AddForestryEventHandler(this.forestryProxy);
+    this.forestryListEventHandler = new ForestryListEventHandler(this.forestryProxy);
+    this.addForestryEventHandler = new AddForestryEventHandler(this.forestryProxy);
   }
 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.forestryPresenter.init(this.forestryList!);
-    this.addForestryPresenter.init(this.forestryList!);
+    this.forestryListEventHandler.init(this.forestryList!);
+    this.addForestryEventHandler.init(this.forestryList!);
   }
 }
