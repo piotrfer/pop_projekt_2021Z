@@ -5,7 +5,7 @@ import { ForestryAPI } from 'src/app/interfaces/forestry-api';
 
 export class AddForestryEventHandler implements IAddForestryEventHandler {
   private forestryView: IForestryListView | undefined;
-  private apiProxy: ForestryAPI | undefined;
+  private apiProxy: ForestryAPI;
 
   constructor(private api: ForestryAPI) {
     this.apiProxy = api;
@@ -15,7 +15,7 @@ export class AddForestryEventHandler implements IAddForestryEventHandler {
     this.forestryView = forestryView;
   }
   saveForestryClicked(forestry: ForestryDto): void {
-    this.apiProxy!.save(forestry).subscribe((response) => {
+    this.apiProxy.save(forestry).subscribe((response) => {
       console.log(response);
     });
   }

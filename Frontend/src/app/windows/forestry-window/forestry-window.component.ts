@@ -22,7 +22,7 @@ export class ForestryWindowComponent implements OnInit, AfterViewInit {
 
   constructor(private http: HttpClient) {
     this.forestryProxy = new ForestryProxy(http);
-    this.forestryPresenter = new ForestryListEventHandler(http);
+    this.forestryPresenter = new ForestryListEventHandler(this.forestryProxy);
     this.addForestryPresenter = new AddForestryEventHandler(this.forestryProxy);
   }
 

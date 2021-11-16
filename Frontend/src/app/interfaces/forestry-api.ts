@@ -3,5 +3,5 @@ import {Observable} from 'rxjs/Rx';
 
 export interface ForestryAPI {
     save(forestryDto: ForestryDto): Observable<ForestryDto>;
-    getAll(): Promise<ForestryDto[]>;
+    getAll(): Observable<ForestryDto[]>;
 }

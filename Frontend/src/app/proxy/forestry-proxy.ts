@@ -21,7 +21,7 @@ export class ForestryProxy implements ForestryAPI {
       httpOptions
     );
   }
-  getAll(): Promise<ForestryDto[]> {
-    throw new Error('Method not implemented.');
+  getAll(): Observable<ForestryDto[]> {
+    return this.http.get<ForestryDto[]>(environment.apiURL + 'forestry')
   }
 }

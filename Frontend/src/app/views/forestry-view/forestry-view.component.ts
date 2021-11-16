@@ -22,6 +22,10 @@ export class ForestryViewComponent implements OnInit, IForestryListView {
     public http: HttpClient) {}
 
   ngOnInit(): void {
+    this.onInit();
+  }
+
+  onInit(): void {
     this.forestryPresenter!.showAllForestriesClicked();
   }
 
