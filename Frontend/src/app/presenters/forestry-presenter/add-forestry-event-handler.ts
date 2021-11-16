@@ -16,10 +16,10 @@ export class AddForestryEventHandler implements IAddForestryEventHandler {
   }
   saveForestryClicked(forestry: ForestryDto): void {
     this.apiProxy.save(forestry).subscribe((response) => {
-      this.forestryList?.showPositiveDialog();
+      this.addForestryDialog!.showForestryCreationSuccessMessage();
       console.log(response);
     }, (error => {
-      this.forestryList?.showNegativeDialog(error.statusText);
+      this.addForestryDialog!.showForestryCreationFailureMessage(error.statusText);
     }));
 
   }

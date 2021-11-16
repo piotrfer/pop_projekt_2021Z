@@ -3,6 +3,8 @@ import { IAddForestryView } from 'src/app/interfaces/iadd-forestry-view';
 import { IAddForestryEventHandler } from 'src/app/interfaces/iadd-forestry-event-handler';
 import { AddForestryDialogFormComponent } from './add-forestry-dialog-form/add-forestry-dialog-form.component';
 import { MatDialog } from '@angular/material/dialog';
+import { PositiveDialogComponent } from '../../dialogs/positive-dialog/positive-dialog.component';
+import { NegativeDialogComponent } from '../../dialogs/negative-dialog/negative-dialog.component';
 
 @Component({
   selector: 'app-add-forestry-dialog',
@@ -41,9 +43,17 @@ export class AddForestryDialogComponent implements OnInit, IAddForestryView {
     });
   }
   showForestryCreationSuccessMessage(): void {
-
+    const dialogConfig = {
+      width: '600px',
+      data: {}
+    }
+    const dialogRef = this.dialog.open(PositiveDialogComponent, dialogConfig);
   }
-  showForestryCreationFailureMessage(): void {
-
+  showForestryCreationFailureMessage(error: string): void {
+    const dialogConfig = {
+      width: '600px',
+      data: {error: error}
+    }
+    const dialogRef = this.dialog.open(NegativeDialogComponent, dialogConfig);
   }
 }

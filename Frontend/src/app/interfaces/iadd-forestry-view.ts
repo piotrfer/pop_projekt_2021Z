@@ -1,5 +1,5 @@
 export interface IAddForestryView {
   showCreateForestryForm(): void;
   showForestryCreationSuccessMessage(): void;
-  showForestryCreationFailureMessage(): void;
+  showForestryCreationFailureMessage(error: string): void;
 }
