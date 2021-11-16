@@ -20,13 +20,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatListModule} from "@angular/material/list";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatInputModule} from "@angular/material/input";
+import { AddForestryDialogFormComponent } from './views/forestry-view/add-forestry-dialog/add-forestry-dialog-form/add-forestry-dialog-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ForestryWindowComponent,
     AddForestryDialogComponent,
-    ForestryListComponent
+    ForestryListComponent,
+    AddForestryDialogFormComponent
   ],
   imports: [
     BrowserModule,

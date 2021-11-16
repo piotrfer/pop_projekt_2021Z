@@ -1,7 +1,8 @@
-import { IForestryListView } from './iforestry-list-view';
 import { ForestryDto } from '../data-types/forestry-dto';
+import { IAddForestryView } from './iadd-forestry-view';
 
 export interface IAddForestryEventHandler {
-  init(forestryList: IForestryListView): void;
+  init(addForestryDialog: IAddForestryView): void;
   saveForestryClicked(forestry: ForestryDto): void;
+  addForestryInvoked(): void;
 }
