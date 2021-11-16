@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { ForestryShower } from 'src/app/interfaces/forestry-shower';
-import { ForestryEventHandler } from 'src/app/interfaces/forestry-event-handler';
-import { ForestryPresenter } from 'src/app/presenters/forestry-presenter/forestry-presenter';
-import { AddForestryEventHandler } from 'src/app/interfaces/add-forestry-event-handler';
-import { AddForestryPresenter } from 'src/app/presenters/forestry-presenter/add-forestry-presenter';
+import { IForestryListEventHandler } from 'src/app/interfaces/iforestry-list-event-handler';
+import { ForestryListEventHandler  } from 'src/app/presenters/forestry-presenter/forestry-list-event-handler';
+import { IAddForestryEventHandler } from 'src/app/interfaces/iadd-forestry-event-handler';
+import { AddForestryEventHandler } from 'src/app/presenters/forestry-presenter/add-forestry-event-handler';
 import { ForestryProxy } from 'src/app/proxy/forestry-proxy';
+import { ForestryAPI } from 'src/app/interfaces/forestry-api';
 
 @Component({
   selector: 'app-forestry-window',
@@ -15,12 +16,14 @@ import { ForestryProxy } from 'src/app/proxy/forestry-proxy';
 export class ForestryWindowComponent implements OnInit, AfterViewInit {
   @ViewChild('forestryView') 
   private forestryView: ForestryShower|undefined;
-  forestryPresenter: ForestryEventHandler;
-  addForestryPresenter: AddForestryEventHandler;
+  forestryPresenter: IForestryListEventHandler;
+  addForestryPresenter: IAddForestryEventHandler;
+  forestryProxy: ForestryAPI;
 
   constructor(private http: HttpClient) {
-    this.forestryPresenter = new ForestryPresenter(http);
-    this.addForestryPresenter = new AddForestryPresenter(new ForestryProxy(http));
+    this.forestryProxy = new ForestryProxy(http);
+    this.forestryPresenter = new ForestryListEventHandler(http);
+    this.addForestryPresenter = new AddForestryEventHandler(this.forestryProxy);
   }
 
   ngOnInit(): void {}

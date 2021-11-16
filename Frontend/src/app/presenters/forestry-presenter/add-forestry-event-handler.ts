@@ -1,13 +1,13 @@
 import { ForestryShower } from 'src/app/interfaces/forestry-shower';
-import { AddForestryEventHandler } from 'src/app/interfaces/add-forestry-event-handler';
+import { IAddForestryEventHandler } from 'src/app/interfaces/iadd-forestry-event-handler';
 import { ForestryDto } from 'src/app/data-types/forestry-dto';
-import { ForestryProxy } from 'src/app/proxy/forestry-proxy';
+import { ForestryAPI } from 'src/app/interfaces/forestry-api';
 
-export class AddForestryPresenter implements AddForestryEventHandler {
+export class AddForestryEventHandler implements IAddForestryEventHandler {
   private forestryView: ForestryShower | undefined;
-  private apiProxy: ForestryProxy | undefined;
+  private apiProxy: ForestryAPI | undefined;
 
-  constructor(private api: ForestryProxy) {
+  constructor(private api: ForestryAPI) {
     this.apiProxy = api;
   }
 

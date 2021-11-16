@@ -1,7 +1,7 @@
 import { ForestryShower } from "./forestry-shower";
-import {ForestryDto} from "./../data-types/forestry-dto";
+import {ForestryDto} from "../data-types/forestry-dto";
 
-export interface ForestryEventHandler {
+export interface IForestryListEventHandler {
     init(forestryList: ForestryShower): void;
     showAllForestriesClicked(): void;
     // showCreateForestryForm(): void;
