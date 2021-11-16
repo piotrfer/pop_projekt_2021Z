@@ -6,6 +6,8 @@ import { IAddForestryEventHandler } from 'src/app/interfaces/iadd-forestry-event
 import { MatDialog } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
 import { AddForestryDialogComponent } from '../add-forestry-dialog/add-forestry-dialog.component';
+import {NegativeDialogComponent} from "../../dialogs/negative-dialog/negative-dialog.component";
+import {PositiveDialogComponent} from "../../dialogs/positive-dialog/positive-dialog.component";
 
 @Component({
   selector: 'app-forestry-list',
@@ -54,5 +56,21 @@ export class ForestryListComponent implements IForestryListView, OnInit {
 
   showForestries(forestries: ForestryDto[]): void {
     this.forestries = forestries;
+  }
+
+  showNegativeDialog(error: string): void {
+    const dialogConfig = {
+      width: '600px',
+      data: {error: error}
+    }
+    const dialogRef = this.dialog.open(NegativeDialogComponent, dialogConfig);
+  }
+
+  showPositiveDialog(): void {
+    const dialogConfig = {
+      width: '600px',
+      data: {}
+    }
+    const dialogRef = this.dialog.open(PositiveDialogComponent, dialogConfig);
   }
 }
