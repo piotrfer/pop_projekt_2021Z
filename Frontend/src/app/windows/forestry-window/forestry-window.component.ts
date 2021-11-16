@@ -14,8 +14,8 @@ import { ForestryAPI } from 'src/app/interfaces/forestry-api';
   styleUrls: ['./forestry-window.component.css']
 })
 export class ForestryWindowComponent implements OnInit, AfterViewInit {
-  @ViewChild('forestryView') 
-  private forestryView: IForestryListView|undefined;
+  @ViewChild('forestryList') 
+  private forestryList: IForestryListView|undefined;
   forestryPresenter: IForestryListEventHandler;
   addForestryPresenter: IAddForestryEventHandler;
   forestryProxy: ForestryAPI;
@@ -29,7 +29,7 @@ export class ForestryWindowComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.forestryPresenter.init(this.forestryView!);
-    this.addForestryPresenter.init(this.forestryView!);
+    this.forestryPresenter.init(this.forestryList!);
+    this.addForestryPresenter.init(this.forestryList!);
   }
 }

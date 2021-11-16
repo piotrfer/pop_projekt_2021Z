@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ForestryViewComponent } from './forestry-view.component';
+import { ForestryListComponent } from './forestry-list.component';
 
-describe('ForestryViewComponent', () => {
-  let component: ForestryViewComponent;
-  let fixture: ComponentFixture<ForestryViewComponent>;
+describe('ForestryListComponent', () => {
+  let component: ForestryListComponent;
+  let fixture: ComponentFixture<ForestryListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForestryViewComponent ]
+      declarations: [ ForestryListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ForestryViewComponent);
+    fixture = TestBed.createComponent(ForestryListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

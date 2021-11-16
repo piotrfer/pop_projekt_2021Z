@@ -6,8 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ForestryWindowComponent } from './windows/forestry-window/forestry-window.component';
-import { ForestryViewComponent } from './views/forestry-view/forestry-view.component';
 import { AddForestryDialogComponent } from './views/forestry-view/add-forestry-dialog/add-forestry-dialog.component';
+import { ForestryListComponent } from './views/forestry-view/forestry-list/forestry-list.component';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
@@ -25,8 +25,8 @@ import {MatInputModule} from "@angular/material/input";
   declarations: [
     AppComponent,
     ForestryWindowComponent,
-    ForestryViewComponent,
-    AddForestryDialogComponent
+    AddForestryDialogComponent,
+    ForestryListComponent
   ],
   imports: [
     BrowserModule,
