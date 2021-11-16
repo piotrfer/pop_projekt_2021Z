@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ForestryViewComponent } from './forestry-view.component';
+import { PositiveDialogComponent } from './positive-dialog.component';
 
-describe('ForestryViewComponent', () => {
-  let component: ForestryViewComponent;
-  let fixture: ComponentFixture<ForestryViewComponent>;
+describe('PositiveDialogComponent', () => {
+  let component: PositiveDialogComponent;
+  let fixture: ComponentFixture<PositiveDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForestryViewComponent ]
+      declarations: [ PositiveDialogComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ForestryViewComponent);
+    fixture = TestBed.createComponent(PositiveDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

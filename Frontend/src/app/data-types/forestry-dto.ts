@@ -1,5 +1,5 @@
 export interface ForestryDto {
-    id: string;
+    id?: string;
     location: any; // TODO
     name: string;
 }

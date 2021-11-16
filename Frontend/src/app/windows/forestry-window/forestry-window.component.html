@@ -1,1 +1,8 @@
-<app-forestry-view #forestryView [forestryPresenter]="forestryPresenter"></app-forestry-view>
+<app-forestry-list
+  #forestryList
+  [forestryListEventHandler]="forestryListEventHandler"
+></app-forestry-list>
+<app-add-forestry-dialog
+  #addForestryDialog
+  [addForestryEventHandler]="addForestryEventHandler"
+></app-add-forestry-dialog>
