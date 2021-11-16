@@ -9,4 +9,5 @@ services:
       DATABASE_PASSWORD: f4196915556a59f4003d412a0a829461c4ed3c4acf58e7fdc2ffc58df5d57c20
       DATABASE_DB: d9kjab7r2sepqv
       DATABASE_HOST: ec2-52-17-1-206.eu-west-1.compute.amazonaws.com
+      DATABASE_URL: unbndswpdhaquu:f4196915556a59f4003d412a0a829461c4ed3c4acf58e7fdc2ffc58df5d57c20@ec2-52-17-1-206.eu-west-1.compute.amazonaws.com:5432/d9kjab7r2sepqv
       DATABASE_PORT: 5432

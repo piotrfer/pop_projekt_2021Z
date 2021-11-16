@@ -5,7 +5,7 @@ import { ForestryEventHandler } from 'src/app/interfaces/forestry-event-handler'
 import { ForestryPresenter } from 'src/app/presenters/forestry-presenter/forestry-presenter';
 import { AddForestryEventHandler } from 'src/app/interfaces/add-forestry-event-handler';
 import { AddForestryPresenter } from 'src/app/presenters/forestry-presenter/add-forestry-presenter';
-import { ApiProxyImpl } from 'src/app/proxy/api-proxy-impl';
+import { ForestryProxy } from 'src/app/proxy/forestry-proxy';
 
 @Component({
   selector: 'app-forestry-window',
@@ -20,7 +20,7 @@ export class ForestryWindowComponent implements OnInit, AfterViewInit {
 
   constructor(private http: HttpClient) {
     this.forestryPresenter = new ForestryPresenter(http);
-    this.addForestryPresenter = new AddForestryPresenter(new ApiProxyImpl(http));
+    this.addForestryPresenter = new AddForestryPresenter(new ForestryProxy(http));
   }
 
   ngOnInit(): void {}
