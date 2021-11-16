@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiURL: "http://localhost:4200/api/"
+  // apiURL: "http://localhost:4200/api/"
+  apiURL: "https://pop-backend-api.herokuapp.com/"
 };
 
 /* http://127.0.0.0:4200/

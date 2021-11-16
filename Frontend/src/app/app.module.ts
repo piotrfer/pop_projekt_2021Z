@@ -21,6 +21,8 @@ import {MatListModule} from "@angular/material/list";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatInputModule} from "@angular/material/input";
 import { AddForestryDialogFormComponent } from './views/forestry-view/add-forestry-dialog/add-forestry-dialog-form/add-forestry-dialog-form.component';
+import { PositiveDialogComponent } from './views/dialogs/positive-dialog/positive-dialog.component';
+import { NegativeDialogComponent } from './views/dialogs/negative-dialog/negative-dialog.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { AddForestryDialogFormComponent } from './views/forestry-view/add-forest
     ForestryWindowComponent,
     AddForestryDialogComponent,
     ForestryListComponent,
-    AddForestryDialogFormComponent
+    AddForestryDialogFormComponent,
+    PositiveDialogComponent,
+    NegativeDialogComponent
   ],
   imports: [
     BrowserModule,
