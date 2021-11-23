@@ -21,3 +21,4 @@ class ForestryDto(BaseModel):
         if len(set(value)) < 3:
             raise ValueError(
                 "Invalid coordinates: coordinates cannot form proper polygon")
+        return value

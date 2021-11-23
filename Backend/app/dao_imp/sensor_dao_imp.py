@@ -30,15 +30,13 @@ class SensorDaoImp(SensorDao):
 
     def getAll():
         with Database() as db:
-            return db.query('SELECT * FROM sensor')
+            sensors_dtos = []
 
-        sensors_dtos = []
-
-        for sensor_row in db.session.query(db.SensorRow).all():
-            point = pointStringToCoordinate(str(sensor_row.location))
-            sensors_dtos.append(SensorDto(
-                id=sensor_row.id, location=point, type=sensor_row.type, model=sensor_row.model))
-        return sensors_dtos
+            for sensor_row in db.session.query(db.SensorRow).all():
+                point = pointStringToCoordinate(str(sensor_row.location))
+                sensors_dtos.append(SensorDto(
+                    id=sensor_row.id, location=point, type=sensor_row.type, model=sensor_row.model))
+            return sensors_dtos
 
     def delete(id: UUID1):
         pass
