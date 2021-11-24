@@ -1,6 +1,7 @@
 from flask import Flask
 from api.forestry_api_imp import forestry_api
 from api.sensors_api_imp import sensor_api
+from flask_cors import CORS
 
 app = Flask(__name__)
 CORS(app)

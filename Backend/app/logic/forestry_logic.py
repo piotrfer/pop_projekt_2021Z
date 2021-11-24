@@ -4,6 +4,7 @@ from pydantic.error_wrappers import ValidationError
 from models.forestry_dto import ForestryDto
 from dao_imp.forestry_dao_imp import ForestryDaoImp
 
+
 class ForestryLogic(IForestryLogic):
     def save(forestry_data: dict):
         try:
