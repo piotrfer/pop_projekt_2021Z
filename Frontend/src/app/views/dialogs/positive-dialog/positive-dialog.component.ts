@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-positive-dialog',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./positive-dialog.component.css']
 })
 export class PositiveDialogComponent implements OnInit {
+
+  @Input() message: any;
 
   constructor() { }
 

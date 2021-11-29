@@ -13,7 +13,7 @@ import { NegativeDialogComponent } from '../../dialogs/negative-dialog/negative-
 })
 export class AddSensorDialogComponent implements OnInit, IAddSensorView {
   @Input() addSensorEventHandler: IAddSensorEventHandler | undefined;
-  constructor(public dialog: MatDialog) {   
+  constructor(public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -30,17 +30,20 @@ export class AddSensorDialogComponent implements OnInit, IAddSensorView {
     );
 
     dialogRef.afterClosed().subscribe((result) => {
+      console.log("sensor dialog close result: ")
       console.log(result);
       // todo
       // create Sensor from received data (with controller)
-      const sensor = {
-        //id: "cef0cbf3-6458-4f13-a418-ee4d7e7505dd", // it should be new valid uuid
-        //location: [{"x": 1.0, "y": 1.2}, {"x": 1.0, "y": 1.2}, {"x": 1.0, "y": 1.2}],  // it should be Sensor location
-        location: result.coordinates,
-        model: result.models,
-        type: result.type
-      };
-      this.addSensorEventHandler!.saveSensorClicked(sensor);
+      if(result) {
+        const sensor = {
+          //id: "cef0cbf3-6458-4f13-a418-ee4d7e7505dd", // it should be new valid uuid
+          //location: [{"x": 1.0, "y": 1.2}, {"x": 1.0, "y": 1.2}, {"x": 1.0, "y": 1.2}],  // it should be Sensor location
+          location: result.coordinates,
+          model: result.sensorModel,
+          type: result.sensorType
+        };
+        this.addSensorEventHandler!.saveSensorClicked(sensor);
+      }
     });
   }
   showSensorCreationSuccessMessage(): void {
@@ -49,6 +52,7 @@ export class AddSensorDialogComponent implements OnInit, IAddSensorView {
       data: {}
     }
     const dialogRef = this.dialog.open(PositiveDialogComponent, dialogConfig);
+    dialogRef.componentInstance.message = 'Sensor został dodany poprawnie!';
   }
   showSensorCreationFailureMessage(error: string): void {
     const dialogConfig = {
@@ -56,5 +60,6 @@ export class AddSensorDialogComponent implements OnInit, IAddSensorView {
       data: {error: error}
     }
     const dialogRef = this.dialog.open(NegativeDialogComponent, dialogConfig);
+    dialogRef.componentInstance.message = 'Sensor nie został dodany';
   }
 }

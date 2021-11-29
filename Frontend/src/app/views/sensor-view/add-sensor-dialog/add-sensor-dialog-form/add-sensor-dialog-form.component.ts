@@ -7,40 +7,34 @@ import {FormControl} from "@angular/forms";
   styleUrls: ['./add-sensor-dialog-form.component.css']
 })
 export class AddSensorDialogFormComponent implements OnInit {
-  sensorName = '';
-  sensorSurface = 0;
-  afforestationTypes: string[] = ['Liściaste', 'Iglaste'];
-  afforestation = new FormControl();
-  foresterLodges: string[] = ['Leśniczówka 1', 'Leśniczówka 2', 'Leśniczówka 3'];
-  selectedForesterLodge = '';
-  sensorBorders: string[] = ['Granica 1', 'Granica 2', 'Granica 3'];
-  selectedSensorBorder = '';
-
   x = "";
   y = "";
   coordinates: any[] = [];
+  selectedSensorType = '';
+  sensorTypes: string[] = ['FIRE', 'HUMIDITY'];
+  sensorModel = ''
 
 
 
   returnData(){
     const formValues = {
-      sensorName: this.sensorName,
-      sensorBorder: this.selectedSensorBorder,
-      sensorSurface: this.sensorSurface,
-      afforestationTypes: this.afforestation.value,
-      coordinates: this.coordinates
+      sensorModel: this.sensorModel,
+      sensorType: this.selectedSensorType,
+      coordinates: {long: parseFloat(this.x), lat: parseFloat(this.y)}
     }
 
     return formValues
   }
 
-  handleAddCoordClick(){
-    const coord = {x: parseFloat(this.x), y: parseFloat(this.y)};
-    this.coordinates.push(coord);
-  }
+  // handleAddCoordClick(){
+  //   const coord = {x: parseFloat(this.x), y: parseFloat(this.y)};
+  //   if(this.coordinates.length < 1) {
+  //     this.coordinates.push(coord);
+  //   }
+  // }
 
 
-  constructor() {   
+  constructor() {
   }
 
   ngOnInit(): void {
