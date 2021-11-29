@@ -16,8 +16,8 @@ export class AddForestryDialogFormComponent implements OnInit {
   forestryBorders: string[] = ['Granica 1', 'Granica 2', 'Granica 3'];
   selectedForestryBorder = '';
 
-  x = "";
-  y = "";
+  lat = "";
+  long = "";
   coordinates: any[] = [];
 
 
@@ -36,7 +36,7 @@ export class AddForestryDialogFormComponent implements OnInit {
   }
 
   handleAddCoordClick(){
-    const coord = {x: parseFloat(this.x), y: parseFloat(this.y)};
+    const coord = {lat: parseFloat(this.lat), long: parseFloat(this.long)};
     this.coordinates.push(coord);
   }
 

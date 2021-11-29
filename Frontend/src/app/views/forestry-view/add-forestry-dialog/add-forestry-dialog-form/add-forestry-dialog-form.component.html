@@ -110,13 +110,13 @@
         <div class="col">
           <mat-form-field appearance="fill" style="width: 50px !important">
             <mat-label>X</mat-label>
-            <input matInput [(ngModel)]="x" name="x" />
+            <input matInput [(ngModel)]="lat" name="lat" />
           </mat-form-field>
         </div>
         <div class="col">
           <mat-form-field appearance="fill" style="width: 50px !important">
             <mat-label>Y</mat-label>
-            <input matInput [(ngModel)]="y" name="y" />
+            <input matInput [(ngModel)]="long" name="long" />
           </mat-form-field>
         </div>
         <div>
@@ -134,9 +134,9 @@
   </form>
   <mat-list>
     <mat-list-item *ngFor="let c of coordinates">
-      <span>{{ "x: " + c.x }}</span>
+      <span>{{ "x: " + c.lat }}</span>
       <span>&nbsp;&nbsp;&nbsp;</span>
-      <span>{{ "y: " + c.y }}</span></mat-list-item
+      <span>{{ "y: " + c.long }}</span></mat-list-item
     >
   </mat-list>
 </mat-dialog-content>

@@ -14,7 +14,7 @@ export class SensorListComponent implements ISensorListView, OnInit  {
   @Input() sensorListEventHandler: ISensorListEventHandler | undefined;
   sensors: SensorDto[] | undefined;
 
-  displayedColumns: string[] = ['id', 'name', 'group', 'surface', 'actions'];
+  displayedColumns: string[] = ['id', 'model', 'type'];
   dataSource?: MatTableDataSource<SensorDto>;
   @ViewChild('paginator') paginator: MatPaginator|undefined;
 

@@ -30,6 +30,7 @@ export class ForestryListComponent implements IForestryListView, OnInit  {
 
   onShowDialogButtonClick(): void {
     this.forestryListEventHandler!.addForestryClicked();
+    
   }
 
   showForestries(forestries: ForestryDto[]): void {

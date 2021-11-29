@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ForestryListComponent } from './sensor-list.component';
+import { SensorListComponent } from './sensor-list.component';
 
 describe('ForestryListComponent', () => {
-  let component: ForestryListComponent;
-  let fixture: ComponentFixture<ForestryListComponent>;
+  let component: SensorListComponent;
+  let fixture: ComponentFixture<SensorListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ForestryListComponent ]
+      declarations: [ SensorListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ForestryListComponent);
+    fixture = TestBed.createComponent(SensorListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
