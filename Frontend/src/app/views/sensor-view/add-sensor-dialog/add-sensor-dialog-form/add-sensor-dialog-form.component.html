@@ -1,0 +1,75 @@
+<h2 mat-dialog-title>Dodaj sensor</h2>
+<mat-dialog-content class="mat-typography">
+  <form>
+    <div class="container">
+      <div class="row">
+        <div class="col border">Model</div>
+        <div class="col border">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Model sensora</mat-label>
+            <input matInput [(ngModel)]="sensorModel" name="sensorModel" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col border">Typ sensora</div>
+        <div class="col border">
+          <mat-form-field appearance="fill">
+            <mat-label>Opcje</mat-label>
+            <mat-select
+              [(ngModel)]="selectedSensorType"
+              name="sensorType"
+            >
+              <mat-option *ngFor="let type of sensorTypes" [value]="type">
+                {{ type }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col border">Współrzędne</div>
+      <div class="col">
+        <mat-form-field appearance="fill" style="width: 50px !important">
+          <mat-label>X</mat-label>
+          <input matInput [(ngModel)]="x" name="x" />
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field appearance="fill" style="width: 50px !important">
+          <mat-label>Y</mat-label>
+          <input matInput [(ngModel)]="y" name="y" />
+        </mat-form-field>
+      </div>
+<!--      <div>-->
+<!--        <button-->
+<!--          mat-button-->
+<!--          color="primary"-->
+<!--          cdkFocusInitial-->
+<!--          (click)="handleAddCoordClick()"-->
+<!--        >-->
+<!--          Dodaj współrzędne-->
+<!--        </button>-->
+<!--      </div>-->
+    </div>
+  </form>
+<!--  <mat-list>-->
+<!--    <mat-list-item *ngFor="let c of coordinates">-->
+<!--      <span>{{ "x: " + c.x }}</span>-->
+<!--      <span>&nbsp;&nbsp;&nbsp;</span>-->
+<!--      <span>{{ "y: " + c.y }}</span></mat-list-item-->
+<!--    >-->
+<!--  </mat-list>-->
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button color="warn" mat-dialog-close>Anuluj</button>
+  <button
+    mat-button
+    color="primary"
+    [mat-dialog-close]="returnData()"
+    cdkFocusInitial
+  >
+    Dodaj
+  </button>
+</mat-dialog-actions>

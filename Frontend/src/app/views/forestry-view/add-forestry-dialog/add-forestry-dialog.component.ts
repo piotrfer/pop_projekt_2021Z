@@ -13,7 +13,7 @@ import { NegativeDialogComponent } from '../../dialogs/negative-dialog/negative-
 })
 export class AddForestryDialogComponent implements OnInit, IAddForestryView {
   @Input() addForestryEventHandler: IAddForestryEventHandler | undefined;
-  constructor(public dialog: MatDialog) {   
+  constructor(public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -30,16 +30,19 @@ export class AddForestryDialogComponent implements OnInit, IAddForestryView {
     );
 
     dialogRef.afterClosed().subscribe((result) => {
+      console.log("afterClosed() result: ")
       console.log(result);
       // todo
       // create forestry from received data (with controller)
-      const forestry = {
-        //id: "cef0cbf3-6458-4f13-a418-ee4d7e7505dd", // it should be new valid uuid
-        //location: [{"x": 1.0, "y": 1.2}, {"x": 1.0, "y": 1.2}, {"x": 1.0, "y": 1.2}],  // it should be forestry location
-        location: result.coordinates,
-        name: result.forestryName,
-      };
-      this.addForestryEventHandler!.saveForestryClicked(forestry);
+      if(result) {
+        const forestry = {
+          //id: "cef0cbf3-6458-4f13-a418-ee4d7e7505dd", // it should be new valid uuid
+          //location: [{"x": 1.0, "y": 1.2}, {"x": 1.0, "y": 1.2}, {"x": 1.0, "y": 1.2}],  // it should be forestry location
+          location: result.coordinates,
+          name: result.forestryName,
+        };
+        this.addForestryEventHandler!.saveForestryClicked(forestry);
+      }
     });
   }
   showForestryCreationSuccessMessage(): void {
@@ -48,6 +51,7 @@ export class AddForestryDialogComponent implements OnInit, IAddForestryView {
       data: {}
     }
     const dialogRef = this.dialog.open(PositiveDialogComponent, dialogConfig);
+    dialogRef.componentInstance.message = 'Leśnictwo zostało dodane poprawnie!';
   }
   showForestryCreationFailureMessage(error: string): void {
     const dialogConfig = {
@@ -55,5 +59,6 @@ export class AddForestryDialogComponent implements OnInit, IAddForestryView {
       data: {error: error}
     }
     const dialogRef = this.dialog.open(NegativeDialogComponent, dialogConfig);
+    dialogRef.componentInstance.message = 'Błąd! Leśnictwo nie zostało dodane!';
   }
 }
