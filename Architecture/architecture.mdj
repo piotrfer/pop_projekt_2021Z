@@ -42584,6 +42584,23 @@
 											"subViews": [
 												{
 													"_type": "UMLOperationView",
+													"_id": "AAAAAAF9cviHJv80UIo=",
+													"_parent": {
+														"$ref": "AAAAAAF9cYL0CB2rFNo="
+													},
+													"model": {
+														"$ref": "AAAAAAF9cviHHf8xPWw="
+													},
+													"font": "Arial;13;0",
+													"left": 2029,
+													"top": 944,
+													"width": 221.46337890625,
+													"height": 13,
+													"text": "+constructor(TokenGeneratorAPI)",
+													"horizontalAlignment": 0
+												},
+												{
+													"_type": "UMLOperationView",
 													"_id": "AAAAAAF9cfh0dX8bQig=",
 													"_parent": {
 														"$ref": "AAAAAAF9cYL0CB2rFNo="
@@ -42593,10 +42610,10 @@
 													},
 													"font": "Arial;13;0",
 													"left": 2029,
-													"top": 944,
+													"top": 959,
 													"width": 221.46337890625,
 													"height": 13,
-													"text": "+constructor(ITokenGeneratorShower)",
+													"text": "+init(ITokenGeneratorShower)",
 													"horizontalAlignment": 0
 												},
 												{
@@ -42610,7 +42627,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 2029,
-													"top": 959,
+													"top": 974,
 													"width": 221.46337890625,
 													"height": 13,
 													"text": "+generateTokenClicked()",
@@ -42639,7 +42656,7 @@
 											"left": 2024,
 											"top": 939,
 											"width": 231.46337890625,
-											"height": 38
+											"height": 53
 										},
 										{
 											"_type": "UMLReceptionCompartmentView",
@@ -43010,19 +43027,19 @@
 												},
 												{
 													"_type": "UMLOperationView",
-													"_id": "AAAAAAF9cY/3dEUE6fI=",
+													"_id": "AAAAAAF9cvZcd+vj94s=",
 													"_parent": {
 														"$ref": "AAAAAAF9cYffIyMi2Jc="
 													},
 													"model": {
-														"$ref": "AAAAAAF9cY/3bET51J8="
+														"$ref": "AAAAAAF9cvZX4uveQf8="
 													},
 													"font": "Arial;13;0",
 													"left": 2053,
 													"top": 1295,
 													"width": 187.52880859375,
 													"height": 13,
-													"text": "+generateToken(token: string[1])",
+													"text": "+generateToken(): string[1]",
 													"horizontalAlignment": 0
 												}
 											],
@@ -43573,7 +43590,7 @@
 													},
 													"font": "Arial;13;1",
 													"left": 2029,
-													"top": 1134,
+													"top": 1149,
 													"width": 221.46337890625,
 													"height": 13,
 													"text": "TokenGeneratorAPI"
@@ -43608,7 +43625,7 @@
 											],
 											"font": "Arial;13;0",
 											"left": 2024,
-											"top": 1127,
+											"top": 1142,
 											"width": 231.46337890625,
 											"height": 25,
 											"stereotypeLabel": {
@@ -43652,44 +43669,27 @@
 											"subViews": [
 												{
 													"_type": "UMLOperationView",
-													"_id": "AAAAAAF9cczpYGrbjmA=",
+													"_id": "AAAAAAF9cvZceevmDfU=",
 													"_parent": {
 														"$ref": "AAAAAAF9ccSv5FqoIww="
 													},
 													"model": {
-														"$ref": "AAAAAAF9cczpV2rWNNs="
-													},
-													"font": "Arial;13;0",
-													"left": 2029,
-													"top": 1157,
-													"width": 221.46337890625,
-													"height": 13,
-													"text": "+constructor(HttpClient)",
-													"horizontalAlignment": 0
-												},
-												{
-													"_type": "UMLOperationView",
-													"_id": "AAAAAAF9ccSv6VrNL7A=",
-													"_parent": {
-														"$ref": "AAAAAAF9ccSv5FqoIww="
-													},
-													"model": {
-														"$ref": "AAAAAAF9ccSVylkW2E4="
+														"$ref": "AAAAAAF9cvYjF+vTcm4="
 													},
 													"font": "Arial;13;0",
 													"left": 2029,
 													"top": 1172,
 													"width": 221.46337890625,
 													"height": 13,
-													"text": "+generateToken(token: string[1])",
+													"text": "+generateToken(): string[1]",
 													"horizontalAlignment": 0
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 2024,
-											"top": 1152,
+											"top": 1167,
 											"width": 231.46337890625,
-											"height": 38
+											"height": 23
 										},
 										{
 											"_type": "UMLReceptionCompartmentView",
@@ -43790,7 +43790,7 @@
 													},
 													"font": "Arial;13;1",
 													"left": 2149,
-													"top": 686,
+													"top": 701,
 													"width": 256.1533203125,
 													"height": 13,
 													"text": "ITokenGeneratorShower"
@@ -43825,7 +43825,7 @@
 											],
 											"font": "Arial;13;0",
 											"left": 2144,
-											"top": 679,
+											"top": 694,
 											"width": 266.1533203125,
 											"height": 25,
 											"stereotypeLabel": {
@@ -43869,23 +43869,6 @@
 											"subViews": [
 												{
 													"_type": "UMLOperationView",
-													"_id": "AAAAAAF9ccukC2QKfns=",
-													"_parent": {
-														"$ref": "AAAAAAF9ccT+8F12H3o="
-													},
-													"model": {
-														"$ref": "AAAAAAF9ccukA2QFv0Y="
-													},
-													"font": "Arial;13;0",
-													"left": 2149,
-													"top": 709,
-													"width": 256.1533203125,
-													"height": 13,
-													"text": "+constructor(ITokenGeneratorEventHandler)",
-													"horizontalAlignment": 0
-												},
-												{
-													"_type": "UMLOperationView",
 													"_id": "AAAAAAF9ccT+9V2Y7Cc=",
 													"_parent": {
 														"$ref": "AAAAAAF9ccT+8F12H3o="
@@ -43904,9 +43887,9 @@
 											],
 											"font": "Arial;13;0",
 											"left": 2144,
-											"top": 704,
+											"top": 719,
 											"width": 266.1533203125,
-											"height": 38
+											"height": 23
 										},
 										{
 											"_type": "UMLReceptionCompartmentView",
@@ -44007,7 +43990,7 @@
 													},
 													"font": "Arial;13;1",
 													"left": 1821,
-													"top": 701,
+													"top": 716,
 													"width": 221.46337890625,
 													"height": 13,
 													"text": "ITokenGeneratorEventHandler"
@@ -44042,7 +44025,7 @@
 											],
 											"font": "Arial;13;0",
 											"left": 1816,
-											"top": 694,
+											"top": 709,
 											"width": 231.46337890625,
 											"height": 25,
 											"stereotypeLabel": {
@@ -44086,23 +44069,6 @@
 											"subViews": [
 												{
 													"_type": "UMLOperationView",
-													"_id": "AAAAAAF9ccqlemJviM8=",
-													"_parent": {
-														"$ref": "AAAAAAF9ccUm6l4mE8s="
-													},
-													"model": {
-														"$ref": "AAAAAAF9ccqlbmJsUdo="
-													},
-													"font": "Arial;13;0",
-													"left": 1821,
-													"top": 724,
-													"width": 221.46337890625,
-													"height": 13,
-													"text": "+constructor(ITokenGeneratorShower)",
-													"horizontalAlignment": 0
-												},
-												{
-													"_type": "UMLOperationView",
 													"_id": "AAAAAAF9ccUm7l5Fu+M=",
 													"_parent": {
 														"$ref": "AAAAAAF9ccUm6l4mE8s="
@@ -44139,9 +44105,9 @@
 											],
 											"font": "Arial;13;0",
 											"left": 1816,
-											"top": 719,
+											"top": 734,
 											"width": 231.46337890625,
-											"height": 38
+											"height": 23
 										},
 										{
 											"_type": "UMLReceptionCompartmentView",
@@ -44222,7 +44188,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 2124,
-											"top": 1176,
+											"top": 1184,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 15,
@@ -44243,7 +44209,7 @@
 											"visible": null,
 											"font": "Arial;13;0",
 											"left": 2109,
-											"top": 1176,
+											"top": 1184,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 30,
@@ -44264,7 +44230,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 2153,
-											"top": 1177,
+											"top": 1185,
 											"height": 13,
 											"alpha": -1.5707963267948966,
 											"distance": 15,
@@ -44281,7 +44247,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9cYffIyMb2vc="
 									},
-									"points": "2139:1240;2139:1127",
+									"points": "2139:1240;2139:1142",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAF9ccaaUF5ROJE="
@@ -44374,7 +44340,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9cYL0Bx2kzsk="
 									},
-									"points": "2024:920;1931:920;1931:694",
+									"points": "2024:920;1931:920;1931:709",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAF9ccbADV5j3MI="
@@ -46638,7 +46604,7 @@
 									"operations": [
 										{
 											"_type": "UMLOperation",
-											"_id": "AAAAAAF9cfh0bX8W8JY=",
+											"_id": "AAAAAAF9cviHHf8xPWw=",
 											"_parent": {
 												"$ref": "AAAAAAF9cYLY2B14S7g="
 											},
@@ -46646,12 +46612,30 @@
 											"parameters": [
 												{
 													"_type": "UMLParameter",
+													"_id": "AAAAAAF9cvjPsQAc6NU=",
+													"_parent": {
+														"$ref": "AAAAAAF9cviHHf8xPWw="
+													},
+													"name": "TokenGeneratorAPI",
+													"type": ""
+												}
+											]
+										},
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAF9cfh0bX8W8JY=",
+											"_parent": {
+												"$ref": "AAAAAAF9cYLY2B14S7g="
+											},
+											"name": "init",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
 													"_id": "AAAAAAF9cfh0bX8X7yw=",
 													"_parent": {
 														"$ref": "AAAAAAF9cfh0bX8W8JY="
 													},
-													"name": "ITokenGeneratorShower",
-													"type": ""
+													"name": "ITokenGeneratorShower"
 												}
 											]
 										},
@@ -46781,7 +46765,7 @@
 								},
 								{
 									"_type": "UMLOperation",
-									"_id": "AAAAAAF9cY/3bET51J8=",
+									"_id": "AAAAAAF9cvZX4uveQf8=",
 									"_parent": {
 										"$ref": "AAAAAAF9cYepNSLUVH8="
 									},
@@ -46789,13 +46773,14 @@
 									"parameters": [
 										{
 											"_type": "UMLParameter",
-											"_id": "AAAAAAF9cY/3bET6ows=",
+											"_id": "AAAAAAF9cvZX4uvfHwo=",
 											"_parent": {
-												"$ref": "AAAAAAF9cY/3bET51J8="
+												"$ref": "AAAAAAF9cvZX4uveQf8="
 											},
 											"name": "token",
 											"type": "string",
-											"multiplicity": "1"
+											"multiplicity": "1",
+											"direction": "return"
 										}
 									]
 								}
@@ -46809,25 +46794,6 @@
 							},
 							"name": "ITokenGeneratorEventHandler",
 							"operations": [
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAF9ccqlbmJsUdo=",
-									"_parent": {
-										"$ref": "AAAAAAF9caJB/1dtq4Y="
-									},
-									"name": "constructor",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAF9cctWWmOKY9I=",
-											"_parent": {
-												"$ref": "AAAAAAF9ccqlbmJsUdo="
-											},
-											"name": "ITokenGeneratorShower",
-											"type": ""
-										}
-									]
-								},
 								{
 									"_type": "UMLOperation",
 									"_id": "AAAAAAF9ccPI7VfyRX8=",
@@ -46854,25 +46820,6 @@
 							},
 							"name": "ITokenGeneratorShower",
 							"operations": [
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAF9ccukA2QFv0Y=",
-									"_parent": {
-										"$ref": "AAAAAAF9ccQA21hTZFI="
-									},
-									"name": "constructor",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAF9ccukA2QGkr4=",
-											"_parent": {
-												"$ref": "AAAAAAF9ccukA2QFv0Y="
-											},
-											"name": "ITokenGeneratorEventHandler",
-											"type": ""
-										}
-									]
-								},
 								{
 									"_type": "UMLOperation",
 									"_id": "AAAAAAF9ccRQ0FjgjJk=",
@@ -46905,26 +46852,7 @@
 							"operations": [
 								{
 									"_type": "UMLOperation",
-									"_id": "AAAAAAF9cczpV2rWNNs=",
-									"_parent": {
-										"$ref": "AAAAAAF9ccSVylkV7H8="
-									},
-									"name": "constructor",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAF9cczpV2rXq+U=",
-											"_parent": {
-												"$ref": "AAAAAAF9cczpV2rWNNs="
-											},
-											"name": "HttpClient",
-											"type": ""
-										}
-									]
-								},
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAF9ccSVylkW2E4=",
+									"_id": "AAAAAAF9cvYjF+vTcm4=",
 									"_parent": {
 										"$ref": "AAAAAAF9ccSVylkV7H8="
 									},
@@ -46932,13 +46860,14 @@
 									"parameters": [
 										{
 											"_type": "UMLParameter",
-											"_id": "AAAAAAF9ccSVylkXTXE=",
+											"_id": "AAAAAAF9cvYjF+vUxwo=",
 											"_parent": {
-												"$ref": "AAAAAAF9ccSVylkW2E4="
+												"$ref": "AAAAAAF9cvYjF+vTcm4="
 											},
 											"name": "token",
 											"type": "string",
-											"multiplicity": "1"
+											"multiplicity": "1",
+											"direction": "return"
 										}
 									]
 								}
