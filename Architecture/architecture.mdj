@@ -42584,6 +42584,23 @@
 											"subViews": [
 												{
 													"_type": "UMLOperationView",
+													"_id": "AAAAAAF9cviHJv80UIo=",
+													"_parent": {
+														"$ref": "AAAAAAF9cYL0CB2rFNo="
+													},
+													"model": {
+														"$ref": "AAAAAAF9cviHHf8xPWw="
+													},
+													"font": "Arial;13;0",
+													"left": 2029,
+													"top": 944,
+													"width": 221.46337890625,
+													"height": 13,
+													"text": "+constructor(TokenGeneratorAPI)",
+													"horizontalAlignment": 0
+												},
+												{
+													"_type": "UMLOperationView",
 													"_id": "AAAAAAF9cfh0dX8bQig=",
 													"_parent": {
 														"$ref": "AAAAAAF9cYL0CB2rFNo="
@@ -42593,10 +42610,10 @@
 													},
 													"font": "Arial;13;0",
 													"left": 2029,
-													"top": 944,
+													"top": 959,
 													"width": 221.46337890625,
 													"height": 13,
-													"text": "+constructor(ITokenGeneratorShower)",
+													"text": "+init(ITokenGeneratorShower)",
 													"horizontalAlignment": 0
 												},
 												{
@@ -42610,7 +42627,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 2029,
-													"top": 959,
+													"top": 974,
 													"width": 221.46337890625,
 													"height": 13,
 													"text": "+generateTokenClicked()",
@@ -42639,7 +42656,7 @@
 											"left": 2024,
 											"top": 939,
 											"width": 231.46337890625,
-											"height": 38
+											"height": 53
 										},
 										{
 											"_type": "UMLReceptionCompartmentView",
@@ -46638,7 +46655,7 @@
 									"operations": [
 										{
 											"_type": "UMLOperation",
-											"_id": "AAAAAAF9cfh0bX8W8JY=",
+											"_id": "AAAAAAF9cviHHf8xPWw=",
 											"_parent": {
 												"$ref": "AAAAAAF9cYLY2B14S7g="
 											},
@@ -46646,12 +46663,30 @@
 											"parameters": [
 												{
 													"_type": "UMLParameter",
+													"_id": "AAAAAAF9cvjPsQAc6NU=",
+													"_parent": {
+														"$ref": "AAAAAAF9cviHHf8xPWw="
+													},
+													"name": "TokenGeneratorAPI",
+													"type": ""
+												}
+											]
+										},
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAF9cfh0bX8W8JY=",
+											"_parent": {
+												"$ref": "AAAAAAF9cYLY2B14S7g="
+											},
+											"name": "init",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
 													"_id": "AAAAAAF9cfh0bX8X7yw=",
 													"_parent": {
 														"$ref": "AAAAAAF9cfh0bX8W8JY="
 													},
-													"name": "ITokenGeneratorShower",
-													"type": ""
+													"name": "ITokenGeneratorShower"
 												}
 											]
 										},
