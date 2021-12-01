@@ -28,6 +28,10 @@ import { AddForestryDialogFormComponent } from './views/forestry-view/add-forest
 import { AddSensorDialogFormComponent } from './views/sensor-view/add-sensor-dialog/add-sensor-dialog-form/add-sensor-dialog-form.component';
 import { PositiveDialogComponent } from './views/dialogs/positive-dialog/positive-dialog.component';
 import { NegativeDialogComponent } from './views/dialogs/negative-dialog/negative-dialog.component';
+import { TokenGeneratorShowerComponent } from './views/token-view/token-generator-shower/token-generator-shower.component';
+import { TokenWindowComponent } from './windows/token-window/token-window.component';
+import { TokenModalComponent } from './views/token-view/token-modal/token-modal.component';
+import { GenerateButtonContainerComponent } from './views/token-view/generate-button-container/generate-button-container.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { NegativeDialogComponent } from './views/dialogs/negative-dialog/negativ
     SensorListComponent,
     AddSensorDialogFormComponent,
     PositiveDialogComponent,
-    NegativeDialogComponent
+    NegativeDialogComponent,
+    TokenGeneratorShowerComponent,
+    TokenWindowComponent,
+    TokenModalComponent,
+    GenerateButtonContainerComponent
   ],
   imports: [
     BrowserModule,
