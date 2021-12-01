@@ -4576,7 +4576,7 @@
 											"top": 990,
 											"width": 168.314453125,
 											"height": 13,
-											"text": "ISensorReadingRegistrator"
+											"text": "ISensorRegistrator"
 										},
 										{
 											"_type": "LabelView",
@@ -4662,9 +4662,26 @@
 											"font": "Arial;13;0",
 											"left": 333,
 											"top": -27,
-											"width": 282.9150390625,
+											"width": 335.6259765625,
 											"height": 13,
 											"text": "+registerReading(reading: SensorReadingDto[1])",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF9dX/oZ2U2Sd8=",
+											"_parent": {
+												"$ref": "AAAAAAF8pEJa2Ibgh1Q="
+											},
+											"model": {
+												"$ref": "AAAAAAF8pHSHtI8ohGA="
+											},
+											"font": "Arial;13;0",
+											"left": 333,
+											"top": -12,
+											"width": 335.6259765625,
+											"height": 13,
+											"text": "+registerSensor(sensorDto: SensorDto[1], token: string[1])",
 											"horizontalAlignment": 0
 										}
 									],
@@ -4672,8 +4689,8 @@
 									"font": "Arial;13;0",
 									"left": 328,
 									"top": -32,
-									"width": 292.9150390625,
-									"height": 23
+									"width": 345.6259765625,
+									"height": 38
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -6827,23 +6844,6 @@
 									"subViews": [
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAF8pHSHwY8v5vg=",
-											"_parent": {
-												"$ref": "AAAAAAF8pE1+HIoPq7A="
-											},
-											"model": {
-												"$ref": "AAAAAAF8pHSHtI8ohGA="
-											},
-											"font": "Arial;13;0",
-											"left": 213,
-											"top": -35,
-											"width": 335.6259765625,
-											"height": 13,
-											"text": "+registerSensor(sensorDto: SensorDto[1], token: string[1])",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAF8pHSnlI81FDg=",
 											"_parent": {
 												"$ref": "AAAAAAF8pE1+HIoPq7A="
@@ -6853,7 +6853,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 213,
-											"top": -20,
+											"top": -35,
 											"width": 335.6259765625,
 											"height": 13,
 											"text": "+getAll(): SensorDto[0..*]",
@@ -6870,7 +6870,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 213,
-											"top": -5,
+											"top": -20,
 											"width": 335.6259765625,
 											"height": 13,
 											"text": "+assignToForestry(forestryId: UUID[1], sensorId: UUID[1])",
@@ -6882,7 +6882,7 @@
 									"left": 208,
 									"top": -40,
 									"width": 345.6259765625,
-									"height": 53
+									"height": 38
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -13935,7 +13935,7 @@
 											"top": -96,
 											"width": 111.97900390625,
 											"height": 13,
-											"text": "(from Components)"
+											"text": "(from interfaces)"
 										},
 										{
 											"_type": "LabelView",
@@ -15645,7 +15645,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF8lOlLvhVfIuw="
 									},
-									"name": "ISensorReadingRegistrator",
+									"name": "ISensorRegistrator",
 									"operations": [
 										{
 											"_type": "UMLOperation",
@@ -15668,22 +15668,12 @@
 													"multiplicity": "1"
 												}
 											]
-										}
-									]
-								},
-								{
-									"_type": "UMLInterface",
-									"_id": "AAAAAAF8pE1+G4oGm1A=",
-									"_parent": {
-										"$ref": "AAAAAAF8lOlLvhVfIuw="
-									},
-									"name": "SensorAPI",
-									"operations": [
+										},
 										{
 											"_type": "UMLOperation",
 											"_id": "AAAAAAF8pHSHtI8ohGA=",
 											"_parent": {
-												"$ref": "AAAAAAF8pE1+G4oGm1A="
+												"$ref": "AAAAAAF8pEJa14bXnog="
 											},
 											"name": "registerSensor",
 											"parameters": [
@@ -15710,7 +15700,17 @@
 													"multiplicity": "1"
 												}
 											]
-										},
+										}
+									]
+								},
+								{
+									"_type": "UMLInterface",
+									"_id": "AAAAAAF8pE1+G4oGm1A=",
+									"_parent": {
+										"$ref": "AAAAAAF8lOlLvhVfIuw="
+									},
+									"name": "SensorAPI",
+									"operations": [
 										{
 											"_type": "UMLOperation",
 											"_id": "AAAAAAF8pHSne48y8J8=",
@@ -16941,67 +16941,67 @@
 											]
 										}
 									]
-								}
-							]
-						}
-					]
-				},
-				{
-					"_type": "UMLInterface",
-					"_id": "AAAAAAF9cjLa4kK4DXc=",
-					"_parent": {
-						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
-					},
-					"name": "IAuthenticationDao",
-					"operations": [
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAF9cjOQmUMGvgw=",
-							"_parent": {
-								"$ref": "AAAAAAF9cjLa4kK4DXc="
-							},
-							"name": "saveToken",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAF9cjOyJEMKt0Y=",
-									"_parent": {
-										"$ref": "AAAAAAF9cjOQmUMGvgw="
-									},
-									"name": "token",
-									"type": "string",
-									"multiplicity": "1"
-								}
-							]
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAF9cjTfEEN9FVk=",
-							"_parent": {
-								"$ref": "AAAAAAF9cjLa4kK4DXc="
-							},
-							"name": "tokenExists",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAF9cjUGd0OBovs=",
-									"_parent": {
-										"$ref": "AAAAAAF9cjTfEEN9FVk="
-									},
-									"name": "token",
-									"type": "string",
-									"multiplicity": "1"
 								},
 								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAF9cjVAKEOHyNk=",
+									"_type": "UMLInterface",
+									"_id": "AAAAAAF9cjLa4kK4DXc=",
 									"_parent": {
-										"$ref": "AAAAAAF9cjTfEEN9FVk="
+										"$ref": "AAAAAAF8pFIUeouFhFk="
 									},
-									"name": "exists",
-									"type": "boolean",
-									"multiplicity": "1",
-									"direction": "return"
+									"name": "IAuthenticationDao",
+									"operations": [
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAF9cjOQmUMGvgw=",
+											"_parent": {
+												"$ref": "AAAAAAF9cjLa4kK4DXc="
+											},
+											"name": "saveToken",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAF9cjOyJEMKt0Y=",
+													"_parent": {
+														"$ref": "AAAAAAF9cjOQmUMGvgw="
+													},
+													"name": "token",
+													"type": "string",
+													"multiplicity": "1"
+												}
+											]
+										},
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAF9cjTfEEN9FVk=",
+											"_parent": {
+												"$ref": "AAAAAAF9cjLa4kK4DXc="
+											},
+											"name": "tokenExists",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAF9cjUGd0OBovs=",
+													"_parent": {
+														"$ref": "AAAAAAF9cjTfEEN9FVk="
+													},
+													"name": "token",
+													"type": "string",
+													"multiplicity": "1"
+												},
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAF9cjVAKEOHyNk=",
+													"_parent": {
+														"$ref": "AAAAAAF9cjTfEEN9FVk="
+													},
+													"name": "exists",
+													"type": "boolean",
+													"multiplicity": "1",
+													"direction": "return"
+												}
+											]
+										}
+									]
 								}
 							]
 						}
