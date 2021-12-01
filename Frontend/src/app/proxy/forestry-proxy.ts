@@ -2,7 +2,7 @@ import { ForestryAPI } from 'src/app/interfaces/forestry-api';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ForestryDto } from 'src/app/data-types/forestry-dto';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
 
 export class ForestryProxy implements ForestryAPI {
   constructor(private http: HttpClient) {}

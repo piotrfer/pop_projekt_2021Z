@@ -2,7 +2,7 @@ import { SensorAPI } from 'src/app/interfaces/sensor-api';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { SensorDto } from 'src/app/data-types/sensor-dto';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
 
 export class SensorProxy implements SensorAPI {
   constructor(private http: HttpClient) {}

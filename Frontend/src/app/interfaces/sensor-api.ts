@@ -1,5 +1,5 @@
 import { SensorDto } from '../data-types/sensor-dto';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs';
 
 export interface SensorAPI {
   save(forestryDto: SensorDto): Observable<SensorDto>;
