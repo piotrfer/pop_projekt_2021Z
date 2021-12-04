@@ -5,10 +5,10 @@ from database import Database
 import re
 
 
-class ForestryDaoImp(ForestryDao):
+with Database() as db:
+    class ForestryDaoImp(ForestryDao):
 
-    def save(forestry_dto: ForestryDto):
-        with Database() as db:
+        def save(forestry_dto: ForestryDto):
             polygon_string = coordinatesToPolygonString(forestry_dto.location)
             forestry_row = db.ForestryRow(
                 name=forestry_dto.name, location=polygon_string)
@@ -16,16 +16,14 @@ class ForestryDaoImp(ForestryDao):
             db.session.commit()
             return forestry_row.id
 
-    def get(id: UUID1):
-        with Database() as db:
+        def get(id: UUID1):
             forestry_row = db.session.query(db.ForestryRow).filter(
                 db.ForestryRow.id == id.hex).first()
             coordinates = polygonStringToCoordinates(
                 str(forestry_row.location))
             return ForestryDto(id=forestry_row.id, name=forestry_row.name, location=coordinates)
 
-    def getAll():
-        with Database() as db:
+        def getAll():
             forestries_dtos = []
             for forestry_row in db.session.query(db.ForestryRow).all():
                 coordinates = polygonStringToCoordinates(
@@ -34,22 +32,20 @@ class ForestryDaoImp(ForestryDao):
                     id=forestry_row.id, name=forestry_row.name, location=coordinates))
             return forestries_dtos
 
-    def delete(id: UUID1):
-        with Database() as db:
+        def delete(id: UUID1):
             forestry = db.session.query(db.ForestryRow).filter(
                 db.ForestryRow.id == id.hex).first()
             db.session.delete(forestry)
 
-    def update(forestry_dto: ForestryDto):
-        with Database() as db:
+        def update(forestry_dto: ForestryDto):
             forestry_row = db.session.query(db.ForestryRow).filter(
                 db.ForestryRow.id == forestry_dto.id.hex).first()
             forestry_row.name = forestry_dto.name
             polygon_string = coordinatesToPolygonString(forestry_dto.location)
             forestry_row.location = polygon_string
 
-    def existsById(id: UUID1) -> bool:
-        pass
+        def existsById(id: UUID1) -> bool:
+            pass
 
 
 def polygonStringToCoordinates(polygonString: str):
