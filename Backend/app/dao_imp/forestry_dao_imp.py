@@ -44,7 +44,7 @@ with Database() as db:
             polygon_string = coordinatesToPolygonString(forestry_dto.location)
             forestry_row.location = polygon_string
 
-        def existsById(id: UUID1) -> bool:
+        def forestryExistsById(id: UUID1) -> bool:
             pass
 
 

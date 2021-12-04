@@ -21,7 +21,8 @@ with Database() as db:
 
         def get(id: UUID1):
             sensor_row = (
-                db.session.query(db.SensorRow).filter(db.SensorRow.id == id.hex).first()
+                db.session.query(db.SensorRow).filter(
+                    db.SensorRow.id == id.hex).first()
             )
             point = pointStringToCoordinate(str(sensor_row.location))
             return SensorDto(
@@ -74,6 +75,12 @@ with Database() as db:
             pass
 
         def deleteEmergencyEvent(id: UUID1):
+            pass
+
+        def sensorExistsById(id: UUID1) -> bool:
+            pass
+
+        def setForestryForSensor(sensorId: UUID1, forestryId: UUID1):
             pass
 
 

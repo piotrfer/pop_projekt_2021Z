@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify
 from flask import Response
 
 from pydantic.error_wrappers import ValidationError
+from models.message import Message
 
 from logic.sensor_logic import SensorLogic
 
@@ -16,6 +17,7 @@ def getAll():
 
 @sensor_api.route("/sensor",  methods=['POST'])
 def registerSensor():
+    # This endpoint should be removed in the future
     content = request.json
 
     try:
@@ -24,3 +26,12 @@ def registerSensor():
         return Response(f"{e.json()}", 400)
 
     return jsonify({'Message': 'Success', 'Sensor_id': id})
+
+
+@sensor_api.route("/assign",  methods=['POST'])
+def assignToForestry():
+    content = request.json
+
+    message: Message = SensorLogic.assignToForestry(content)
+
+    return Response(message.content, content_type="application/json", status=message.code)
