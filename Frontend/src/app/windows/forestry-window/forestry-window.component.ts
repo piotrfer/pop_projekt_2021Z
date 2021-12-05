@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { IForestryListView } from 'src/app/interfaces/iforestry-list-view';
 import { IForestryListEventHandler } from 'src/app/interfaces/iforestry-list-event-handler';
 import { ForestryListEventHandler  } from 'src/app/presenters/forestry-presenter/forestry-list-event-handler';
@@ -14,7 +14,7 @@ import { IAddForestryView } from 'src/app/interfaces/iadd-forestry-view';
   templateUrl: './forestry-window.component.html',
   styleUrls: ['./forestry-window.component.css']
 })
-export class ForestryWindowComponent implements OnInit, AfterViewInit {
+export class ForestryWindowComponent implements AfterViewInit {
   @ViewChild('forestryList') 
   private forestryList: IForestryListView|undefined;
   @ViewChild('addForestryDialog') 
@@ -30,8 +30,6 @@ export class ForestryWindowComponent implements OnInit, AfterViewInit {
     this.forestryListEventHandler = new ForestryListEventHandler(this.forestryProxy);
     this.addForestryEventHandler = new AddForestryEventHandler(this.forestryProxy);
   }
-
-  ngOnInit(): void {}
 
   ngAfterViewInit(): void {
     this.forestryListEventHandler.init(this.forestryList!, this.addForestryEventHandler!);
