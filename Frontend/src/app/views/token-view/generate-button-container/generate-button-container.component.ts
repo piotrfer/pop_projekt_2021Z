@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ITokenGeneratorEventHandler } from 'src/app/interfaces/itoken-generator-event-handler';
+import { ITokenGeneratorEventHandler } from 'src/app/interfaces/event-handler/itoken-generator-event-handler';
 
 @Component({
   selector: 'app-generate-button-container',

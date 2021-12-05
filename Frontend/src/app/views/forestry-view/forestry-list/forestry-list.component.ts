@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { ForestryDto } from 'src/app/data-types/forestry-dto';
-import { IForestryListView } from 'src/app/interfaces/iforestry-list-view';
-import { IForestryListEventHandler } from 'src/app/interfaces/iforestry-list-event-handler';
+import { IForestryListView } from 'src/app/interfaces/view/iforestry-list-view';
+import { IForestryListEventHandler } from 'src/app/interfaces/event-handler/iforestry-list-event-handler';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 

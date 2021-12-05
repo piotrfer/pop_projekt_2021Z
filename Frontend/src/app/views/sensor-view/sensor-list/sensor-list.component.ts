@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { SensorDto } from 'src/app/data-types/sensor-dto';
-import { ISensorListView } from 'src/app/interfaces/isensor-list-view';
-import { ISensorListEventHandler } from 'src/app/interfaces/isensor-list-event-handler';
+import { ISensorListView } from 'src/app/interfaces/view/isensor-list-view';
+import { ISensorListEventHandler } from 'src/app/interfaces/event-handler/isensor-list-event-handler';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 

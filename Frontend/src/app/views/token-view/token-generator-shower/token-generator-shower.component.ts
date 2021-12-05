@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ITokenGeneratorEventHandler } from 'src/app/interfaces/itoken-generator-event-handler';
-import { ITokenGeneratorShower } from 'src/app/interfaces/itoken-generator-shower';
+import { ITokenGeneratorEventHandler } from 'src/app/interfaces/event-handler/itoken-generator-event-handler';
+import { ITokenGeneratorShower } from 'src/app/interfaces/view/itoken-generator-shower';
 import { TokenModalComponent } from '../token-modal/token-modal.component';
 
 @Component({

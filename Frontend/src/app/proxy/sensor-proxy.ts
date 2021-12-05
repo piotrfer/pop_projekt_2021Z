@@ -1,4 +1,4 @@
-import { SensorAPI } from 'src/app/interfaces/sensor-api';
+import { SensorAPI } from 'src/app/interfaces/api/sensor-api';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { SensorDto } from 'src/app/data-types/sensor-dto';

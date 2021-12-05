@@ -1,7 +1,7 @@
-import { IForestryListView } from 'src/app/interfaces/iforestry-list-view';
-import { IForestryListEventHandler } from 'src/app/interfaces/iforestry-list-event-handler';
-import { ForestryAPI } from 'src/app/interfaces/forestry-api';
-import { IAddForestryEventHandler } from 'src/app/interfaces/iadd-forestry-event-handler';
+import { IForestryListView } from 'src/app/interfaces/view/iforestry-list-view';
+import { IForestryListEventHandler } from 'src/app/interfaces/event-handler/iforestry-list-event-handler';
+import { ForestryAPI } from 'src/app/interfaces/api/forestry-api';
+import { IAddForestryEventHandler } from 'src/app/interfaces/event-handler/iadd-forestry-event-handler';
 
 export class ForestryListEventHandler implements IForestryListEventHandler {
   private forestryList: IForestryListView | undefined;

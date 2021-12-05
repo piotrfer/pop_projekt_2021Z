@@ -1,13 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { ISensorListView } from 'src/app/interfaces/isensor-list-view';
-import { ISensorListEventHandler } from 'src/app/interfaces/isensor-list-event-handler';
+import { ISensorListView } from 'src/app/interfaces/view/isensor-list-view';
+import { ISensorListEventHandler } from 'src/app/interfaces/event-handler/isensor-list-event-handler';
 import { SensorListEventHandler  } from 'src/app/presenters/sensor-presenter/sensor-list-event-handler';
-import { IAddSensorEventHandler } from 'src/app/interfaces/iadd-sensor-event-handler';
+import { IAddSensorEventHandler } from 'src/app/interfaces/event-handler/iadd-sensor-event-handler';
 import { AddSensorEventHandler } from 'src/app/presenters/sensor-presenter/add-sensor-event-handler';
 import { SensorProxy } from 'src/app/proxy/sensor-proxy';
-import { SensorAPI } from 'src/app/interfaces/sensor-api';
-import { IAddSensorView } from 'src/app/interfaces/iadd-sensor-view';
+import { SensorAPI } from 'src/app/interfaces/api/sensor-api';
+import { IAddSensorView } from 'src/app/interfaces/view/iadd-sensor-view';
 
 @Component({
   selector: 'app-sensor-window',

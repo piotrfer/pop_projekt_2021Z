@@ -1,7 +1,7 @@
-import { IAddSensorView } from 'src/app/interfaces/iadd-sensor-view';
-import { IAddSensorEventHandler } from 'src/app/interfaces/iadd-sensor-event-handler';
+import { IAddSensorView } from 'src/app/interfaces/view/iadd-sensor-view';
+import { IAddSensorEventHandler } from 'src/app/interfaces/event-handler/iadd-sensor-event-handler';
 import { SensorDto } from 'src/app/data-types/sensor-dto';
-import { SensorAPI } from 'src/app/interfaces/sensor-api';
+import { SensorAPI } from 'src/app/interfaces/api/sensor-api';
 
 export class AddSensorEventHandler implements IAddSensorEventHandler {
   private addSensorDialog: IAddSensorView|undefined;

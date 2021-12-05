@@ -1,4 +1,4 @@
-import { ForestryDto } from '../data-types/forestry-dto';
+import { ForestryDto } from '../../data-types/forestry-dto';
 import { Observable } from 'rxjs';
 
 export interface ForestryAPI {

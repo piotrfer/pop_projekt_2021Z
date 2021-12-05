@@ -1,4 +1,4 @@
-import { ForestryAPI } from 'src/app/interfaces/forestry-api';
+import { ForestryAPI } from 'src/app/interfaces/api/forestry-api';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { ForestryDto } from 'src/app/data-types/forestry-dto';

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IAddForestryView } from 'src/app/interfaces/iadd-forestry-view';
-import { IAddForestryEventHandler } from 'src/app/interfaces/iadd-forestry-event-handler';
+import { IAddForestryView } from 'src/app/interfaces/view/iadd-forestry-view';
+import { IAddForestryEventHandler } from 'src/app/interfaces/event-handler/iadd-forestry-event-handler';
 import { AddForestryDialogFormComponent } from './add-forestry-dialog-form/add-forestry-dialog-form.component';
 import { MatDialog } from '@angular/material/dialog';
 import { PositiveDialogComponent } from '../../dialogs/positive-dialog/positive-dialog.component';

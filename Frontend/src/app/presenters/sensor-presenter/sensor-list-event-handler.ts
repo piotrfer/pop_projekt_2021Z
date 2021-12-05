@@ -1,7 +1,7 @@
-import { ISensorListView } from 'src/app/interfaces/isensor-list-view';
-import { ISensorListEventHandler } from 'src/app/interfaces/isensor-list-event-handler';
-import { SensorAPI } from 'src/app/interfaces/sensor-api';
-import { IAddSensorEventHandler } from 'src/app/interfaces/iadd-sensor-event-handler';
+import { ISensorListView } from 'src/app/interfaces/view/isensor-list-view';
+import { ISensorListEventHandler } from 'src/app/interfaces/event-handler/isensor-list-event-handler';
+import { SensorAPI } from 'src/app/interfaces/api/sensor-api';
+import { IAddSensorEventHandler } from 'src/app/interfaces/event-handler/iadd-sensor-event-handler';
 
 export class SensorListEventHandler implements ISensorListEventHandler {
   private SensorList: ISensorListView | undefined;

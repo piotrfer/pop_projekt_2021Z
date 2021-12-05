@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
-import { ITokenGeneratorEventHandler } from 'src/app/interfaces/itoken-generator-event-handler';
-import { ITokenGeneratorShower } from 'src/app/interfaces/itoken-generator-shower';
-import { TokenGeneratorAPI } from 'src/app/interfaces/token-generator-api';
+import { ITokenGeneratorEventHandler } from 'src/app/interfaces/event-handler/itoken-generator-event-handler';
+import { ITokenGeneratorShower } from 'src/app/interfaces/view/itoken-generator-shower';
+import { TokenGeneratorAPI } from 'src/app/interfaces/api/token-generator-api';
 import { TokenGeneratorEventHandler } from 'src/app/presenters/token-presenter/token-generator-event-handler';
 import { TokenGeneratorProxy } from 'src/app/proxy/token-generator-proxy';
 

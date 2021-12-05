@@ -1,4 +1,4 @@
-import { SensorDto } from '../data-types/sensor-dto';
+import { SensorDto } from '../../data-types/sensor-dto';
 import { Observable } from 'rxjs';
 
 export interface SensorAPI {

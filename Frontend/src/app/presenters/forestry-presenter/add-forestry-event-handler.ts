@@ -1,7 +1,7 @@
-import { IAddForestryView } from 'src/app/interfaces/iadd-forestry-view';
-import { IAddForestryEventHandler } from 'src/app/interfaces/iadd-forestry-event-handler';
+import { IAddForestryView } from 'src/app/interfaces/view/iadd-forestry-view';
+import { IAddForestryEventHandler } from 'src/app/interfaces/event-handler/iadd-forestry-event-handler';
 import { ForestryDto } from 'src/app/data-types/forestry-dto';
-import { ForestryAPI } from 'src/app/interfaces/forestry-api';
+import { ForestryAPI } from 'src/app/interfaces/api/forestry-api';
 
 export class AddForestryEventHandler implements IAddForestryEventHandler {
   private addForestryDialog: IAddForestryView|undefined;

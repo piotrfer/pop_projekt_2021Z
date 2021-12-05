@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable, of } from 'rxjs';
-import { TokenGeneratorAPI } from '../interfaces/token-generator-api';
+import { TokenGeneratorAPI } from '../interfaces/api/token-generator-api';
 
 export class TokenGeneratorProxy implements TokenGeneratorAPI {
   constructor(private http: HttpClient) {}

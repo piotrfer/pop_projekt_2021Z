@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IAddSensorView } from 'src/app/interfaces/iadd-sensor-view';
-import { IAddSensorEventHandler } from 'src/app/interfaces/iadd-sensor-event-handler';
+import { IAddSensorView } from 'src/app/interfaces/view/iadd-sensor-view';
+import { IAddSensorEventHandler } from 'src/app/interfaces/event-handler/iadd-sensor-event-handler';
 import { AddSensorDialogFormComponent } from './add-sensor-dialog-form/add-sensor-dialog-form.component';
 import { MatDialog } from '@angular/material/dialog';
 import { PositiveDialogComponent } from '../../dialogs/positive-dialog/positive-dialog.component';

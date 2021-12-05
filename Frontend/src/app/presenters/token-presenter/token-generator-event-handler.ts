@@ -1,6 +1,6 @@
-import { ITokenGeneratorEventHandler } from 'src/app/interfaces/itoken-generator-event-handler';
-import { TokenGeneratorAPI } from 'src/app/interfaces/token-generator-api';
-import { ITokenGeneratorShower } from 'src/app/interfaces/itoken-generator-shower';
+import { ITokenGeneratorEventHandler } from 'src/app/interfaces/event-handler/itoken-generator-event-handler';
+import { TokenGeneratorAPI } from 'src/app/interfaces/api/token-generator-api';
+import { ITokenGeneratorShower } from 'src/app/interfaces/view/itoken-generator-shower';
 
 export class TokenGeneratorEventHandler implements ITokenGeneratorEventHandler {
   private tokenGeneratorShower: ITokenGeneratorShower | undefined;
