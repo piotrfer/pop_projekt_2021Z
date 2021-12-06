@@ -54612,7 +54612,7 @@
 													"font": "Arial;13;0",
 													"left": 1813,
 													"top": 605,
-													"width": 157.1806640625,
+													"width": 189.71240234375,
 													"height": 13,
 													"text": "«Component»"
 												},
@@ -54625,7 +54625,7 @@
 													"font": "Arial;13;1",
 													"left": 1813,
 													"top": 620,
-													"width": 157.1806640625,
+													"width": 189.71240234375,
 													"height": 13,
 													"text": "ErrorModalComponent"
 												},
@@ -54660,7 +54660,7 @@
 											"font": "Arial;13;0",
 											"left": 1808,
 											"top": 600,
-											"width": 167.1806640625,
+											"width": 199.71240234375,
 											"height": 38,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF9cvy4ikcwZaM="
@@ -54697,16 +54697,16 @@
 													"font": "Arial;13;0",
 													"left": 1813,
 													"top": 643,
-													"width": 157.1806640625,
+													"width": 189.71240234375,
 													"height": 13,
-													"text": "«Input»+message: string[1]",
+													"text": "«Input»+response.body: string[1]",
 													"horizontalAlignment": 0
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 1808,
 											"top": 638,
-											"width": 167.1806640625,
+											"width": 199.71240234375,
 											"height": 23
 										},
 										{
@@ -54721,7 +54721,7 @@
 											"font": "Arial;13;0",
 											"left": 1808,
 											"top": 661,
-											"width": 167.1806640625,
+											"width": 199.71240234375,
 											"height": 10
 										},
 										{
@@ -54764,7 +54764,7 @@
 									"containerChangeable": true,
 									"left": 1808,
 									"top": 600,
-									"width": 167.1806640625,
+									"width": 199.71240234375,
 									"height": 71,
 									"nameCompartment": {
 										"$ref": "AAAAAAF9cvy4ikcvcMk="
@@ -57694,7 +57694,7 @@
 											"_parent": {
 												"$ref": "AAAAAAF9cvy4ikcskww="
 											},
-											"name": "message",
+											"name": "response.body",
 											"stereotype": "Input",
 											"type": "string",
 											"multiplicity": "1"
