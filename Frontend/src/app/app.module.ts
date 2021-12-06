@@ -32,6 +32,11 @@ import { TokenGeneratorShowerComponent } from './views/token-view/token-generato
 import { TokenWindowComponent } from './windows/token-window/token-window.component';
 import { TokenModalComponent } from './views/token-view/token-modal/token-modal.component';
 import { GenerateButtonContainerComponent } from './views/token-view/generate-button-container/generate-button-container.component';
+import { AssignForestryShowerComponent } from './views/sensor-view/assign-forestry-shower/assign-forestry-shower.component';
+import { NoForestriesModalComponent } from './views/sensor-view/no-forestries-modal/no-forestries-modal.component';
+import { SuccessModalComponent } from './views/sensor-view/success-modal/success-modal.component';
+import { ErrorModalComponent } from './views/sensor-view/error-modal/error-modal.component';
+import { AssignForestryDialogComponent } from './views/sensor-view/assign-forestry-dialog/assign-forestry-dialog.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +54,12 @@ import { GenerateButtonContainerComponent } from './views/token-view/generate-bu
     TokenGeneratorShowerComponent,
     TokenWindowComponent,
     TokenModalComponent,
-    GenerateButtonContainerComponent
+    GenerateButtonContainerComponent,
+    AssignForestryShowerComponent,
+    NoForestriesModalComponent,
+    SuccessModalComponent,
+    ErrorModalComponent,
+    AssignForestryDialogComponent
   ],
   imports: [
     BrowserModule,
