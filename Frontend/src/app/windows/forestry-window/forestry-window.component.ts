@@ -33,6 +33,6 @@ export class ForestryWindowComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.forestryListEventHandler.init(this.forestryList!, this.addForestryEventHandler!);
-    this.addForestryEventHandler.init(this.addForestryDialog!);
+    this.addForestryEventHandler.init(this.addForestryDialog!, this.forestryListEventHandler!);
   }
 }

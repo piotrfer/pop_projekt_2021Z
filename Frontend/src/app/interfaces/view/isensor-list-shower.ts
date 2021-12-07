@@ -1,5 +1,5 @@
 import { SensorDto } from '../../data-types/sensor-dto';
 
-export interface ISensorListView {
+export interface ISensorListShower {
   showSensors(forestries: SensorDto[]): void;
 }
