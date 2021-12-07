@@ -1,8 +1,8 @@
 import { IAddSensorEventHandler } from './iadd-sensor-event-handler';
-import { ISensorListView } from '../view/isensor-list-view';
+import { ISensorListShower } from '../view/isensor-list-shower';
 
 export interface ISensorListEventHandler {
-  init(sensorList: ISensorListView, addSensorEventHandler: IAddSensorEventHandler): void;
+  init(sensorList: ISensorListShower, addSensorEventHandler: IAddSensorEventHandler): void;
   showAllSensorsClicked(): void;
   addSensorClicked(): void;
 }

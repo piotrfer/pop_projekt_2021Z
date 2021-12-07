@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
-import { ISensorListView } from 'src/app/interfaces/view/isensor-list-view';
+import { ISensorListShower } from 'src/app/interfaces/view/isensor-list-shower';
 import { ISensorListEventHandler } from 'src/app/interfaces/event-handler/isensor-list-event-handler';
 import { SensorListEventHandler  } from 'src/app/presenters/sensor-presenter/sensor-list-event-handler';
 import { IAddSensorEventHandler } from 'src/app/interfaces/event-handler/iadd-sensor-event-handler';
@@ -21,7 +21,7 @@ import { AssignForestryEventHandler } from 'src/app/presenters/sensor-presenter/
 })
 export class SensorWindowComponent implements AfterViewInit {
   @ViewChild('sensorList')
-  private sensorList: ISensorListView|undefined;
+  private sensorList: ISensorListShower|undefined;
   @ViewChild('addSensorDialog') 
   private addSensorDialog: IAddSensorView|undefined;
   @ViewChild('assignForestryShower')

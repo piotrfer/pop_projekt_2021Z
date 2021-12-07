@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { SensorDto } from 'src/app/data-types/sensor-dto';
-import { ISensorListView } from 'src/app/interfaces/view/isensor-list-view';
+import { ISensorListShower } from 'src/app/interfaces/view/isensor-list-shower';
 import { ISensorListEventHandler } from 'src/app/interfaces/event-handler/isensor-list-event-handler';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
@@ -10,7 +10,7 @@ import { MatPaginator } from '@angular/material/paginator';
   templateUrl: './sensor-list.component.html',
   styleUrls: ['./sensor-list.component.css'],
 })
-export class SensorListComponent implements ISensorListView, OnInit  {
+export class SensorListComponent implements ISensorListShower, OnInit  {
   @Input() sensorListEventHandler: ISensorListEventHandler | undefined;
   sensors: SensorDto[] | undefined;
 
