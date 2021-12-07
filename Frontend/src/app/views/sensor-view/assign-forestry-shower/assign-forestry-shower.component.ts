@@ -18,10 +18,11 @@ export class AssignForestryShowerComponent implements IAssignForestryShower {
 
   constructor(public dialog: MatDialog) {}
 
-  showAvailableForestries(forestries: ForestryDto[]): void {
+  showAvailableForestries(forestries: ForestryDto[], sensorId: string): void {
     const dialogRef = this.dialog.open(AssignForestryDialogComponent);
     dialogRef.componentInstance.assignForestryEventHandler = this.assignForestryEventHandler;
     dialogRef.componentInstance.forestries = forestries;
+    dialogRef.componentInstance.sensorId = sensorId;
   }
 
   showNoForestriesMessage(): void {

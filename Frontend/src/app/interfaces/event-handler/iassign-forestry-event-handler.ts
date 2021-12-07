@@ -1,4 +1,4 @@
 export interface IAssignForestryEventHandler {
-    selectForestryClicked(): void;
+    selectForestryClicked(sensorId: string): void;
     forestrySelected(forestryId: string, sensorId: string): void;
 }

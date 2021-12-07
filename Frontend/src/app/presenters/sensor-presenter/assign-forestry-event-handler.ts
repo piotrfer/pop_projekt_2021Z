@@ -17,12 +17,12 @@ export class AssignForestryEventHandler implements IAssignForestryEventHandler {
     this.assignForestryShower = assignForestryShower;
   }
 
-  selectForestryClicked(): void {
+  selectForestryClicked(sensorId: string): void {
     this.forestryProxy.getAll().subscribe((forestries) => {
       if (forestries.length === 0) {
         this.assignForestryShower!.showNoForestriesMessage();
       } else {
-        this.assignForestryShower!.showAvailableForestries(forestries);
+        this.assignForestryShower!.showAvailableForestries(forestries, sensorId);
       }
     });
   }
@@ -33,7 +33,8 @@ export class AssignForestryEventHandler implements IAssignForestryEventHandler {
         this.assignForestryShower!.showSuccessMessage();
       },
       (error: any) => {
-        this.assignForestryShower!.showErrorMessage({ body: 'TODO' });
+        console.log(error)
+        this.assignForestryShower!.showErrorMessage({ body: JSON.stringify(error.error) });
       }
     );
   }

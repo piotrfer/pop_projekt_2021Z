@@ -1,6 +1,9 @@
-<mat-dialog-content class="mat-typography">
-  <p>Assign:</p>
+<mat-dialog-content *ngIf="this.forestries" class="mat-typography">
+  <p class="title">Sensor {{ this.sensorId }}</p>
+  <div class="forestries">
+    <button *ngFor="let forestry of this.forestries" mat-raised-button (click)="forestrySelected(forestry.id!)">{{ forestry.name }}</button>
+  </div>
 </mat-dialog-content>
 <div mat-dialog-actions>
-  <button mat-button [mat-dialog-close]="">OK</button>
+  <button mat-button [mat-dialog-close]="">Anuluj</button>
 </div>

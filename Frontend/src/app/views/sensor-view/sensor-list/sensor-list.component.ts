@@ -14,7 +14,7 @@ export class SensorListComponent implements ISensorListView, OnInit  {
   @Input() sensorListEventHandler: ISensorListEventHandler | undefined;
   sensors: SensorDto[] | undefined;
 
-  displayedColumns: string[] = ['id', 'model', 'type'];
+  displayedColumns: string[] = ['id', 'model', 'type', 'forestry'];
   dataSource?: MatTableDataSource<SensorDto>;
   @ViewChild('paginator') paginator: MatPaginator|undefined;
 
@@ -39,5 +39,9 @@ export class SensorListComponent implements ISensorListView, OnInit  {
     if (this.paginator) {
       this.dataSource.paginator = this.paginator;
     }
+  }
+
+  onAssignForestryButtonClick(sensorId: string): void {
+    this.sensorListEventHandler!.assignForestryClicked(sensorId);
   }
 }

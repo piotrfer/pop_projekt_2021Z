@@ -30,9 +30,9 @@ export class SensorProxy implements SensorAPI {
         'Content-Type': 'application/json',
       }),
     };
-    const body = { forestryId, sensorId };
+    const body = { forestry_id: forestryId, sensor_id: sensorId };
     return this.http.post<void>(
-      environment.apiURL + 'sensor',
+      environment.apiURL + 'assign',
       body,
       httpOptions
     );

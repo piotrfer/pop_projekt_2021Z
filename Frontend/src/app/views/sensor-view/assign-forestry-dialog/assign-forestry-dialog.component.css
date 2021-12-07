@@ -1,0 +1,14 @@
+.forestries {
+    display: flex;
+    flex-wrap: wrap;
+}
+.forestries button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.mat-dialog-actions {
+    justify-content: center;
+}
+.title {
+    text-align: center;
+}

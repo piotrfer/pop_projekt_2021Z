@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { ForestryDto } from 'src/app/data-types/forestry-dto';
 import { IAssignForestryEventHandler } from 'src/app/interfaces/event-handler/iassign-forestry-event-handler';
 
@@ -10,8 +11,12 @@ import { IAssignForestryEventHandler } from 'src/app/interfaces/event-handler/ia
 export class AssignForestryDialogComponent {
   @Input() assignForestryEventHandler: IAssignForestryEventHandler | undefined;
   @Input() forestries: ForestryDto[] | undefined;
+  @Input() sensorId: string | undefined;
+
+  constructor(public dialogRef: MatDialogRef<AssignForestryDialogComponent>) {}
 
   forestrySelected(forestryId: string) {
-
+    this.assignForestryEventHandler!.forestrySelected(forestryId, this.sensorId!);
+    this.dialogRef.close()
   }
 }
