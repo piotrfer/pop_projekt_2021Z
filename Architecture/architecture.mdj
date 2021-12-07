@@ -28768,9 +28768,9 @@
 														"$ref": "AAAAAAF9SR1Aoh3nZZc="
 													},
 													"font": "Arial;13;0",
-													"left": 24.72998046875,
+													"left": 22.55908203125,
 													"top": 5,
-													"width": 144.05712890625,
+													"width": 130.62548828125,
 													"height": 13,
 													"text": "Assign sensor to forestry"
 												},
@@ -28783,7 +28783,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -30178,7 +30178,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 80.72998046875,
+													"left": 79.99365234375,
 													"top": 237,
 													"width": 1,
 													"height": 13
@@ -30192,7 +30192,7 @@
 													"font": "Arial;13;1",
 													"left": 61,
 													"top": 237,
-													"width": 14.72998046875,
+													"width": 13.99365234375,
 													"height": 13,
 													"text": "alt"
 												},
@@ -30225,7 +30225,7 @@
 																	"font": "Arial;13;0",
 																	"left": 76,
 																	"top": 270,
-																	"width": 125.708984375,
+																	"width": 116.8095703125,
 																	"height": 13,
 																	"text": "[forestries.size() == 0]"
 																}
@@ -30258,7 +30258,7 @@
 																	"font": "Arial;13;0",
 																	"left": 76,
 																	"top": 424,
-																	"width": 118.1171875,
+																	"width": 109.47802734375,
 																	"height": 13,
 																	"text": "[forestries.size() > 0]"
 																}
@@ -31315,7 +31315,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 1357.07177734375,
+													"left": 1355.61181640625,
 													"top": 765,
 													"width": 1,
 													"height": 13
@@ -31329,7 +31329,7 @@
 													"font": "Arial;13;1",
 													"left": 1333,
 													"top": 765,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -31362,7 +31362,7 @@
 																	"font": "Arial;13;0",
 																	"left": 1348,
 																	"top": 798,
-																	"width": 78.736328125,
+																	"width": 74.369140625,
 																	"height": 13,
 																	"text": "[forestrExists]"
 																}
@@ -31417,7 +31417,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 1685.07177734375,
+													"left": 1683.61181640625,
 													"top": 941,
 													"width": 1,
 													"height": 13
@@ -31431,7 +31431,7 @@
 													"font": "Arial;13;1",
 													"left": 1661,
 													"top": 941,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -31464,7 +31464,7 @@
 																	"font": "Arial;13;0",
 																	"left": 1676,
 																	"top": 974,
-																	"width": 80.91357421875,
+																	"width": 73.658203125,
 																	"height": 13,
 																	"text": "[sensorExists]"
 																}
@@ -31965,7 +31965,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 112.72998046875,
+													"left": 111.99365234375,
 													"top": 1261,
 													"width": 1,
 													"height": 13
@@ -31979,7 +31979,7 @@
 													"font": "Arial;13;1",
 													"left": 93,
 													"top": 1261,
-													"width": 14.72998046875,
+													"width": 13.99365234375,
 													"height": 13,
 													"text": "alt"
 												},
@@ -32012,7 +32012,7 @@
 																	"font": "Arial;13;0",
 																	"left": 108,
 																	"top": 1294,
-																	"width": 143.09521484375,
+																	"width": 127.67041015625,
 																	"height": 13,
 																	"text": "[response.status == 200]"
 																}
@@ -32045,7 +32045,7 @@
 																	"font": "Arial;13;0",
 																	"left": 108,
 																	"top": 1392,
-																	"width": 143.09521484375,
+																	"width": 127.67041015625,
 																	"height": 13,
 																	"text": "[response.status == 404]"
 																}
@@ -51720,23 +51720,6 @@
 												},
 												{
 													"_type": "UMLOperationView",
-													"_id": "AAAAAAF9lR4DS78GGE0=",
-													"_parent": {
-														"$ref": "AAAAAAF9ctb2HbdtfCA="
-													},
-													"model": {
-														"$ref": "AAAAAAF9lR4DRr8BMr8="
-													},
-													"font": "Arial;13;0",
-													"left": 1381,
-													"top": 1102,
-													"width": 400.35791015625,
-													"height": 13,
-													"text": "+selectForestryClicked(sensorId: UUID[1])",
-													"horizontalAlignment": 0
-												},
-												{
-													"_type": "UMLOperationView",
 													"_id": "AAAAAAF9c5dVt9TYhFs=",
 													"_parent": {
 														"$ref": "AAAAAAF9ctb2HbdtfCA="
@@ -51746,10 +51729,27 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1381,
-													"top": 1117,
+													"top": 1102,
 													"width": 400.35791015625,
 													"height": 13,
 													"text": "+forestrySelected(forestryId: UUID[1], sensorId: UUID[1])",
+													"horizontalAlignment": 0
+												},
+												{
+													"_type": "UMLOperationView",
+													"_id": "AAAAAAF9lneV9Hxtf08=",
+													"_parent": {
+														"$ref": "AAAAAAF9ctb2HbdtfCA="
+													},
+													"model": {
+														"$ref": "AAAAAAF9lneV63xolOM="
+													},
+													"font": "Arial;13;0",
+													"left": 1381,
+													"top": 1117,
+													"width": 400.35791015625,
+													"height": 13,
+													"text": "+assignForestryInvoked(sensorId: UUID[1])",
 													"horizontalAlignment": 0
 												}
 											],
@@ -52110,7 +52110,7 @@
 													},
 													"font": "Arial;13;1",
 													"left": 1861,
-													"top": 864,
+													"top": 869,
 													"width": 328.35791015625,
 													"height": 13,
 													"text": "IAssignForestryEventHandler"
@@ -52145,7 +52145,7 @@
 											],
 											"font": "Arial;13;0",
 											"left": 1856,
-											"top": 857,
+											"top": 862,
 											"width": 338.35791015625,
 											"height": 25,
 											"stereotypeLabel": {
@@ -52189,23 +52189,6 @@
 											"subViews": [
 												{
 													"_type": "UMLOperationView",
-													"_id": "AAAAAAF9lRybc7fI41E=",
-													"_parent": {
-														"$ref": "AAAAAAF9ctb2HbeGkPs="
-													},
-													"model": {
-														"$ref": "AAAAAAF9lRyba7fD2uo="
-													},
-													"font": "Arial;13;0",
-													"left": 1861,
-													"top": 887,
-													"width": 328.35791015625,
-													"height": 13,
-													"text": "+selectForestryClicked(sensorId: UUID[1])",
-													"horizontalAlignment": 0
-												},
-												{
-													"_type": "UMLOperationView",
 													"_id": "AAAAAAF9c5Sq3WmQTuw=",
 													"_parent": {
 														"$ref": "AAAAAAF9ctb2HbeGkPs="
@@ -52215,16 +52198,33 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1861,
-													"top": 902,
+													"top": 892,
 													"width": 328.35791015625,
 													"height": 13,
 													"text": "+forestrySelected(forestryId: UUID[1], sensorId: UUID[1])",
+													"horizontalAlignment": 0
+												},
+												{
+													"_type": "UMLOperationView",
+													"_id": "AAAAAAF9lncUVnp7+Bw=",
+													"_parent": {
+														"$ref": "AAAAAAF9ctb2HbeGkPs="
+													},
+													"model": {
+														"$ref": "AAAAAAF9lncUTXp20tM="
+													},
+													"font": "Arial;13;0",
+													"left": 1861,
+													"top": 907,
+													"width": 328.35791015625,
+													"height": 13,
+													"text": "+assignForestryInvoked(sensorId: UUID[1])",
 													"horizontalAlignment": 0
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 1856,
-											"top": 882,
+											"top": 887,
 											"width": 338.35791015625,
 											"height": 38
 										},
@@ -52266,7 +52266,7 @@
 									"left": 1856,
 									"top": 824,
 									"width": 338.35791015625,
-									"height": 97,
+									"height": 102,
 									"stereotypeDisplay": "icon",
 									"nameCompartment": {
 										"$ref": "AAAAAAF9ctb2HbeABhU="
@@ -52366,7 +52366,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9ctb2HbdmOd0="
 									},
-									"points": "1785:1080;2024:1080;2024:857",
+									"points": "1785:1080;2024:1080;2024:862",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAF9ctb2HremJAE="
@@ -57868,26 +57868,6 @@
 							"operations": [
 								{
 									"_type": "UMLOperation",
-									"_id": "AAAAAAF9lRyba7fD2uo=",
-									"_parent": {
-										"$ref": "AAAAAAF9ctb2JLiYM1A="
-									},
-									"name": "selectForestryClicked",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAF9lRyba7fE3N8=",
-											"_parent": {
-												"$ref": "AAAAAAF9lRyba7fD2uo="
-											},
-											"name": "sensorId",
-											"type": "UUID",
-											"multiplicity": "1"
-										}
-									]
-								},
-								{
-									"_type": "UMLOperation",
 									"_id": "AAAAAAF9c5Sq12mJeP0=",
 									"_parent": {
 										"$ref": "AAAAAAF9ctb2JLiYM1A="
@@ -57909,6 +57889,26 @@
 											"_id": "AAAAAAF9c5Sq12mLBls=",
 											"_parent": {
 												"$ref": "AAAAAAF9c5Sq12mJeP0="
+											},
+											"name": "sensorId",
+											"type": "UUID",
+											"multiplicity": "1"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAF9lncUTXp20tM=",
+									"_parent": {
+										"$ref": "AAAAAAF9ctb2JLiYM1A="
+									},
+									"name": "assignForestryInvoked",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAF9lncUTXp3xgs=",
+											"_parent": {
+												"$ref": "AAAAAAF9lncUTXp20tM="
 											},
 											"name": "sensorId",
 											"type": "UUID",
@@ -58491,26 +58491,6 @@
 										},
 										{
 											"_type": "UMLOperation",
-											"_id": "AAAAAAF9lR4DRr8BMr8=",
-											"_parent": {
-												"$ref": "AAAAAAF9ctb2I7h99zs="
-											},
-											"name": "selectForestryClicked",
-											"parameters": [
-												{
-													"_type": "UMLParameter",
-													"_id": "AAAAAAF9lR4DRr8Couw=",
-													"_parent": {
-														"$ref": "AAAAAAF9lR4DRr8BMr8="
-													},
-													"name": "sensorId",
-													"type": "UUID",
-													"multiplicity": "1"
-												}
-											]
-										},
-										{
-											"_type": "UMLOperation",
 											"_id": "AAAAAAF9c5dVstTRm5s=",
 											"_parent": {
 												"$ref": "AAAAAAF9ctb2I7h99zs="
@@ -58532,6 +58512,26 @@
 													"_id": "AAAAAAF9c5dVstTTwao=",
 													"_parent": {
 														"$ref": "AAAAAAF9c5dVstTRm5s="
+													},
+													"name": "sensorId",
+													"type": "UUID",
+													"multiplicity": "1"
+												}
+											]
+										},
+										{
+											"_type": "UMLOperation",
+											"_id": "AAAAAAF9lneV63xolOM=",
+											"_parent": {
+												"$ref": "AAAAAAF9ctb2I7h99zs="
+											},
+											"name": "assignForestryInvoked",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAF9lneV63xpcKw=",
+													"_parent": {
+														"$ref": "AAAAAAF9lneV63xolOM="
 													},
 													"name": "sensorId",
 													"type": "UUID",
