@@ -9483,9 +9483,26 @@
 											"font": "Arial;13;0",
 											"left": 37,
 											"top": -259,
-											"width": 151.35986328125,
+											"width": 230.8134765625,
 											"height": 13,
 											"text": "+showAllSensorsClicked()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF9leR6KeeZ8LE=",
+											"_parent": {
+												"$ref": "AAAAAAF8pL1KdZwtHaY="
+											},
+											"model": {
+												"$ref": "AAAAAAF9SSYElx8HGos="
+											},
+											"font": "Arial;13;0",
+											"left": 37,
+											"top": -244,
+											"width": 230.8134765625,
+											"height": 13,
+											"text": "+assignForestryClicked(sensorId: UUID[1])",
 											"horizontalAlignment": 0
 										}
 									],
@@ -9493,8 +9510,8 @@
 									"font": "Arial;13;0",
 									"left": 32,
 									"top": -264,
-									"width": 161.35986328125,
-									"height": 23
+									"width": 240.8134765625,
+									"height": 38
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -13214,23 +13231,6 @@
 									"subViews": [
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAF9SSYEtB8Klrw=",
-											"_parent": {
-												"$ref": "AAAAAAF9SSEfKB6FgxQ="
-											},
-											"model": {
-												"$ref": "AAAAAAF9SSYElx8HGos="
-											},
-											"font": "Arial;13;0",
-											"left": -43,
-											"top": -19,
-											"width": 328.35791015625,
-											"height": 13,
-											"text": "+selectForestryClicked(sensorId: UUID[1])",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAF9SSZSih8RMAk=",
 											"_parent": {
 												"$ref": "AAAAAAF9SSEfKB6FgxQ="
@@ -13240,10 +13240,27 @@
 											},
 											"font": "Arial;13;0",
 											"left": -43,
-											"top": -4,
+											"top": -19,
 											"width": 328.35791015625,
 											"height": 13,
 											"text": "+forestrySelected(forestryId: UUID[1], sensorId: UUID[1])",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF9leR6Muecxqc=",
+											"_parent": {
+												"$ref": "AAAAAAF9SSEfKB6FgxQ="
+											},
+											"model": {
+												"$ref": "AAAAAAF9lY+Gm1Vmkzs="
+											},
+											"font": "Arial;13;0",
+											"left": -43,
+											"top": -4,
+											"width": 328.35791015625,
+											"height": 13,
+											"text": "+assignForestryInvoked(sensorId: UUID[1])",
 											"horizontalAlignment": 0
 										}
 									],
@@ -33695,13 +33712,30 @@
 											"height": 13,
 											"text": "+type: string[1]",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF9lea3JugEmIY=",
+											"_parent": {
+												"$ref": "AAAAAAF8pFubo40+0+A="
+											},
+											"model": {
+												"$ref": "AAAAAAF9lea3IOgBX6c="
+											},
+											"font": "Arial;13;0",
+											"left": 661,
+											"top": 715,
+											"width": 156.45703125,
+											"height": 13,
+											"text": "+type: ForestryDto[1]",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 656,
 									"top": 665,
 									"width": 166.45703125,
-									"height": 53
+									"height": 68
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -33714,7 +33748,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 656,
-									"top": 718,
+									"top": 733,
 									"width": 166.45703125,
 									"height": 10
 								},
@@ -33756,7 +33790,7 @@
 							"left": 656,
 							"top": 640,
 							"width": 166.45703125,
-							"height": 88,
+							"height": 103,
 							"nameCompartment": {
 								"$ref": "AAAAAAF8pFubo405mNk="
 							},
@@ -33924,13 +33958,30 @@
 											"height": 13,
 											"text": "+name: string[1]",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF9leYSTOf6jqY=",
+											"_parent": {
+												"$ref": "AAAAAAF8pFu9oY1qKt0="
+											},
+											"model": {
+												"$ref": "AAAAAAF9leYSQ+f3Xsk="
+											},
+											"font": "Arial;13;0",
+											"left": 877,
+											"top": 715,
+											"width": 156.45703125,
+											"height": 13,
+											"text": "+sensors: SensorDto[0..*]",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 872,
 									"top": 665,
 									"width": 166.45703125,
-									"height": 53
+									"height": 68
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -33943,7 +33994,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 872,
-									"top": 718,
+									"top": 733,
 									"width": 166.45703125,
 									"height": 10
 								},
@@ -33985,7 +34036,7 @@
 							"left": 872,
 							"top": 640,
 							"width": 166.45703125,
-							"height": 88,
+							"height": 103,
 							"nameCompartment": {
 								"$ref": "AAAAAAF8pFu9oY1lBks="
 							},
@@ -35290,6 +35341,19 @@
 							"documentation": "['FIRE', 'HUMIDITY']",
 							"type": "string",
 							"multiplicity": "1"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF9lea3IOgBX6c=",
+							"_parent": {
+								"$ref": "AAAAAAF8pFuUOo00fQU="
+							},
+							"name": "type",
+							"documentation": "['FIRE', 'HUMIDITY']",
+							"type": {
+								"$ref": "AAAAAAF8pFu9oY1ivdc="
+							},
+							"multiplicity": "1"
 						}
 					]
 				},
@@ -35330,6 +35394,18 @@
 							"name": "name",
 							"type": "string",
 							"multiplicity": "1"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF9leYSQ+f3Xsk=",
+							"_parent": {
+								"$ref": "AAAAAAF8pFu9oY1ivdc="
+							},
+							"name": "sensors",
+							"type": {
+								"$ref": "AAAAAAF8pFuUOo00fQU="
+							},
+							"multiplicity": "0..*"
 						}
 					]
 				},
@@ -66995,7 +67071,7 @@
 											"font": "Arial;13;1",
 											"left": 2797,
 											"top": 141,
-											"width": 154.59716796875,
+											"width": 230.8134765625,
 											"height": 13,
 											"text": "ISensorListEventHandler"
 										},
@@ -67008,7 +67084,7 @@
 											"font": "Arial;13;0",
 											"left": 2797,
 											"top": 156,
-											"width": 154.59716796875,
+											"width": 230.8134765625,
 											"height": 13,
 											"text": "(from interfaces)"
 										},
@@ -67029,7 +67105,7 @@
 									"font": "Arial;13;0",
 									"left": 2792,
 									"top": 134,
-									"width": 164.59716796875,
+									"width": 240.8134765625,
 									"height": 40,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF85S0qWirSxhE="
@@ -67082,17 +67158,34 @@
 											"font": "Arial;13;0",
 											"left": 2797,
 											"top": 179,
-											"width": 154.59716796875,
+											"width": 230.8134765625,
 											"height": 13,
 											"text": "+showAllSensorsClicked()",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF9leR54+eTVgY=",
+											"_parent": {
+												"$ref": "AAAAAAF85S0qWirX0lk="
+											},
+											"model": {
+												"$ref": "AAAAAAF9SSYElx8HGos="
+											},
+											"font": "Arial;13;0",
+											"left": 2797,
+											"top": 194,
+											"width": 230.8134765625,
+											"height": 13,
+											"text": "+assignForestryClicked(sensorId: UUID[1])",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 2792,
 									"top": 174,
-									"width": 164.59716796875,
-									"height": 23
+									"width": 240.8134765625,
+									"height": 38
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -67131,8 +67224,8 @@
 							"containerChangeable": true,
 							"left": 2792,
 							"top": 111,
-							"width": 164.59716796875,
-							"height": 87,
+							"width": 240.8134765625,
+							"height": 102,
 							"stereotypeDisplay": "icon",
 							"showNamespace": true,
 							"nameCompartment": {
@@ -68952,23 +69045,6 @@
 									"subViews": [
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAF9SWdHFigSIco=",
-											"_parent": {
-												"$ref": "AAAAAAF9SWdHACfzL7g="
-											},
-											"model": {
-												"$ref": "AAAAAAF9SSYElx8HGos="
-											},
-											"font": "Arial;13;0",
-											"left": 1533,
-											"top": 1075,
-											"width": 328.35791015625,
-											"height": 13,
-											"text": "+selectForestryClicked(sensorId: UUID[1])",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAF9SWdHFigVngA=",
 											"_parent": {
 												"$ref": "AAAAAAF9SWdHACfzL7g="
@@ -68978,10 +69054,27 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1533,
-											"top": 1090,
+											"top": 1075,
 											"width": 328.35791015625,
 											"height": 13,
 											"text": "+forestrySelected(forestryId: UUID[1], sensorId: UUID[1])",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF9leR57eeWzHI=",
+											"_parent": {
+												"$ref": "AAAAAAF9SWdHACfzL7g="
+											},
+											"model": {
+												"$ref": "AAAAAAF9lY+Gm1Vmkzs="
+											},
+											"font": "Arial;13;0",
+											"left": 1533,
+											"top": 1090,
+											"width": 328.35791015625,
+											"height": 13,
+											"text": "+assignForestryInvoked(sensorId: UUID[1])",
 											"horizontalAlignment": 0
 										}
 									],
