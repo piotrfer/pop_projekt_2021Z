@@ -12971,9 +12971,9 @@
 											"font": "Arial;13;0",
 											"left": -11,
 											"top": -3,
-											"width": 318.96337890625,
+											"width": 422.7666015625,
 											"height": 13,
-											"text": "+showAvailableForestries(forestries: ForestryDto[0..*])",
+											"text": "+showAvailableForestries(forestries: ForestryDto[0..*], sensorId: UUID[1])",
 											"horizontalAlignment": 0
 										},
 										{
@@ -12988,7 +12988,7 @@
 											"font": "Arial;13;0",
 											"left": -11,
 											"top": 12,
-											"width": 318.96337890625,
+											"width": 422.7666015625,
 											"height": 13,
 											"text": "+showNoForestriesMessage()",
 											"horizontalAlignment": 0
@@ -13005,7 +13005,7 @@
 											"font": "Arial;13;0",
 											"left": -11,
 											"top": 27,
-											"width": 318.96337890625,
+											"width": 422.7666015625,
 											"height": 13,
 											"text": "+showSuccessMessage()",
 											"horizontalAlignment": 0
@@ -13022,7 +13022,7 @@
 											"font": "Arial;13;0",
 											"left": -11,
 											"top": 42,
-											"width": 318.96337890625,
+											"width": 422.7666015625,
 											"height": 13,
 											"text": "+showErrorMessage(response.body: string[1])",
 											"horizontalAlignment": 0
@@ -13032,7 +13032,7 @@
 									"font": "Arial;13;0",
 									"left": -16,
 									"top": -8,
-									"width": 328.96337890625,
+									"width": 432.7666015625,
 									"height": 68
 								},
 								{
@@ -13226,7 +13226,7 @@
 											"top": -19,
 											"width": 328.35791015625,
 											"height": 13,
-											"text": "+selectForestryClicked()",
+											"text": "+selectForestryClicked(sensorId: UUID[1])",
 											"horizontalAlignment": 0
 										},
 										{
@@ -28731,9 +28731,9 @@
 														"$ref": "AAAAAAF9SR1Aoh3nZZc="
 													},
 													"font": "Arial;13;0",
-													"left": 24.72998046875,
+													"left": 22.55908203125,
 													"top": 5,
-													"width": 144.05712890625,
+													"width": 130.62548828125,
 													"height": 13,
 													"text": "Assign sensor to forestry"
 												},
@@ -28746,7 +28746,7 @@
 													"font": "Arial;13;1",
 													"left": 5,
 													"top": 5,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -30030,7 +30030,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 80.72998046875,
+													"left": 79.99365234375,
 													"top": 237,
 													"width": 1,
 													"height": 13
@@ -30044,7 +30044,7 @@
 													"font": "Arial;13;1",
 													"left": 61,
 													"top": 237,
-													"width": 14.72998046875,
+													"width": 13.99365234375,
 													"height": 13,
 													"text": "alt"
 												},
@@ -30077,7 +30077,7 @@
 																	"font": "Arial;13;0",
 																	"left": 76,
 																	"top": 270,
-																	"width": 125.708984375,
+																	"width": 116.8095703125,
 																	"height": 13,
 																	"text": "[forestries.size() == 0]"
 																}
@@ -30110,7 +30110,7 @@
 																	"font": "Arial;13;0",
 																	"left": 76,
 																	"top": 424,
-																	"width": 118.1171875,
+																	"width": 109.47802734375,
 																	"height": 13,
 																	"text": "[forestries.size() > 0]"
 																}
@@ -31279,7 +31279,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 1357.07177734375,
+													"left": 1355.61181640625,
 													"top": 765,
 													"width": 1,
 													"height": 13
@@ -31293,7 +31293,7 @@
 													"font": "Arial;13;1",
 													"left": 1333,
 													"top": 765,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -31326,7 +31326,7 @@
 																	"font": "Arial;13;0",
 																	"left": 1348,
 																	"top": 798,
-																	"width": 78.736328125,
+																	"width": 74.369140625,
 																	"height": 13,
 																	"text": "[forestrExists]"
 																}
@@ -31381,7 +31381,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 1685.07177734375,
+													"left": 1683.61181640625,
 													"top": 941,
 													"width": 1,
 													"height": 13
@@ -31395,7 +31395,7 @@
 													"font": "Arial;13;1",
 													"left": 1661,
 													"top": 941,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -31428,7 +31428,7 @@
 																	"font": "Arial;13;0",
 																	"left": 1676,
 																	"top": 974,
-																	"width": 80.91357421875,
+																	"width": 73.658203125,
 																	"height": 13,
 																	"text": "[sensorExists]"
 																}
@@ -31929,7 +31929,7 @@
 													},
 													"visible": false,
 													"font": "Arial;13;0",
-													"left": 112.72998046875,
+													"left": 111.99365234375,
 													"top": 1261,
 													"width": 1,
 													"height": 13
@@ -31943,7 +31943,7 @@
 													"font": "Arial;13;1",
 													"left": 93,
 													"top": 1261,
-													"width": 14.72998046875,
+													"width": 13.99365234375,
 													"height": 13,
 													"text": "alt"
 												},
@@ -31976,7 +31976,7 @@
 																	"font": "Arial;13;0",
 																	"left": 108,
 																	"top": 1294,
-																	"width": 143.09521484375,
+																	"width": 127.67041015625,
 																	"height": 13,
 																	"text": "[response.status == 200]"
 																}
@@ -32009,7 +32009,7 @@
 																	"font": "Arial;13;0",
 																	"left": 108,
 																	"top": 1392,
-																	"width": 143.09521484375,
+																	"width": 127.67041015625,
 																	"height": 13,
 																	"text": "[response.status == 404]"
 																}
@@ -51496,19 +51496,19 @@
 												},
 												{
 													"_type": "UMLOperationView",
-													"_id": "AAAAAAF9c5dD0tMe+6g=",
+													"_id": "AAAAAAF9lR4DS78GGE0=",
 													"_parent": {
 														"$ref": "AAAAAAF9ctb2HbdtfCA="
 													},
 													"model": {
-														"$ref": "AAAAAAF9c5dDzdMbJJE="
+														"$ref": "AAAAAAF9lR4DRr8BMr8="
 													},
 													"font": "Arial;13;0",
 													"left": 1381,
 													"top": 1102,
 													"width": 400.35791015625,
 													"height": 13,
-													"text": "+selectForestryClicked()",
+													"text": "+selectForestryClicked(sensorId: UUID[1])",
 													"horizontalAlignment": 0
 												},
 												{
@@ -51636,7 +51636,7 @@
 													"font": "Arial;13;1",
 													"left": 1349,
 													"top": 786,
-													"width": 312.228515625,
+													"width": 422.7666015625,
 													"height": 13,
 													"text": "IAssignForestryShower"
 												},
@@ -51671,7 +51671,7 @@
 											"font": "Arial;13;0",
 											"left": 1344,
 											"top": 779,
-											"width": 322.228515625,
+											"width": 432.7666015625,
 											"height": 25,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF9ctb2Hbdy7kM="
@@ -51714,19 +51714,19 @@
 											"subViews": [
 												{
 													"_type": "UMLOperationView",
-													"_id": "AAAAAAF9ctb2Hbd5m7k=",
+													"_id": "AAAAAAF9lRz73roCyJw=",
 													"_parent": {
 														"$ref": "AAAAAAF9ctb2Hbd3xRI="
 													},
 													"model": {
-														"$ref": "AAAAAAF9ctb2I7iIBpE="
+														"$ref": "AAAAAAF9lRz717n7G3k="
 													},
 													"font": "Arial;13;0",
 													"left": 1349,
 													"top": 809,
-													"width": 312.228515625,
+													"width": 422.7666015625,
 													"height": 13,
-													"text": "+showAvailableForestries(forestries: ForestryDto[0..*])",
+													"text": "+showAvailableForestries(forestries: ForestryDto[0..*], sensorId: UUID[1])",
 													"horizontalAlignment": 0
 												},
 												{
@@ -51741,7 +51741,7 @@
 													"font": "Arial;13;0",
 													"left": 1349,
 													"top": 824,
-													"width": 312.228515625,
+													"width": 422.7666015625,
 													"height": 13,
 													"text": "+showNoForestriesMessage()",
 													"horizontalAlignment": 0
@@ -51758,7 +51758,7 @@
 													"font": "Arial;13;0",
 													"left": 1349,
 													"top": 839,
-													"width": 312.228515625,
+													"width": 422.7666015625,
 													"height": 13,
 													"text": "+showSuccessMessage()",
 													"horizontalAlignment": 0
@@ -51775,7 +51775,7 @@
 													"font": "Arial;13;0",
 													"left": 1349,
 													"top": 854,
-													"width": 312.228515625,
+													"width": 422.7666015625,
 													"height": 13,
 													"text": "+showErrorMessage(response.body: string[1])",
 													"horizontalAlignment": 0
@@ -51784,7 +51784,7 @@
 											"font": "Arial;13;0",
 											"left": 1344,
 											"top": 804,
-											"width": 322.228515625,
+											"width": 432.7666015625,
 											"height": 68
 										},
 										{
@@ -51824,7 +51824,7 @@
 									"containerChangeable": true,
 									"left": 1344,
 									"top": 752,
-									"width": 322.228515625,
+									"width": 432.7666015625,
 									"height": 121,
 									"stereotypeDisplay": "icon",
 									"nameCompartment": {
@@ -51965,19 +51965,19 @@
 											"subViews": [
 												{
 													"_type": "UMLOperationView",
-													"_id": "AAAAAAF9c5SNTmgkoYM=",
+													"_id": "AAAAAAF9lRybc7fI41E=",
 													"_parent": {
 														"$ref": "AAAAAAF9ctb2HbeGkPs="
 													},
 													"model": {
-														"$ref": "AAAAAAF9c5SNRGghQww="
+														"$ref": "AAAAAAF9lRyba7fD2uo="
 													},
 													"font": "Arial;13;0",
 													"left": 1861,
 													"top": 887,
 													"width": 328.35791015625,
 													"height": 13,
-													"text": "+selectForestryClicked()",
+													"text": "+selectForestryClicked(sensorId: UUID[1])",
 													"horizontalAlignment": 0
 												},
 												{
@@ -52175,7 +52175,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 1518,
+											"left": 1560,
 											"top": 725,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -52196,7 +52196,7 @@
 											},
 											"visible": null,
 											"font": "Arial;13;0",
-											"left": 1533,
+											"left": 1575,
 											"top": 725,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -52217,7 +52217,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 1489,
+											"left": 1531,
 											"top": 726,
 											"height": 13,
 											"alpha": -1.5707963267948966,
@@ -52235,7 +52235,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9ctb2HrfAehg="
 									},
-									"points": "1504:713;1504:752",
+									"points": "1546.38330078125:713;1546.38330078125:752.38330078125",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAF9ctb2H7fOMQo="
@@ -52541,7 +52541,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 2047,
-											"top": 678,
+											"top": 681,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 15,
@@ -52562,7 +52562,7 @@
 											"visible": null,
 											"font": "Arial;13;0",
 											"left": 2062,
-											"top": 678,
+											"top": 681,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 30,
@@ -52583,7 +52583,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 2017,
-											"top": 679,
+											"top": 682,
 											"height": 13,
 											"alpha": -1.5707963267948966,
 											"distance": 15,
@@ -52604,7 +52604,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 2047,
-											"top": 565,
+											"top": 572,
 											"height": 13,
 											"alpha": 0.5235987755982988,
 											"distance": 30,
@@ -52625,7 +52625,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 2060,
-											"top": 568,
+											"top": 575,
 											"height": 13,
 											"alpha": 0.7853981633974483,
 											"distance": 40,
@@ -52646,7 +52646,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 2019,
-											"top": 561,
+											"top": 568,
 											"height": 13,
 											"alpha": -0.5235987755982988,
 											"distance": 25,
@@ -52753,7 +52753,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9cwBovltHtmQ="
 									},
-									"points": "2032:546;2032:824",
+									"points": "2032:553;2032:824",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAF9ctb2ILf6XwI="
@@ -55771,7 +55771,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1653,
-													"top": 453,
+													"top": 445,
 													"width": 391.27587890625,
 													"height": 13,
 													"text": "«Component»"
@@ -55784,7 +55784,7 @@
 													},
 													"font": "Arial;13;1",
 													"left": 1653,
-													"top": 468,
+													"top": 460,
 													"width": 391.27587890625,
 													"height": 13,
 													"text": "AssignForestryDialogComponent"
@@ -55798,7 +55798,7 @@
 													"visible": false,
 													"font": "Arial;13;0",
 													"left": 1544,
-													"top": -2208,
+													"top": -2224,
 													"width": 192.87353515625,
 													"height": 13,
 													"text": "(from SensorView)"
@@ -55812,14 +55812,14 @@
 													"visible": false,
 													"font": "Arial;13;0",
 													"left": 1544,
-													"top": -2208,
+													"top": -2224,
 													"height": 13,
 													"horizontalAlignment": 1
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 1648,
-											"top": 448,
+											"top": 440,
 											"width": 401.27587890625,
 											"height": 38,
 											"stereotypeLabel": {
@@ -55856,7 +55856,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1653,
-													"top": 491,
+													"top": 483,
 													"width": 391.27587890625,
 													"height": 13,
 													"text": "«Input»+assignForestryEventHandler: IAssignForestryEventHandler",
@@ -55873,18 +55873,35 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1653,
-													"top": 506,
+													"top": 498,
 													"width": 391.27587890625,
 													"height": 13,
 													"text": "«Input»+forestries: ForestryDto[0..*]",
+													"horizontalAlignment": 0
+												},
+												{
+													"_type": "UMLAttributeView",
+													"_id": "AAAAAAF9lR71AsfUJT0=",
+													"_parent": {
+														"$ref": "AAAAAAF9cwBovltNnSw="
+													},
+													"model": {
+														"$ref": "AAAAAAF9lR709sfF4VM="
+													},
+													"font": "Arial;13;0",
+													"left": 1653,
+													"top": 513,
+													"width": 391.27587890625,
+													"height": 13,
+													"text": "«Input»+sensorId: UUID[1]",
 													"horizontalAlignment": 0
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 1648,
-											"top": 486,
+											"top": 478,
 											"width": 401.27587890625,
-											"height": 38
+											"height": 53
 										},
 										{
 											"_type": "UMLOperationCompartmentView",
@@ -55907,7 +55924,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1653,
-													"top": 529,
+													"top": 536,
 													"width": 391.27587890625,
 													"height": 13,
 													"text": "+forestrySelected(forestryId: UUID[1])",
@@ -55916,7 +55933,7 @@
 											],
 											"font": "Arial;13;0",
 											"left": 1648,
-											"top": 524,
+											"top": 531,
 											"width": 401.27587890625,
 											"height": 23
 										},
@@ -55932,7 +55949,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 1104,
-											"top": -1480,
+											"top": -1488,
 											"width": 10,
 											"height": 10
 										},
@@ -55948,7 +55965,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 1104,
-											"top": -1480,
+											"top": -1488,
 											"width": 10,
 											"height": 10
 										}
@@ -55959,9 +55976,9 @@
 									"font": "Arial;13;0",
 									"containerChangeable": true,
 									"left": 1648,
-									"top": 448,
+									"top": 440,
 									"width": 401.27587890625,
-									"height": 99,
+									"height": 114,
 									"nameCompartment": {
 										"$ref": "AAAAAAF9cwBovltIkXg="
 									},
@@ -56007,7 +56024,7 @@
 													"font": "Arial;13;0",
 													"left": 1365,
 													"top": 573,
-													"width": 391.27587890625,
+													"width": 422.7666015625,
 													"height": 13,
 													"text": "«Component»"
 												},
@@ -56020,7 +56037,7 @@
 													"font": "Arial;13;1",
 													"left": 1365,
 													"top": 588,
-													"width": 391.27587890625,
+													"width": 422.7666015625,
 													"height": 13,
 													"text": "AssignForestryShowerComponent"
 												},
@@ -56055,7 +56072,7 @@
 											"font": "Arial;13;0",
 											"left": 1360,
 											"top": 568,
-											"width": 401.27587890625,
+											"width": 432.7666015625,
 											"height": 38,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF9ctb2HrfC2BQ="
@@ -56082,24 +56099,6 @@
 											"subViews": [
 												{
 													"_type": "UMLAttributeView",
-													"_id": "AAAAAAF9ctb2HrfIt6w=",
-													"_parent": {
-														"$ref": "AAAAAAF9ctb2HrfGvvw="
-													},
-													"model": {
-														"$ref": "AAAAAAF9ctb2JLivS1w="
-													},
-													"visible": false,
-													"font": "Arial;13;0",
-													"left": 525,
-													"top": 498,
-													"width": 224.33251953125,
-													"height": 13,
-													"text": "-sensorId: UUID[1]",
-													"horizontalAlignment": 0
-												},
-												{
-													"_type": "UMLAttributeView",
 													"_id": "AAAAAAF9c8/jGF10UMM=",
 													"_parent": {
 														"$ref": "AAAAAAF9ctb2HrfGvvw="
@@ -56109,8 +56108,8 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1365,
-													"top": 613,
-													"width": 391.27587890625,
+													"top": 611,
+													"width": 422.7666015625,
 													"height": 13,
 													"text": "«Input»+assignForestryEventHandler: IAssignForestryEventHandler",
 													"horizontalAlignment": 0
@@ -56119,8 +56118,8 @@
 											"font": "Arial;13;0",
 											"left": 1360,
 											"top": 606,
-											"width": 401.27587890625,
-											"height": 25
+											"width": 432.7666015625,
+											"height": 23
 										},
 										{
 											"_type": "UMLOperationCompartmentView",
@@ -56143,27 +56142,27 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1365,
-													"top": 636,
-													"width": 391.27587890625,
+													"top": 634,
+													"width": 422.7666015625,
 													"height": 13,
 													"text": "+constructor(dialog: MatDialog)",
 													"horizontalAlignment": 0
 												},
 												{
 													"_type": "UMLOperationView",
-													"_id": "AAAAAAF9c6kHwWfAkJY=",
+													"_id": "AAAAAAF9lR1jgrzadE4=",
 													"_parent": {
 														"$ref": "AAAAAAF9ctb2HrfJRSs="
 													},
 													"model": {
-														"$ref": "AAAAAAF9c6kHtWe7wrU="
+														"$ref": "AAAAAAF9lR1jeLzHNkU="
 													},
 													"font": "Arial;13;0",
 													"left": 1365,
-													"top": 651,
-													"width": 391.27587890625,
+													"top": 649,
+													"width": 422.7666015625,
 													"height": 13,
-													"text": "+showAvailableForestries(forestries: ForestryDto[0..*])",
+													"text": "+showAvailableForestries(forestries: ForestryDto[0..*], sensorId: UUID[1])",
 													"horizontalAlignment": 0
 												},
 												{
@@ -56177,8 +56176,8 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1365,
-													"top": 666,
-													"width": 391.27587890625,
+													"top": 664,
+													"width": 422.7666015625,
 													"height": 13,
 													"text": "+showNoForestriesMessage()",
 													"horizontalAlignment": 0
@@ -56194,8 +56193,8 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1365,
-													"top": 681,
-													"width": 391.27587890625,
+													"top": 679,
+													"width": 422.7666015625,
 													"height": 13,
 													"text": "+showSuccessMessage()",
 													"horizontalAlignment": 0
@@ -56211,8 +56210,8 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1365,
-													"top": 696,
-													"width": 391.27587890625,
+													"top": 694,
+													"width": 422.7666015625,
 													"height": 13,
 													"text": "+showErrorMessage(response.body: string[1])",
 													"horizontalAlignment": 0
@@ -56220,8 +56219,8 @@
 											],
 											"font": "Arial;13;0",
 											"left": 1360,
-											"top": 631,
-											"width": 401.27587890625,
+											"top": 629,
+											"width": 432.7666015625,
 											"height": 83
 										},
 										{
@@ -56264,7 +56263,7 @@
 									"containerChangeable": true,
 									"left": 1360,
 									"top": 568,
-									"width": 401.27587890625,
+									"width": 432.7666015625,
 									"height": 146,
 									"nameCompartment": {
 										"$ref": "AAAAAAF9ctb2HrfB64g="
@@ -57039,8 +57038,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 1784,
-											"top": 615,
+											"left": 1800,
+											"top": 616,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 15,
@@ -57060,8 +57059,8 @@
 											},
 											"visible": null,
 											"font": "Arial;13;0",
-											"left": 1784,
-											"top": 600,
+											"left": 1800,
+											"top": 601,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 30,
@@ -57081,8 +57080,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 1784,
-											"top": 645,
+											"left": 1800,
+											"top": 646,
 											"height": 13,
 											"alpha": -1.5707963267948966,
 											"distance": 15,
@@ -57102,8 +57101,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 1786,
-											"top": 615,
+											"left": 1818,
+											"top": 616,
 											"height": 13,
 											"alpha": 0.5235987755982988,
 											"distance": 30,
@@ -57123,7 +57122,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 1788,
+											"left": 1821,
 											"top": 602,
 											"height": 13,
 											"alpha": 0.7853981633974483,
@@ -57144,7 +57143,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 1782,
+											"left": 1814,
 											"top": 643,
 											"height": 13,
 											"alpha": -0.5235987755982988,
@@ -57165,8 +57164,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 1780,
-											"top": 615,
+											"left": 1781,
+											"top": 616,
 											"height": 13,
 											"alpha": -0.5235987755982988,
 											"distance": 30,
@@ -57206,7 +57205,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 1785,
-											"top": 642,
+											"top": 643,
 											"height": 13,
 											"alpha": 0.5235987755982988,
 											"distance": 25,
@@ -57251,7 +57250,7 @@
 										"$ref": "AAAAAAF9ctb2HrfAehg="
 									},
 									"lineStyle": 1,
-									"points": "1761:637;1807:636",
+									"points": "1793:637;1807:637",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAF9eFHhdxUHP1o="
@@ -57567,7 +57566,7 @@
 							"operations": [
 								{
 									"_type": "UMLOperation",
-									"_id": "AAAAAAF9ctb2I7iIBpE=",
+									"_id": "AAAAAAF9lRz717n7G3k=",
 									"_parent": {
 										"$ref": "AAAAAAF9ctb2I7iFlAY="
 									},
@@ -57575,15 +57574,25 @@
 									"parameters": [
 										{
 											"_type": "UMLParameter",
-											"_id": "AAAAAAF9ctb2I7iJU+E=",
+											"_id": "AAAAAAF9lRz717n835k=",
 											"_parent": {
-												"$ref": "AAAAAAF9ctb2I7iIBpE="
+												"$ref": "AAAAAAF9lRz717n7G3k="
 											},
 											"name": "forestries",
 											"type": {
 												"$ref": "AAAAAAF8pFu9oY1ivdc="
 											},
 											"multiplicity": "0..*"
+										},
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAF9lRz717n9EXA=",
+											"_parent": {
+												"$ref": "AAAAAAF9lRz717n7G3k="
+											},
+											"name": "sensorId",
+											"type": "UUID",
+											"multiplicity": "1"
 										}
 									]
 								},
@@ -57635,11 +57644,23 @@
 							"operations": [
 								{
 									"_type": "UMLOperation",
-									"_id": "AAAAAAF9c5SNRGghQww=",
+									"_id": "AAAAAAF9lRyba7fD2uo=",
 									"_parent": {
 										"$ref": "AAAAAAF9ctb2JLiYM1A="
 									},
-									"name": "selectForestryClicked"
+									"name": "selectForestryClicked",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAF9lRyba7fE3N8=",
+											"_parent": {
+												"$ref": "AAAAAAF9lRyba7fD2uo="
+											},
+											"name": "sensorId",
+											"type": "UUID",
+											"multiplicity": "1"
+										}
+									]
 								},
 								{
 									"_type": "UMLOperation",
@@ -57753,6 +57774,17 @@
 											"name": "forestries",
 											"stereotype": "Input",
 											"type": "ForestryDto[0..*]"
+										},
+										{
+											"_type": "UMLAttribute",
+											"_id": "AAAAAAF9lR709sfF4VM=",
+											"_parent": {
+												"$ref": "AAAAAAF9cwBovltF5hM="
+											},
+											"name": "sensorId",
+											"stereotype": "Input",
+											"type": "UUID",
+											"multiplicity": "1"
 										}
 									],
 									"operations": [
@@ -57944,17 +57976,6 @@
 									"attributes": [
 										{
 											"_type": "UMLAttribute",
-											"_id": "AAAAAAF9ctb2JLivS1w=",
-											"_parent": {
-												"$ref": "AAAAAAF9ctb2JLippEg="
-											},
-											"name": "sensorId",
-											"visibility": "private",
-											"type": "UUID",
-											"multiplicity": "1"
-										},
-										{
-											"_type": "UMLAttribute",
 											"_id": "AAAAAAF9c8/jBV1ZSWI=",
 											"_parent": {
 												"$ref": "AAAAAAF9ctb2JLippEg="
@@ -57988,7 +58009,7 @@
 										},
 										{
 											"_type": "UMLOperation",
-											"_id": "AAAAAAF9c6kHtWe7wrU=",
+											"_id": "AAAAAAF9lR1jeLzHNkU=",
 											"_parent": {
 												"$ref": "AAAAAAF9ctb2JLippEg="
 											},
@@ -57996,15 +58017,25 @@
 											"parameters": [
 												{
 													"_type": "UMLParameter",
-													"_id": "AAAAAAF9c6kHtWe8WF4=",
+													"_id": "AAAAAAF9lR1jeLzIKmk=",
 													"_parent": {
-														"$ref": "AAAAAAF9c6kHtWe7wrU="
+														"$ref": "AAAAAAF9lR1jeLzHNkU="
 													},
 													"name": "forestries",
 													"type": {
 														"$ref": "AAAAAAF8pFu9oY1ivdc="
 													},
 													"multiplicity": "0..*"
+												},
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAF9lR1jeLzJRTY=",
+													"_parent": {
+														"$ref": "AAAAAAF9lR1jeLzHNkU="
+													},
+													"name": "sensorId",
+													"type": "UUID",
+													"multiplicity": "1"
 												}
 											]
 										},
@@ -58236,11 +58267,23 @@
 										},
 										{
 											"_type": "UMLOperation",
-											"_id": "AAAAAAF9c5dDzdMbJJE=",
+											"_id": "AAAAAAF9lR4DRr8BMr8=",
 											"_parent": {
 												"$ref": "AAAAAAF9ctb2I7h99zs="
 											},
-											"name": "selectForestryClicked"
+											"name": "selectForestryClicked",
+											"parameters": [
+												{
+													"_type": "UMLParameter",
+													"_id": "AAAAAAF9lR4DRr8Couw=",
+													"_parent": {
+														"$ref": "AAAAAAF9lR4DRr8BMr8="
+													},
+													"name": "sensorId",
+													"type": "UUID",
+													"multiplicity": "1"
+												}
+											]
 										},
 										{
 											"_type": "UMLOperation",
@@ -68437,7 +68480,7 @@
 											"font": "Arial;13;1",
 											"left": 1181,
 											"top": 1039,
-											"width": 312.228515625,
+											"width": 395.55419921875,
 											"height": 13,
 											"text": "IAssignForestryShower"
 										},
@@ -68450,7 +68493,7 @@
 											"font": "Arial;13;0",
 											"left": 1181,
 											"top": 1054,
-											"width": 312.228515625,
+											"width": 395.55419921875,
 											"height": 13,
 											"text": "(from interfaces)"
 										},
@@ -68470,7 +68513,7 @@
 									"font": "Arial;13;0",
 									"left": 1176,
 									"top": 1032,
-									"width": 322.228515625,
+									"width": 405.55419921875,
 									"height": 40,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF9SWc7rSe7WK8="
@@ -68522,9 +68565,9 @@
 											"font": "Arial;13;0",
 											"left": 1181,
 											"top": 1077,
-											"width": 312.228515625,
+											"width": 395.55419921875,
 											"height": 13,
-											"text": "+showAvailableForestries(forestries: ForestryDto[0..*])",
+											"text": "+showAvailableForestries(forestries: ForestryDto[0..*], sensorId: UUID[1])",
 											"horizontalAlignment": 0
 										},
 										{
@@ -68539,7 +68582,7 @@
 											"font": "Arial;13;0",
 											"left": 1181,
 											"top": 1092,
-											"width": 312.228515625,
+											"width": 395.55419921875,
 											"height": 13,
 											"text": "+showNoForestriesMessage()",
 											"horizontalAlignment": 0
@@ -68556,7 +68599,7 @@
 											"font": "Arial;13;0",
 											"left": 1181,
 											"top": 1107,
-											"width": 312.228515625,
+											"width": 395.55419921875,
 											"height": 13,
 											"text": "+showSuccessMessage()",
 											"horizontalAlignment": 0
@@ -68573,7 +68616,7 @@
 											"font": "Arial;13;0",
 											"left": 1181,
 											"top": 1122,
-											"width": 312.228515625,
+											"width": 395.55419921875,
 											"height": 13,
 											"text": "+showErrorMessage(response.body: string[1])",
 											"horizontalAlignment": 0
@@ -68582,7 +68625,7 @@
 									"font": "Arial;13;0",
 									"left": 1176,
 									"top": 1072,
-									"width": 322.228515625,
+									"width": 405.55419921875,
 									"height": 68
 								},
 								{
@@ -68620,7 +68663,7 @@
 							"containerChangeable": true,
 							"left": 1176,
 							"top": 994,
-							"width": 322.228515625,
+							"width": 405.55419921875,
 							"height": 147,
 							"stereotypeDisplay": "icon",
 							"showNamespace": true,
@@ -68773,7 +68816,7 @@
 											"top": 1075,
 											"width": 328.35791015625,
 											"height": 13,
-											"text": "+selectForestryClicked()",
+											"text": "+selectForestryClicked(sensorId: UUID[1])",
 											"horizontalAlignment": 0
 										},
 										{
