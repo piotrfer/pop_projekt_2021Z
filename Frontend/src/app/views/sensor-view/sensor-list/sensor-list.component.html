@@ -22,10 +22,10 @@
         </ng-container>
 
         <ng-container matColumnDef="forestry">
-            <th mat-header-cell *matHeaderCellDef>Leśnictwo</th>
+            <th mat-header-cell *matHeaderCellDef></th>
             <td mat-cell *matCellDef="let element">
                 <button mat-button (click)="onAssignForestryButtonClick(element.id)">
-                    Brak leśnictwa
+                    {{ !element.forestry ? "Wybierz leśnictwo" : "Zmień leśnictwo" }}
                 </button>
             </td>
         </ng-container>

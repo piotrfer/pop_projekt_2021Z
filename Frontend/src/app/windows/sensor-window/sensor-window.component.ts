@@ -45,6 +45,6 @@ export class SensorWindowComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.sensorListEventHandler.init(this.sensorList!, this.addSensorEventHandler!, this.assignForestryEventHandler!);
     this.addSensorEventHandler.init(this.addSensorDialog!);
-    (this.assignForestryEventHandler as AssignForestryEventHandler).init(this.assignForestryShower!);
+    (this.assignForestryEventHandler as AssignForestryEventHandler).init(this.assignForestryShower!, this.sensorListEventHandler!);
   }
 }

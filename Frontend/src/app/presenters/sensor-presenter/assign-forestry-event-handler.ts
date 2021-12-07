@@ -2,9 +2,11 @@ import { IAssignForestryShower } from 'src/app/interfaces/view/iassign-forestry-
 import { IAssignForestryEventHandler } from 'src/app/interfaces/event-handler/iassign-forestry-event-handler';
 import { SensorAPI } from 'src/app/interfaces/api/sensor-api';
 import { ForestryAPI } from 'src/app/interfaces/api/forestry-api';
+import { ISensorListEventHandler } from 'src/app/interfaces/event-handler/isensor-list-event-handler';
 
 export class AssignForestryEventHandler implements IAssignForestryEventHandler {
   private assignForestryShower: IAssignForestryShower | undefined;
+  private sensorListEventHandler: ISensorListEventHandler | undefined;
   private sensorProxy: SensorAPI;
   private forestryProxy: ForestryAPI;
 
@@ -13,8 +15,9 @@ export class AssignForestryEventHandler implements IAssignForestryEventHandler {
     this.forestryProxy = forestryAPI;
   }
 
-  init(assignForestryShower: IAssignForestryShower) {
+  init(assignForestryShower: IAssignForestryShower, sensorListEventHandler: ISensorListEventHandler) {
     this.assignForestryShower = assignForestryShower;
+    this.sensorListEventHandler = sensorListEventHandler;
   }
 
   selectForestryClicked(sensorId: string): void {
@@ -31,10 +34,12 @@ export class AssignForestryEventHandler implements IAssignForestryEventHandler {
     this.sensorProxy.assignToForestry(forestryId, sensorId).subscribe(
       () => {
         this.assignForestryShower!.showSuccessMessage();
+        this.sensorListEventHandler!.showAllSensorsClicked();
       },
       (error: any) => {
         console.log(error)
         this.assignForestryShower!.showErrorMessage({ body: JSON.stringify(error.error) });
+        this.sensorListEventHandler!.showAllSensorsClicked();
       }
     );
   }
