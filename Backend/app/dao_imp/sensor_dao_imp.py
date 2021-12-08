@@ -1,3 +1,6 @@
+from sqlalchemy.orm import session
+from sqlalchemy.sql.elements import Null
+from .forestry_dao_imp import ForestryDaoImp
 from pydantic.types import UUID1
 
 from database import Database
@@ -78,10 +81,13 @@ with Database() as db:
             pass
 
         def sensorExistsById(id: UUID1) -> bool:
-            pass
+            return db.session.query(db.SensorRow.id).filter_by(id=id).first() is not None
 
         def setForestryForSensor(sensorId: UUID1, forestryId: UUID1):
-            pass
+            if sensorId is not None and forestryId is not None and SensorDaoImp.sensorExistsById(sensorId) and ForestryDaoImp.forestryExistsById(forestryId):
+                sensor = db.session.query(db.SensorRow).filter_by(id=sensorId).first()
+                sensor.forestry_id = forestryId
+                db.session.commit()
 
 
 def pointStringToCoordinate(pointString: str):

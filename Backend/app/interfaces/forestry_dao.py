@@ -14,5 +14,5 @@ class ForestryDao(metaclass=ABCMeta):
         ...
 
     @abstractmethod
-    def existsById(id: UUID1) -> bool:
+    def forestryExistsById(id: UUID1) -> bool:
         ...
