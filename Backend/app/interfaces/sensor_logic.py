@@ -15,5 +15,9 @@ class ISensorLogic(metaclass=ABCMeta):
         ...
 
     @abstractmethod
+    def sensorExistById(id: UUID1) -> bool:
+        ...
+
+    @abstractmethod
     def assignToForestry(assign_data: dict) -> Message:
         ...
