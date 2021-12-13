@@ -3,9 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { ForestryWindowComponent } from './windows/forestry-window/forestry-window.component';
 import { SensorWindowComponent } from './windows/sensor-window/sensor-window.component';
 import { TokenWindowComponent } from './windows/token-window/token-window.component';
+import { HomeComponent } from './views/home-view/home.component';
 
 const routes: Routes = [
-  { path: '', component: ForestryWindowComponent },
+  { path: '', component: HomeComponent },
+  { path: 'forestry', component: ForestryWindowComponent },
   { path: '_sensor', component: TokenWindowComponent, outlet: 'second' },
   { path: '_sensor', component: SensorWindowComponent },
   { path: 'sensor', redirectTo: '/_sensor(second:_sensor)' },

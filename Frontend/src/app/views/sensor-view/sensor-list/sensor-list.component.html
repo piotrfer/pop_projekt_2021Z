@@ -1,6 +1,9 @@
 <mat-toolbar color="primary" class="mat-elevation-z8">
     <mat-icon id="tree-icon">park</mat-icon> Lista sensorów
 </mat-toolbar>
+<div class="routing">
+    <a routerLink="/"><button class="btn btn-primary" > Home </button></a>
+</div>
 <main>
     <div *ngIf="sensors && dataSource" class="sensor-list-table mat-elevation-z8">
         <table

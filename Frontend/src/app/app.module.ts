@@ -37,6 +37,7 @@ import { NoForestriesModalComponent } from './views/sensor-view/no-forestries-mo
 import { SuccessModalComponent } from './views/sensor-view/success-modal/success-modal.component';
 import { ErrorModalComponent } from './views/sensor-view/error-modal/error-modal.component';
 import { AssignForestryDialogComponent } from './views/sensor-view/assign-forestry-dialog/assign-forestry-dialog.component';
+import { HomeComponent } from './views/home-view/home.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,9 @@ import { AssignForestryDialogComponent } from './views/sensor-view/assign-forest
     NoForestriesModalComponent,
     SuccessModalComponent,
     ErrorModalComponent,
-    AssignForestryDialogComponent
+    AssignForestryDialogComponent,
+    HomeComponent
+  
   ],
   imports: [
     BrowserModule,
