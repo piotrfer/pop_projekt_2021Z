@@ -25,16 +25,13 @@ export class SensorProxy implements SensorAPI {
     return this.http.get<SensorDto[]>(environment.apiURL + 'sensor')
   }
   assignToForestry(forestryId: string, sensorId: string): Observable<void> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-      }),
-    };
     const body = { forestry_id: forestryId, sensor_id: sensorId };
-    return this.http.post<void>(
+    return this.http.post(
       environment.apiURL + 'assign',
       body,
-      httpOptions
-    );
+      {responseType: 'text', headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      })}
+    ) as Observable<any>;
   }
 }

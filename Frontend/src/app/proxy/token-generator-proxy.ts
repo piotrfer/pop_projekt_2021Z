@@ -8,7 +8,6 @@ export class TokenGeneratorProxy implements TokenGeneratorAPI {
   constructor(private http: HttpClient) {}
   generateToken(): Observable<string> {
     return this.http
-      .get<any>(environment.apiURL + 'token')
-      .pipe(map(({ token }) => token));
+      .get(environment.apiURL + 'token', {responseType: 'text'})
   }
 }
