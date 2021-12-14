@@ -15,19 +15,6 @@ def getAll():
     return jsonify(sensors)
 
 
-@sensor_api.route("/sensor",  methods=['POST'])
-def registerSensor():
-    # This endpoint should be removed in the future
-    content = request.json
-
-    try:
-        id = SensorLogic.save(content)
-    except ValidationError as e:
-        return Response(f"{e.json()}", 400)
-
-    return jsonify({'Message': 'Success', 'Sensor_id': id})
-
-
 @sensor_api.route("/assign",  methods=['POST'])
 def assignToForestry():
     content = request.json
