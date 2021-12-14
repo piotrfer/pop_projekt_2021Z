@@ -34,5 +34,5 @@ class SensorLogic(ISensorLogic):
             return Message(content="Sensor does not exists", code=404)
 
         SensorDaoImp.setForestryForSensor(
-            sensorId=assign_dto.sensor_id, forestryId=assign_dto.forestry_id)
+            sensorId=str(assign_dto.sensor_id), forestryId=str(assign_dto.forestry_id))
         return Message(content=f"Sensor {assign_dto.sensor_id} successfully assigned to forestry {assign_dto.forestry_id}", code=200)

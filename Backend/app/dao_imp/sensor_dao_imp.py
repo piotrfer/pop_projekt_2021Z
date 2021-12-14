@@ -46,6 +46,7 @@ with Database() as db:
                         location=point,
                         type=sensor_row.type,
                         model=sensor_row.model,
+                        forestry_id=sensor_row.forestry_id
                     )
                 )
             return sensors_dtos
@@ -81,11 +82,12 @@ with Database() as db:
             pass
 
         def sensorExistsById(id: UUID1) -> bool:
-            return db.session.query(db.SensorRow.id).filter_by(id=id).first() is not None
+            return db.session.query(db.SensorRow.id).filter_by(id=str(id)).first() is not None
 
         def setForestryForSensor(sensorId: UUID1, forestryId: UUID1):
             if sensorId is not None and forestryId is not None and SensorDaoImp.sensorExistsById(sensorId) and ForestryDaoImp.forestryExistsById(forestryId):
-                sensor = db.session.query(db.SensorRow).filter_by(id=sensorId).first()
+                sensor = db.session.query(
+                    db.SensorRow).filter_by(id=sensorId).first()
                 sensor.forestry_id = forestryId
                 db.session.commit()
 

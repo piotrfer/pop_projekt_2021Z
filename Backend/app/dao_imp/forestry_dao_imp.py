@@ -29,7 +29,7 @@ with Database() as db:
                 coordinates = polygonStringToCoordinates(
                     str(forestry_row.location))
                 forestries_dtos.append(ForestryDto(
-                    id=forestry_row.id, name=forestry_row.name, location=coordinates))
+                    id=forestry_row.id, name=forestry_row.name, location=coordinates, sensors=[]))
             return forestries_dtos
 
         def delete(id: UUID1):
@@ -45,7 +45,7 @@ with Database() as db:
             forestry_row.location = polygon_string
 
         def forestryExistsById(id: UUID1) -> bool:
-            return db.session.query(db.ForestryRow.id).filter_by(id=id).first() is not None
+            return db.session.query(db.ForestryRow.id).filter_by(id=str(id)).first() is not None
 
 
 def polygonStringToCoordinates(polygonString: str):
