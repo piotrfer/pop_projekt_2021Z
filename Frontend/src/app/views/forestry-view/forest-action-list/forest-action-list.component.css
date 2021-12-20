@@ -1,0 +1,30 @@
+main {
+    padding: 100px 15%;
+    display: flex;
+}
+@media (max-width: 1500px) {
+    main {
+        padding: 80px 10%;
+    }
+}
+@media (max-width: 1000px) {
+    main {
+        padding: 48px 16px;
+    }
+}
+.add-button {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+.forestry-list-table {
+    width: 100%;
+}
+#tree-icon {
+    margin-right: 8px;
+}
+.routing{
+    position: absolute;
+    margin-left: 1em;
+    margin-top: 1em;
+}

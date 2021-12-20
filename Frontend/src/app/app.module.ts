@@ -11,6 +11,8 @@ import { ForestryListComponent } from './views/forestry-view/forestry-list/fores
 import { SensorWindowComponent } from './windows/sensor-window/sensor-window.component';
 import { AddSensorDialogComponent } from './views/sensor-view/add-sensor-dialog/add-sensor-dialog.component';
 import { SensorListComponent } from './views/sensor-view/sensor-list/sensor-list.component';
+import { ForestActionWindowComponent } from './windows/forest-action-window/forest-action-window.component';
+import { ForestActionListComponent } from './views/forestry-view/forest-action-list/forest-action-list.component';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
@@ -43,8 +45,10 @@ import { HomeComponent } from './views/home-view/home.component';
   declarations: [
     AppComponent,
     ForestryWindowComponent,
+    ForestActionWindowComponent,
     AddForestryDialogComponent,
     ForestryListComponent,
+    ForestActionListComponent,
     AddForestryDialogFormComponent,
     SensorWindowComponent,
     AddSensorDialogComponent,
