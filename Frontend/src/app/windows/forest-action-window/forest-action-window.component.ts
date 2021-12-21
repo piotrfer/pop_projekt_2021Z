@@ -11,7 +11,7 @@ import { ForestActionAPI } from 'src/app/interfaces/api/forest-action-api';
   templateUrl: './forest-action-window.component.html',
   styleUrls: ['./forest-action-window.component.css']
 })
-export class ForestActionWindowComponent implements AfterViewInit {
+export class ForestActionWindow implements AfterViewInit {
   @ViewChild('forestryList') 
   private forestActionList: IForestActionListView|undefined;
 
