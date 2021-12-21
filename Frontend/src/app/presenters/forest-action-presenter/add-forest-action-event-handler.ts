@@ -7,7 +7,6 @@ import { IAddForestActionView } from 'src/app/interfaces/view/iadd-forest-action
 
 export class AddForestActionEventHandler implements IAddForestActionEventHandler {
   private addForestActionView: IAddForestActionView | undefined;
-  private addForestActionEventHandler: IAddForestActionEventHandler | undefined;
   private forestActionListEventHandler: IForestActionListEventHandler | undefined;
   private forestActionAPI: ForestActionAPI;
   private forestryAPI: ForestryAPI;
@@ -19,11 +18,9 @@ export class AddForestActionEventHandler implements IAddForestActionEventHandler
 
   init(
     addForestActionView: IAddForestActionView,
-    addForestActionEventHandler: IAddForestActionEventHandler,
     forestActionListEventHandler: IForestActionListEventHandler
   ) {
     this.addForestActionView = addForestActionView;
-    this.addForestActionEventHandler = addForestActionEventHandler;
     this.forestActionListEventHandler = forestActionListEventHandler;
   }
 
