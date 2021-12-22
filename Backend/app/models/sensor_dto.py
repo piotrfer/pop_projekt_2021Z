@@ -1,6 +1,7 @@
 from typing import Literal, Optional
 from pydantic import BaseModel
 from pydantic.types import UUID1, confloat
+from datetime import datetime
 
 
 class Coordinates(BaseModel):
@@ -23,3 +24,8 @@ class SensorDto(BaseModel):
 class SensorRegistratorDto(BaseModel):
     sensor_dto: SensorDto
     token: str
+
+
+class SensorReadingDto(BaseModel):
+    sensorId: UUID1
+    readTime: datetime
