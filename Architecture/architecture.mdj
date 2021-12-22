@@ -88744,7 +88744,7 @@
 													},
 													"font": "Arial;13;0",
 													"left": 1013,
-													"top": 165,
+													"top": 117,
 													"width": 1263,
 													"height": 13,
 													"text": "«Component»"
@@ -88757,7 +88757,7 @@
 													},
 													"font": "Arial;13;1",
 													"left": 1013,
-													"top": 180,
+													"top": 132,
 													"width": 1263,
 													"height": 13,
 													"text": "ForestActionWindow"
@@ -88771,7 +88771,7 @@
 													"visible": false,
 													"font": "Arial;13;0",
 													"left": -876,
-													"top": -500,
+													"top": -596,
 													"width": 216.01708984375,
 													"height": 13,
 													"text": "(from Create forest action (Frontend))"
@@ -88785,14 +88785,14 @@
 													"visible": false,
 													"font": "Arial;13;0",
 													"left": -876,
-													"top": -500,
+													"top": -596,
 													"height": 13,
 													"horizontalAlignment": 1
 												}
 											],
 											"font": "Arial;13;0",
 											"left": 1008,
-											"top": 160,
+											"top": 112,
 											"width": 1273,
 											"height": 38,
 											"stereotypeLabel": {
@@ -88817,11 +88817,115 @@
 											"model": {
 												"$ref": "AAAAAAF93l21Gj+Ro4I="
 											},
+											"subViews": [
+												{
+													"_type": "UMLAttributeView",
+													"_id": "AAAAAAF939SCTuV+LYg=",
+													"_parent": {
+														"$ref": "AAAAAAF93l46+T+efOs="
+													},
+													"model": {
+														"$ref": "AAAAAAF939SCReV7eZU="
+													},
+													"font": "Arial;13;0",
+													"left": 1013,
+													"top": 155,
+													"width": 1263,
+													"height": 13,
+													"text": "«ViewChild»+forestActionList: IForestActionListView",
+													"horizontalAlignment": 0
+												},
+												{
+													"_type": "UMLAttributeView",
+													"_id": "AAAAAAF939TVO+ff4VA=",
+													"_parent": {
+														"$ref": "AAAAAAF93l46+T+efOs="
+													},
+													"model": {
+														"$ref": "AAAAAAF939TVNOfcgcQ="
+													},
+													"font": "Arial;13;0",
+													"left": 1013,
+													"top": 170,
+													"width": 1263,
+													"height": 13,
+													"text": "«ViewChild»+addForestActionDispatcher: IAddForestActionView",
+													"horizontalAlignment": 0
+												},
+												{
+													"_type": "UMLAttributeView",
+													"_id": "AAAAAAF939UgiepAyHg=",
+													"_parent": {
+														"$ref": "AAAAAAF93l46+T+efOs="
+													},
+													"model": {
+														"$ref": "AAAAAAF939Ugheo9aNU="
+													},
+													"font": "Arial;13;0",
+													"left": 1013,
+													"top": 185,
+													"width": 1263,
+													"height": 13,
+													"text": "+forestActionListEventHandler: IForestActionListEventHandler",
+													"horizontalAlignment": 0
+												},
+												{
+													"_type": "UMLAttributeView",
+													"_id": "AAAAAAF939VPtewo69A=",
+													"_parent": {
+														"$ref": "AAAAAAF93l46+T+efOs="
+													},
+													"model": {
+														"$ref": "AAAAAAF939VPsOwlfH8="
+													},
+													"font": "Arial;13;0",
+													"left": 1013,
+													"top": 200,
+													"width": 1263,
+													"height": 13,
+													"text": "+addForestActionEventHandler: IAddForestActionEventHandler",
+													"horizontalAlignment": 0
+												},
+												{
+													"_type": "UMLAttributeView",
+													"_id": "AAAAAAF939V24+4Qc9o=",
+													"_parent": {
+														"$ref": "AAAAAAF93l46+T+efOs="
+													},
+													"model": {
+														"$ref": "AAAAAAF939V24O4NbLo="
+													},
+													"font": "Arial;13;0",
+													"left": 1013,
+													"top": 215,
+													"width": 1263,
+													"height": 13,
+													"text": "+forestActionProxy: ForestActionAPI",
+													"horizontalAlignment": 0
+												},
+												{
+													"_type": "UMLAttributeView",
+													"_id": "AAAAAAF939W2i+/4gRE=",
+													"_parent": {
+														"$ref": "AAAAAAF93l46+T+efOs="
+													},
+													"model": {
+														"$ref": "AAAAAAF939W2he/1qbU="
+													},
+													"font": "Arial;13;0",
+													"left": 1013,
+													"top": 230,
+													"width": 1263,
+													"height": 13,
+													"text": "+forestryProxy: ForestryAPI",
+													"horizontalAlignment": 0
+												}
+											],
 											"font": "Arial;13;0",
 											"left": 1008,
-											"top": 198,
+											"top": 150,
 											"width": 1273,
-											"height": 10
+											"height": 98
 										},
 										{
 											"_type": "UMLOperationCompartmentView",
@@ -88832,11 +88936,47 @@
 											"model": {
 												"$ref": "AAAAAAF93l21Gj+Ro4I="
 											},
+											"subViews": [
+												{
+													"_type": "UMLOperationView",
+													"_id": "AAAAAAF939YSqPON6G0=",
+													"_parent": {
+														"$ref": "AAAAAAF93l46+T+fgM0="
+													},
+													"model": {
+														"$ref": "AAAAAAF939YSovOKoIk="
+													},
+													"font": "Arial;13;0",
+													"left": 1013,
+													"top": 253,
+													"width": 1263,
+													"height": 13,
+													"text": "+constructor(http: HttpClient)",
+													"horizontalAlignment": 0
+												},
+												{
+													"_type": "UMLOperationView",
+													"_id": "AAAAAAF939YzU/T8q10=",
+													"_parent": {
+														"$ref": "AAAAAAF93l46+T+fgM0="
+													},
+													"model": {
+														"$ref": "AAAAAAF939YzT/T5vdY="
+													},
+													"font": "Arial;13;0",
+													"left": 1013,
+													"top": 268,
+													"width": 1263,
+													"height": 13,
+													"text": "+ngAfterViewInit()",
+													"horizontalAlignment": 0
+												}
+											],
 											"font": "Arial;13;0",
 											"left": 1008,
-											"top": 208,
+											"top": 248,
 											"width": 1273,
-											"height": 10
+											"height": 38
 										},
 										{
 											"_type": "UMLReceptionCompartmentView",
@@ -88850,7 +88990,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -286,
-											"top": -242,
+											"top": -290,
 											"width": 10,
 											"height": 10
 										},
@@ -88866,7 +89006,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -286,
-											"top": -242,
+											"top": -290,
 											"width": 10,
 											"height": 10
 										}
@@ -88874,9 +89014,9 @@
 									"font": "Arial;13;0",
 									"containerChangeable": true,
 									"left": 1008,
-									"top": 160,
+									"top": 112,
 									"width": 1273,
-									"height": 58,
+									"height": 174,
 									"nameCompartment": {
 										"$ref": "AAAAAAF93l46+T+Z/lI="
 									},
@@ -95446,7 +95586,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 1640,
-											"top": 353,
+											"top": 387,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 15,
@@ -95467,7 +95607,7 @@
 											"visible": null,
 											"font": "Arial;13;0",
 											"left": 1655,
-											"top": 353,
+											"top": 387,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 30,
@@ -95488,7 +95628,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 1610,
-											"top": 354,
+											"top": 388,
 											"height": 13,
 											"alpha": -1.5707963267948966,
 											"distance": 15,
@@ -95505,7 +95645,7 @@
 									"tail": {
 										"$ref": "AAAAAAF93l46+D+YckY="
 									},
-									"points": "1625:217;1625:504",
+									"points": "1625:285;1625:504",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAF93otPMR/CR0Y="
@@ -95598,7 +95738,7 @@
 									"tail": {
 										"$ref": "AAAAAAF93l46+D+YckY="
 									},
-									"points": "1024:217;1024:1136;1152:1136",
+									"points": "1024:285;1024:1136;1152:1136",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAF93ot1CieucZo="
@@ -95691,7 +95831,7 @@
 									"tail": {
 										"$ref": "AAAAAAF93l46+D+YckY="
 									},
-									"points": "2256:217;2256:1464;1875:1464",
+									"points": "2256:285;2256:1464;1875:1464",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAF93o1VpEqsM9Y="
@@ -95784,7 +95924,7 @@
 									"tail": {
 										"$ref": "AAAAAAF93l46+D+YckY="
 									},
-									"points": "1016:217;1016:1456;1320:1456",
+									"points": "1016:285;1016:1456;1320:1456",
 									"showVisibility": true,
 									"nameLabel": {
 										"$ref": "AAAAAAF93o39plmLEu0="
@@ -96580,7 +96720,106 @@
 									}
 								}
 							],
-							"stereotype": "Component"
+							"stereotype": "Component",
+							"attributes": [
+								{
+									"_type": "UMLAttribute",
+									"_id": "AAAAAAF939SCReV7eZU=",
+									"_parent": {
+										"$ref": "AAAAAAF93l21Gj+Ro4I="
+									},
+									"name": "forestActionList",
+									"stereotype": "ViewChild",
+									"type": {
+										"$ref": "AAAAAAF85Txkwi0FkNY="
+									}
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "AAAAAAF939TVNOfcgcQ=",
+									"_parent": {
+										"$ref": "AAAAAAF93l21Gj+Ro4I="
+									},
+									"name": "addForestActionDispatcher",
+									"stereotype": "ViewChild",
+									"type": {
+										"$ref": "AAAAAAF93mJ1tkCNPGE="
+									}
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "AAAAAAF939Ugheo9aNU=",
+									"_parent": {
+										"$ref": "AAAAAAF93l21Gj+Ro4I="
+									},
+									"name": "forestActionListEventHandler",
+									"type": {
+										"$ref": "AAAAAAF93mvcnUb5TWg="
+									}
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "AAAAAAF939VPsOwlfH8=",
+									"_parent": {
+										"$ref": "AAAAAAF93l21Gj+Ro4I="
+									},
+									"name": "addForestActionEventHandler",
+									"type": {
+										"$ref": "AAAAAAF93mBqDj/0UEo="
+									}
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "AAAAAAF939V24O4NbLo=",
+									"_parent": {
+										"$ref": "AAAAAAF93l21Gj+Ro4I="
+									},
+									"name": "forestActionProxy",
+									"type": {
+										"$ref": "AAAAAAF93n17CJdKyNE="
+									}
+								},
+								{
+									"_type": "UMLAttribute",
+									"_id": "AAAAAAF939W2he/1qbU=",
+									"_parent": {
+										"$ref": "AAAAAAF93l21Gj+Ro4I="
+									},
+									"name": "forestryProxy",
+									"type": {
+										"$ref": "AAAAAAF93mi1O0LdO/s="
+									}
+								}
+							],
+							"operations": [
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAF939YSovOKoIk=",
+									"_parent": {
+										"$ref": "AAAAAAF93l21Gj+Ro4I="
+									},
+									"name": "constructor",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAF939ZYV/ZoL3g=",
+											"_parent": {
+												"$ref": "AAAAAAF939YSovOKoIk="
+											},
+											"name": "http",
+											"type": "HttpClient"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
+									"_id": "AAAAAAF939YzT/T5vdY=",
+									"_parent": {
+										"$ref": "AAAAAAF93l21Gj+Ro4I="
+									},
+									"name": "ngAfterViewInit"
+								}
+							]
 						},
 						{
 							"_type": "UMLInterface",
