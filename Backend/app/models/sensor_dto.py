@@ -29,3 +29,4 @@ class SensorRegistratorDto(BaseModel):
 class SensorReadingDto(BaseModel):
     sensorId: UUID1
     readTime: datetime
+    reading: float
