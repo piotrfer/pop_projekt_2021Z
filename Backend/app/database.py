@@ -16,7 +16,7 @@ class Database:
         self.SensorRow = self.Base.classes.sensor
         self.TokenRow = self.Base.classes.token
         self.ForestActionRow = self.Base.classes.forest_action
-        self.SensorReadingRow = self.Base.classes.sensorReading
+        self.SensorReadingRow = self.Base.classes.sensor_reading
 
     def __enter__(self):
         self.session = Session(self.engine)
