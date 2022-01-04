@@ -24,6 +24,18 @@ export class AddForestActionEventHandler implements IAddForestActionEventHandler
     this.forestActionListEventHandler = forestActionListEventHandler;
   }
 
-  saveForestActionClicked(forestAction: ForestActionDto): void {}
-  addForestActionInvoked(): void {}
+  saveForestActionClicked(forestAction: ForestActionDto): void {
+    this.forestActionAPI!.save(forestAction).subscribe(() => {
+      this.addForestActionView!.showForestActionCreationSuccessMessage();
+      this.forestActionListEventHandler!.showForestActionsClicked();
+    }, (error => {
+      console.log(error.error[0].msg);
+      this.addForestActionView!.showForestActionCreationFailureMessage(error.error[0].msg);
+    }));
+  }
+  addForestActionInvoked(): void {
+    this.forestryAPI.getAll().subscribe((forestries) => {
+      this.addForestActionView!.showCreateForestActionForm(forestries)
+    });
+  }
 }

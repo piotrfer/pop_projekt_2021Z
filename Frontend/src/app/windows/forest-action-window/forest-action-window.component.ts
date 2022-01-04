@@ -36,7 +36,7 @@ export class ForestActionWindow implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.forestActionListEventHandler.init(this.forestActionList!);
+    this.forestActionListEventHandler.init(this.forestActionList!, this.addForestActionEventHandler);
     (this.addForestActionEventHandler as AddForestActionEventHandler).init(this.addForestActionDispatcher!, this.forestActionListEventHandler)
   }
 }

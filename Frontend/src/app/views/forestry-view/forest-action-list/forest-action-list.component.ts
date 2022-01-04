@@ -29,6 +29,7 @@ export class ForestActionListComponent implements IForestActionListView, OnInit 
   }
 
   onShowDialogButtonClick(): void {
+    this.forestActionListEventHandler!.addForestActionClicked();
   }
 
   showForestActions(forestActions: ForestActionDto[]): void {

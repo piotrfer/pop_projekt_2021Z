@@ -1,1 +1,78 @@
-<p>create-forest-action-form works!</p>
+<mat-dialog-content *ngIf="this.forestries" class="mat-typography">
+  <p class="title">Akcja leśna</p>
+
+  <label id="type">Typ akcji leśnej</label>
+  <mat-radio-group class="radio-group"
+    aria-labelledby="type"
+    [(ngModel)]="type"
+  >
+    <mat-radio-button value="WYCINKA">Wycinka</mat-radio-button>
+    <mat-radio-button value="ZALESIENIE">Zalesienie</mat-radio-button>
+  </mat-radio-group>
+
+  <div *ngIf="type === 'WYCINKA'">
+    <label id="subtype">Podtyp akcji leśnej</label>
+    <mat-radio-group class="radio-group"
+      aria-labelledby="subtype"
+      [(ngModel)]="subtype"
+    >
+      <mat-radio-button value="PRZERZEDZAJĄCA">Przerzedzająca</mat-radio-button>
+      <mat-radio-button value="NA MATERIAŁ">Na materiał</mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <mat-form-field appearance="standard" class="formField">
+    <mat-label>Data początku</mat-label>
+    <input matInput type="date" [(ngModel)]="dateStart">
+  </mat-form-field>
+
+  <mat-form-field appearance="standard" class="formField">
+    <mat-label>Data końca</mat-label>
+    <input matInput type="date" [(ngModel)]="dateEnd">
+  </mat-form-field>
+
+    <label>Współrzędne</label>
+    <mat-chip-list>
+        <mat-chip *ngFor="let c of coordinates">
+            {{ "x: " + c.lat + " y: " + c.long }}
+        </mat-chip>
+    </mat-chip-list>
+      
+    <div>
+        <mat-form-field appearance="standard" class="shortFormField">
+            <mat-label>X</mat-label>
+            <input matInput [(ngModel)]="lat">
+        </mat-form-field>
+        <mat-form-field appearance="standard" class="shortFormField">
+            <mat-label>Y</mat-label>
+            <input matInput [(ngModel)]="long">
+        </mat-form-field>
+        <button
+            mat-raised-button
+            (click)="handleAddCoordClick()"
+        >
+            Dodaj współrzędne
+        </button>
+    </div>
+
+    <mat-form-field appearance="standard">
+        <mat-label>Leśnictwo</mat-label>
+        <mat-select [(ngModel)]="forestry">
+          <mat-option *ngFor="let forestry of forestries" [value]="forestry.id">
+            {{forestry.name}}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+      
+</mat-dialog-content>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="">Anuluj</button>
+  <button
+    mat-button
+    color="primary"
+    (click)="saveForestActionClicked()"
+    [mat-dialog-close]=""
+  >
+    Dodaj
+  </button>
+</div>

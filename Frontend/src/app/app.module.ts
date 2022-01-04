@@ -26,6 +26,7 @@ import {MatListModule} from "@angular/material/list";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {MatInputModule} from "@angular/material/input";
 import { MatPaginatorModule } from '@angular/material/paginator'; 
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 import { AddForestryDialogFormComponent } from './views/forestry-view/add-forestry-dialog/add-forestry-dialog-form/add-forestry-dialog-form.component';
 import { AddSensorDialogFormComponent } from './views/sensor-view/add-sensor-dialog/add-sensor-dialog-form/add-sensor-dialog-form.component';
 import { PositiveDialogComponent } from './views/dialogs/positive-dialog/positive-dialog.component';
@@ -46,7 +47,8 @@ import { NoForestriesMessage } from './views/forest-action-view/no-forestries-me
 import { ForestActionCreationSuccessMessage } from './views/forest-action-view/forest-action-creation-success-message/forest-action-creation-success-message.component';
 import { CreateForestActionForm } from './views/forest-action-view/create-forest-action-form/create-forest-action-form.component';
 import { ForestActionCreationFailureMessage } from './views/forest-action-view/forest-action-creation-failure-message/forest-action-creation-failure-message.component';
-
+import {MatRadioModule} from '@angular/material/radio';
+import {MatChipsModule} from '@angular/material/chips'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -97,7 +99,10 @@ import { ForestActionCreationFailureMessage } from './views/forest-action-view/f
     MatListModule,
     NgbModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

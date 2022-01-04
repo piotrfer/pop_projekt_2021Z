@@ -16,12 +16,12 @@ export class ForestActionProxy implements ForestActionAPI {
     console.log(body);
     console.log('INSIDE POST');
     return this.http.post<ForestActionDto>(
-      environment.apiURL + 'forest-actions', // TODO check with backend
+      environment.apiURL + 'forest-action',
       body,
       httpOptions
     );
   }
   getAll(): Observable<ForestActionDto[]> {
-    return this.http.get<ForestActionDto[]>(environment.apiURL + 'forest-actions') // TODO check with backend
+    return this.http.get<ForestActionDto[]>(environment.apiURL + 'forest-action')
   }
 }

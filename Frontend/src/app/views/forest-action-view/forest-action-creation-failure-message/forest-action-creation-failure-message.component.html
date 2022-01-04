@@ -1,1 +1,7 @@
-<p>forest-action-creation-failure-message works!</p>
+<mat-dialog-content class="mat-typography">
+  <p>Błąd! Akcja leśna nie została zapisana!</p>
+  <p>Błąd: {{ this.response?.body || "ERROR" }}</p>
+</mat-dialog-content>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="">OK</button>
+</div>
