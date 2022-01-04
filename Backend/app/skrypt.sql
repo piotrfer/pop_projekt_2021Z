@@ -28,13 +28,25 @@ CREATE TABLE sensor(
 	CONSTRAINT fk_forestry FOREIGN KEY(forestry_id) REFERENCES forestry(id)
 );
 
+CREATE TABLE sensor_reading(
+	id UUID NOT NULL DEFAULT uuid_generate_v1mc(),
+	sensor_id UUID NOT NULL,
+	reading REAL NOT NULL,
+	readTime DATERANGE NOT NULL,
+	PRIMARY KEY(id),
+	CONSTRAINT fk_sensor FOREIGN KEY(sensor_id) REFERENCES sensor(id)
+);
+
 CREATE TABLE forest_action(
 	id UUID NOT NULL DEFAULT uuid_generate_v1mc(),
+	forestry_id UUID NOT NULL,
 	location POLYGON NOT NULL,
 	type VARCHAR(100) NOT NULL,
 	subtype VARCHAR(100) NOT NULL,
 	time_period DATERANGE NOT NULL,
+	forestry_id UUID NOT NULL,
 	PRIMARY KEY(id)
+	CONSTRAINT fk_forestry FOREIGN KEY(forestry_id) REFERENCES forestry(id)
 );
 
 CREATE TABLE sensor_readings_log(

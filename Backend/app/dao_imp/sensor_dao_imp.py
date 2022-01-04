@@ -27,12 +27,15 @@ with Database() as db:
                 db.session.query(db.SensorRow).filter(
                     db.SensorRow.id == id.hex).first()
             )
+            forestry = db.session.query(db.ForestryRow).filter(db.ForestryRow.id == sensor_row.forestry_id).first()
             point = pointStringToCoordinate(str(sensor_row.location))
             return SensorDto(
                 id=sensor_row.id,
                 location=point,
                 type=sensor_row.type,
                 model=sensor_row.model,
+                forestry_name=forestry.name,
+                forestry_id=sensor_row.forestry_id
             )
 
         def getAll():
@@ -40,12 +43,14 @@ with Database() as db:
 
             for sensor_row in db.session.query(db.SensorRow).all():
                 point = pointStringToCoordinate(str(sensor_row.location))
+                forestry = db.session.query(db.ForestryRow).filter(db.ForestryRow.id == sensor_row.forestry_id).first()
                 sensors_dtos.append(
                     SensorDto(
                         id=sensor_row.id,
                         location=point,
                         type=sensor_row.type,
                         model=sensor_row.model,
+                        forestry_name=forestry.name,
                         forestry_id=sensor_row.forestry_id
                     )
                 )
