@@ -1,7 +1,6 @@
 from flask import Blueprint, request, jsonify
 from flask import Response
 
-from pydantic.error_wrappers import ValidationError
 from models.message import Message
 
 from logic.sensor_logic import SensorLogic

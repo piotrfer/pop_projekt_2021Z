@@ -1,5 +1,4 @@
-from dao_imp.forestry_dao_imp import polygonStringToCoordinates
-from dao_imp.sensor_dao_imp import coordinateToPointString
+from dao_imp.forestry_dao_imp import polygonStringToCoordinates, coordinatesToPolygonString
 from pydantic.types import UUID1
 from interfaces.forest_action_dao import ForestActionDao
 from models.forest_action_dto import ForestActionDto
@@ -11,25 +10,28 @@ with Database() as db:
         def getAll():
             forest_action_dtos = []
             for forest_action_row in db.session.query(db.ForestActionRow).all():
-                coordinates = polygonStringToCoordinates(str(forest_action_row.location))
+                coordinates = polygonStringToCoordinates(
+                    str(forest_action_row.location))
                 forest_action_dtos.append(
                     ForestActionDto(
-                        id = forest_action_row.id,
-                        location = coordinates,
-                        type = forest_action_row.type,
-                        subtype = forest_action_row.subtype,
-                        forestry_id = forest_action_row.forestry_id
+                        id=forest_action_row.id,
+                        location=coordinates,
+                        type=forest_action_row.type,
+                        subtype=forest_action_row.subtype,
+                        forestry_id=forest_action_row.forestry_id,
+                        begin="2022-01-01",
+                        end="2022-01-02",
                     )
                 )
             return forest_action_dtos
 
-
         def save(forestActionDto: ForestActionDto):
-            location = coordinateToPointString(forestActionDto.location)
+            polygon_string = coordinatesToPolygonString(
+                forestActionDto.location)
             forest_action_row = db.ForestActionRow(
-                location=location, type=forestActionDto.type, subtype=forestActionDto.subtype, forestry_id=forestActionDto.forestry_id
+                location=polygon_string, type=forestActionDto.type, subtype=forestActionDto.subtype, forestry_id=str(
+                    forestActionDto.forestry_id)
             )
             db.session.add(forest_action_row)
             db.session.commit()
             return forest_action_row.id
-
