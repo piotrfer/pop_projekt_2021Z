@@ -44,6 +44,7 @@ CREATE TABLE forest_action(
 	type VARCHAR(100) NOT NULL,
 	subtype VARCHAR(100) NOT NULL,
 	time_period DATERANGE NOT NULL,
+	forestry_id UUID NOT NULL,
 	PRIMARY KEY(id)
 	CONSTRAINT fk_forestry FOREIGN KEY(forestry_id) REFERENCES forestry(id)
 );
