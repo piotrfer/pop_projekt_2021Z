@@ -4,5 +4,7 @@ export interface ForestActionDto {
    forestry: any;
    type: any;
    subtype: any;
-   coordinates: any;
+   location: any;
+   begin: any;
+   end: any;
 }

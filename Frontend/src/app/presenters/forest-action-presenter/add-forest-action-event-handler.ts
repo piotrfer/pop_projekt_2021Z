@@ -25,16 +25,21 @@ export class AddForestActionEventHandler implements IAddForestActionEventHandler
   }
 
   saveForestActionClicked(forestAction: ForestActionDto): void {
+    this.addForestActionView!.showSpinner();
     this.forestActionAPI!.save(forestAction).subscribe(() => {
+      this.addForestActionView!.hideSpinner();
       this.addForestActionView!.showForestActionCreationSuccessMessage();
       this.forestActionListEventHandler!.showForestActionsClicked();
     }, (error => {
+      this.addForestActionView!.hideSpinner();
       console.log(error.error[0].msg);
       this.addForestActionView!.showForestActionCreationFailureMessage(error.error[0].msg);
     }));
   }
   addForestActionInvoked(): void {
+    this.addForestActionView!.showSpinner();
     this.forestryAPI.getAll().subscribe((forestries) => {
+      this.addForestActionView!.hideSpinner();
       this.addForestActionView!.showCreateForestActionForm(forestries)
     });
   }

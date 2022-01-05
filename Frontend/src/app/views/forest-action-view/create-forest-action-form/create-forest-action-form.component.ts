@@ -24,8 +24,10 @@ export class CreateForestActionForm {
     this.addForestActionEventHandler!.saveForestActionClicked({
       forestry: this.forestry,
       type: this.type,
-      subtype: this.type === 'WYCINKA' ? this.subtype : undefined,
-      coordinates: this.coordinates
+      subtype: this.type === 'DEFORESTRATION' ? this.subtype : undefined,
+      location: this.coordinates,
+      begin: this.dateStart,
+      end: this.dateEnd
     })
   }
 

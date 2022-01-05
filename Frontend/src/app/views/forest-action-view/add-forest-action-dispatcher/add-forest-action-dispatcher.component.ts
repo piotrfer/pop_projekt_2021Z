@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ForestryDto } from 'src/app/data-types/forestry-dto';
 import { IAddForestActionEventHandler } from 'src/app/interfaces/event-handler/iadd-forest-action-event-handler';
 import { IAddForestActionView } from 'src/app/interfaces/view/iadd-forest-action-view';
@@ -16,7 +16,7 @@ import { Spinner } from '../spinner/spinner.component';
 })
 export class AddForestActionDispatcher implements IAddForestActionView {
   @Input() addForestActionEventHandler: IAddForestActionEventHandler|undefined; 
-
+  spinnerDialogRef: MatDialogRef<Spinner, any>|undefined;
   constructor(public dialog: MatDialog) { }
 
   showCreateForestActionForm(forestries: ForestryDto[]): void {
@@ -35,6 +35,12 @@ export class AddForestActionDispatcher implements IAddForestActionView {
     const dialogRef = this.dialog.open(NoForestriesMessage);
   }
   showSpinner(): void {
-    const dialogRef = this.dialog.open(Spinner);
+    this.spinnerDialogRef = this.dialog.open(Spinner);
+  }
+  hideSpinner(): void {
+    if (this.spinnerDialogRef) {
+      this.spinnerDialogRef.close();
+      this.spinnerDialogRef = undefined;
+    }
   }
 }

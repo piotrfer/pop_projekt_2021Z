@@ -6,4 +6,5 @@ export interface IAddForestActionView {
     showForestActionCreationFailureMessage(response: Response): void;
     showNoForestriesMessage(): void;
     showSpinner(): void;
+    hideSpinner(): void;
 }

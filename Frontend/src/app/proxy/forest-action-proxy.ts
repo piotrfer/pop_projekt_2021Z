@@ -12,7 +12,7 @@ export class ForestActionProxy implements ForestActionAPI {
         'Content-Type': 'application/json',
       }),
     };
-    const body = forestActionDto;
+    const body = { ...forestActionDto, forestry_id: forestActionDto.forestry };
     console.log(body);
     console.log('INSIDE POST');
     return this.http.post<ForestActionDto>(

@@ -14,7 +14,7 @@ export class ForestActionListComponent implements IForestActionListView, OnInit 
   @Input() forestActionListEventHandler: IForestActionListEventHandler | undefined;
   forestActions: ForestActionDto[] | undefined;
 
-  displayedColumns: string[] = ['id', 'forestry', 'type', 'subtype', 'coordinates', 'actions'];
+  displayedColumns: string[] = ['type', 'subtype', 'begin', 'end', 'coordinates', 'forestry'];
   dataSource?: MatTableDataSource<ForestActionDto>;
   @ViewChild('paginator') paginator: MatPaginator|undefined;
 
